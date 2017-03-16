@@ -1,0 +1,78 @@
+﻿
+.ps-top-to-bottom {
+  position: relative;
+  border-top: 3px solid black;
+}
+.ps-top-to-bottom:before, .ps-top-to-bottom:after {
+  content: "";
+  position: absolute;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#000), to(transparent));
+  background-image: -webkit-linear-gradient(#000, transparent);
+  background-image: -moz-linear-gradient(#000, transparent);
+  background-image: -o-linear-gradient(#000, transparent);
+  background-image: linear-gradient(#000, transparent);
+  top: -3px;
+  bottom: -3px;
+  width: 3px;
+}
+.ps-top-to-bottom:before {
+  left: -3px;
+}
+.ps-top-to-bottom:after {
+  right: -3px;
+}
+
+#background1 {
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: inherit;
+   background-attachment: fixed;
+   width: 100%;
+}
+.btnclr{
+    color: black;
+    background-color:#5dc6f0;
+    font-weight:900;
+    font-size:x-large;
+}
+.cntr {
+    position: absolute;
+    top: 35%;
+    left: 35%;
+}
+.scoreimage{
+background-image: url('../Images/Final-Score.png');
+height:250px;width:244px;      
+position: relative;
+  left:50%;
+  transform: translate(-50%,-50%);
+  padding-top:40px;
+  top:120px;
+}
+.svgborder  {
+        border:2px solid black;
+        background:white;  
+}
+
+.removesidepadding{    
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+
+.anim {
+    background-color: none;
+    -webkit-animation-name: highlight; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: .5s; /* Safari 4.0 - 8.0 */
+    animation: highlight 1s infinite;
+}
+@-webkit-keyframes highlight {
+    from {fill: none;}
+    to {fill: #ff6666;}
+}
+
+/* Standard syntax */
+@keyframes highlight {
+    from {fill: none;}
+    to {fill: #ff6666;}
+}

@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <title>Word Shop Hindi</title>
+
+    <link href="Scripts/jquery-ui.css" rel="stylesheet" />
+    <link href="Scripts/bootstrap.css" rel="stylesheet" />
+    <link href="Content/Site.css" rel="stylesheet" />
+    <link href="Content/mobileui.css" rel="stylesheet" />
+    <script src="Scripts/angular.js" type="text/javascript"></script>
+    <script src="Scripts/wordlist1.js" type="text/javascript"></script>
+    <script src="Scripts/CorrectWordApp.js" type="text/javascript"></script>
+    <script src="Scripts/jquery-1.12.4.js"></script>
+    <script src="Scripts/jquery-ui.js"></script>
+    <script src="Scripts/jquery.ui.touch-punch.min.js"></script>
+    <style>        
+        body{
+            background-image:url(Image/Word-Repair-layout.png);
+        }
+    </style>
+</head>
+<body ng-app="WordApp" ng-controller="CorrectController as c" id="background1">       
+    <div id="playagain" class="row text-center" ng-show="dvplayagain">
+        <div id="playagain1">
+            <p id="congrats">शुक्रिया</p>
+            <p>आपके गुण :{{score}}</p>
+            <!--<span id="btnplay" class="btn btn-success" ng-click="c.playAgain()">पुन्हा खेळा</span>-->
+            <button id="btnplay" class="btn btn-default" style="padding:0px;" ng-click="c.playAgain()">
+                <img src="Image/Play-again.png" id="checkthis" />
+            </button>
+        </div>
+    </div>
+
+    <div class="" ng-hide="dvheader" id="dvhead">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"></div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+        </div>
+        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+        </div>
+    </div>
+
+    <div ng-hide="dvgame">
+        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10" id="game">
+            <div class="row">
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                </div>
+                <!--<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>-->
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" id="timescore">
+                    <div class="row textaline">
+                        समय :{{maxsec}}
+                    </div>
+                    <div class="row">
+                        गुण :{{score}}
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-6" ng-hide="btncheck">
+                    <ul id="sortable">
+                        <li class="ui-state-default" data-myattr="{{a}}" ng-repeat="a in c.randomword">{{a}}</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4"></div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                    <div id="idcontrol" class="row text-center" ng-hide="dvcontrol">
+                        <button ng-hide="btncheck" id="btnname" class="btn btn-default" style="padding:0px;" ng-click="c.Check()">
+                            <img src="Image/Check-this.png" id="checkthis" />
+                        </button>
+                        <button ng-hide="!btncheck" id="btnnext" class="btn btn-default" ng-click="c.Next()">
+                            <img src="Image/Next.png" id="nextthis" />
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"></div>
+            </div>
+        </div>
+        <div id="createword" class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+            <div class="text-center row" id="rightword"></div>
+            <div class="text-center row" id="rightanswer">
+                <div id="rightanswerlist" ng-repeat="item in items | limitTo:10">{{item.name}}</div>
+            </div>
+        </div>
+        <div >
+            <div class="pull-right monkey" id="dvmonkey"></div>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            $("#sortable").sortable();
+            $("#sortable").disableSelection();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1541 @@
+﻿
+#background1 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: inherit;
+    background-attachment: fixed;
+    width: 100%;
+}
+
+/*@media screen and (max-width: 299px) {
+}
+    */
+@media screen and (max-width: 499px) {
+    #dvhead {
+        margin-top: 5%;
+    }
+
+    #headname {
+        font-size: 6px;
+        color: #ffffff;
+        text-align: center;
+        /*background-image: url(../Image/Board_1.png);*/
+        background-size: cover;
+        width: 60px;
+        height: 15px;
+        left: 1%;
+    }
+
+    #timescore {
+        text-align: center;
+        background-image: none;
+        background-size: cover;
+        width: 40px;
+        height: 22px;
+        left: 9%;
+        color: #ffffff;
+        font-size: 6px;
+    }
+
+    .textaline {
+        margin-top: 3px;
+    }
+
+
+    #createword {
+        margin-left: 2%;
+        margin-top: 0.1%;
+        background-image: url(../Image/Board_3.png);
+        background-size: cover;
+        width: 50px;
+        height: 122px;
+    }
+
+    #rightword {
+        font-size: 6px;
+        color: #ffd800;
+        font-weight: bold;
+        margin-top: 20px;
+        margin-bottom:5px;
+        /*border-bottom: 3px solid #000000;*/
+    }
+
+    #rightanswerlist {
+        color: #ffffff;
+        font-size: 6px;
+    }
+
+    #playagain1 {
+        margin-top: 29px;
+        margin-left: 46.8px;
+        font-size: 8px;
+        color: #ffffff;
+        height: 10px;
+    }
+
+    #congrats {
+        padding-top: 30px;
+    }
+
+    #playagain {
+        width: 99%;
+    }
+    #checkthis {
+        width: 35px;
+    }
+    #nextthis {
+        width: 35px;
+    }
+
+    #btnnext {
+        font-size: 6px;
+        padding: 0px;
+        margin-top: 22px;
+    }    
+
+    #background3 {
+        height: 280px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: inherit;
+        background-attachment: fixed;
+        width: 100%;
+    }
+
+    #btnstart {
+        padding: 0px;
+        margin-top: 120px;
+        margin-left: 240px;
+    }
+
+    #imgstart {
+        width: 80px;
+    }
+
+    #btnplay {
+        font-size: 6px;
+    }
+
+    #sortable {
+        list-style-type: none;
+        margin: 0;
+        margin-left: 40px;
+        padding: 0;
+        width: 100%;
+    }
+
+        #sortable li {
+            margin: 3px 3px 3px 0;
+            padding: 0px;
+            font-size: 1.8em;
+            text-align: center;
+            float: left;
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+            color: #ffd800;
+            cursor: pointer;
+            /*width: 25px;*/
+        }
+
+    .rightanswer {
+        -webkit-columns: 50px 2;
+        -moz-columns: 50px 2;
+        columns: 50px 2;
+    }
+
+    #game {
+        margin-top: 10%;
+    }
+
+    #idcontrol {
+        margin-top: 2%;
+        margin-left: -40%;
+    }
+
+    #btnname {
+        font-size: 6px;
+        margin: 0px;
+    }
+
+    .monkey {
+        width: 136px;
+        height: 80px;
+        margin: 2% auto;
+        background: url('../Image/Mon400.png') left center;
+        z-index: -1;
+    }
+
+    .animatemonkey {
+        width: 136px;
+        height: 80px;
+        margin: 2% auto;
+        background: url('../Image/Mon400.png') left center;
+        animation: play .5s steps(10) 1; /*1 for only 1 loop, you can any many loops using infinite*/
+        z-index: -1;
+    }
+
+    .stopmonkey {
+        width: 136px;
+        height: 80px;
+        margin: 2% auto;
+        background: url('../Image/Mon400.png') left center;
+        animation: play .5s steps(1) 1; /*1 for only 1 loop, you can any many loops using infinite*/
+        z-index: -1;
+    }
+
+    @keyframes play {
+        100% {
+            background-position: -1359px;/*1359*/
+        }
+    }
+
+    #dvmonkey {
+        position: relative;
+        top: -142px;
+        margin-bottom: -120px;
+        margin-left: -50px;
+        left: -50px;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    #dvhead {
+        margin-top: 5%;
+    }
+
+    #headname {
+        font-size: 14px;
+        color: #ffffff;
+        text-align: center;
+        /*background-image: url(../Image/Board_1.png);*/
+        background-size: cover;
+        width: 115px;
+        height: 33px;
+        left: 2.6%;
+    }
+
+    #timescore {
+        text-align: center;
+        background-image: none;
+        background-size: cover;
+        width: 100px;
+        height: 20px;
+        left: 6%;
+        margin-top:13px;
+        color: #ffffff;
+        font-size: 14px;
+    }
+
+    .textaline {
+        margin-top: 7px;
+    }
+
+    #game {
+        margin-top: 5.5%;
+    }
+
+    #idcontrol {
+        margin-top: 2%;
+        margin-left: -17%;
+    }
+
+    #btnname {
+        font-size: 10px;
+    }
+
+    #createword {
+        margin-left: 0%;
+        margin-top: 30px;
+        background-image: url(../Image/Board_3.png);
+        background-size: cover;
+        width: 82px;
+        height: 200px;
+    }
+
+    #rightword {
+        font-size: 8px;
+        color: #ffd800;
+        font-weight: bold;
+        margin-top: 20px;
+        margin-bottom:20px;
+        /*border-bottom: 3px solid #000000;*/
+    }
+
+    #rightanswerlist {
+        color: #ffffff;
+        font-size: 11px;
+    }
+
+    #playagain1 {
+        margin: 0px;
+        margin-left: 53.4px;
+        font-size: 16px;
+        margin-top: 68px;
+        color: #ffffff;
+    }
+
+    #congrats {
+        padding-top: 30px;
+    }
+
+    #playagain {
+        width: 100%;
+    }  
+
+    #btnnext {
+        font-size: 14px;
+        padding: 0px;
+        margin-top: 51px;
+    }    
+
+    #nextthis {
+        width: 70px;
+    }
+    #checkthis {
+        width: 70px;
+    }
+
+    #background3 {
+        height: 280px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: inherit;
+        background-attachment: fixed;
+        width: 100%;
+    }
+
+    #btnstart {
+        padding: 0px;
+        margin-top: 120px;
+        margin-left: 240px;
+    }
+
+    #imgstart {
+        width: 80px;
+    }
+
+    #btnplay {
+        font-size: 14px;
+    }
+
+    #sortable {
+        list-style-type: none;
+        margin: 0;
+        margin-top:30px;
+        padding: 0;
+        width: 100%;
+        margin-left: 40px;
+    }
+
+        #sortable li {
+            margin: 3px 3px 3px 0;
+            padding: 0px;
+            float: left;
+            font-size: 2.8em;
+            text-align: center;
+            background-color: transparent;
+            border: none;
+            color: #ffd800;
+            cursor: pointer;
+            /*width: 45px;*/
+        }
+
+    .rightanswer {
+        -webkit-columns: 50px 2;
+        -moz-columns: 50px 2;
+        columns: 50px 2;
+    }
+
+    .monkey {
+        width: 272px;
+        height: 180px;
+        margin: 2% auto;
+        background: url('../Image/Mon500.png') left center;
+        z-index: -1;
+    }
+
+    .animatemonkey {
+        width: 272px;
+        height: 180px;
+        margin: 2% auto;
+        background: url('../Image/Mon500.png') left center;
+        animation: play .5s steps(10) 1; /*1 for only 1 loop, you can any many loops using infinite*/
+        z-index: -1;
+    }
+
+    .stopmonkey {
+        width: 272px;
+        height: 180px;
+        margin: 2% auto;
+        background: url('../Image/Mon500.png') left center;
+        animation: play .5s steps(1) 1; /*1 for only 1 loop, you can any many loops using infinite*/
+        z-index: -1;
+    }
+
+    @keyframes play {
+        100% {
+            background-position: -2718px;/*1359*/
+        }
+    }
+
+    #dvmonkey {
+        position: relative;
+        top: -273px;
+        margin-bottom: -273px;
+        margin-left: -70px;
+        left: -70px;
+    }
+}
+
+
+
+@media screen and (min-width: 850px) {
+    #dvhead {
+        margin-top: 5%;
+    }
+
+    #headname {
+        font-size: 28px;
+        color: #ffffff;
+        text-align: center;
+        /*background-image: url(../Image/Board_1.png);*/
+        background-size: cover;
+        width: 200px;
+        height: 64px;
+        left: 0.6%;
+    }
+
+    #timescore {
+        text-align: center;
+        background-image: none;
+        background-size: cover;
+        width: 109px;
+        height: 60px;
+        left: 9%;
+        margin-top:-2%;
+        color: #ffffff;
+        font-size: 18px;
+    }
+
+    .textaline {
+        margin-top: 7px;
+    }
+
+    #game {
+        margin-top: 10%;
+    }
+
+    #idcontrol {
+        margin-top: 5%;
+        margin-left: -20%;
+    }
+
+    #btnname {
+        font-size: 20px;
+    }
+
+    #createword {
+        margin-left: 0%;
+        margin-top: 0.3%;
+        background-image: url(../Image/Board_3.png);
+        background-size: cover;
+        width: 145px;
+        height: 355px;
+    }
+
+    #rightword {
+        font-size: 12px;
+        color: #ffd800;
+        font-weight: bold;
+        margin-top: 45px;
+        margin-bottom:25px;
+    }
+
+    #rightanswerlist {
+        color: #ffffff;
+        font-size: 20px;
+    }
+
+    #playagain1 {
+        margin: 0px;
+        font-size: 32px;
+        margin-top: 0px;
+        color: #ffffff;
+        height: 400px;
+        margin-left: 50px;
+    }
+
+    #congrats {
+        padding-top: 142px;
+    }
+
+    #playagain {
+        width: 100%;
+    }
+
+    #btnnext {
+        font-size: 20px;
+        padding: 0px;
+        margin-top: 68px;
+    }   
+
+    #nextthis {
+        width: 130px;
+    }
+    #checkthis {
+        width: 130px;
+    }
+
+    #background3 {
+        height: 540px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: inherit;
+        background-attachment: fixed;
+        width: 100%;
+    }
+
+    #btnstart {
+        padding: 0px;
+        margin-top: 200px;
+        margin-left: 320px;
+    }
+
+    #imgstart {
+        width: 150px;
+    }
+
+    #btnplay {
+        font-size: 24px;
+    }
+
+    #sortable {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        margin-left: 120px;
+    }
+
+        #sortable li {
+            margin: 3px 0px 10px 0;
+            padding: 0px;
+            float: left;
+            font-size: 5em;
+            font-weight: 900;
+            background-color: transparent;
+            border: none;
+            color: #ffd800;
+            text-align: center;
+            cursor: pointer;
+            /*width: 75px;*/
+        }
+
+    .rightanswer {
+        -webkit-columns: 150px 2;
+        -moz-columns: 150px 2;
+        columns: 150px 2;
+    }
+
+    .monkey {
+        width: 340px;
+        height: 210px;
+        margin: 2% auto;
+        background: url('../Image/Mon1000.png') left center;
+        z-index: -1;
+    }
+
+    .animatemonkey {
+        width: 340px;
+        height: 210px;
+        margin: 2% auto;
+        background: url('../Image/Mon1000.png') left center;
+        animation: play .5s steps(10) 1; /*1 for only 1 loop, you can any many loops using infinite*/
+        z-index: -1;
+    }
+
+    .stopmonkey {
+        width: 340px;
+        height: 210px;
+        margin: 2% auto;
+        background: url('../Image/Mon1000.png') left center;
+        animation: play .5s steps(1) 1; /*1 for only 1 loop, you can any many loops using infinite*/
+        z-index: -1;
+    }
+
+    @keyframes play {
+        100% {
+            background-position: -3398px;
+        }
+    }
+
+    #dvmonkey {
+        position: relative;
+        top: -410px;
+        margin-bottom: -410px;
+        margin-left: -120px;
+        left: -120px;
+    }
+}
+
+
+@media screen and (min-width: 1000px) {
+    #dvhead {
+        margin-top: 5%;
+    }
+
+    #headname {
+        font-size: 28px;
+        color: #ffffff;
+        text-align: center;
+        /*background-image: url(../Image/Board_1.png);*/
+        background-size: cover;
+        width: 250px;
+        height: 64px;
+        left: 0.6%;
+    }
+
+    #timescore {
+        text-align: center;
+        background-image: none;
+        background-size: cover;
+        width: 109px;
+        height: 60px;
+        left: 10%;
+        margin-top:-1%;
+        color: #ffffff;
+        font-size: 20px;
+    }
+
+    .textaline {
+        margin-top: 7px;
+    }
+
+    #game {
+        margin-top: 10%;
+    }
+
+    #idcontrol {
+        margin-top: 5%;
+        margin-left: -20%;
+    }
+
+    #btnname {
+        font-size: 20px;
+    }
+
+    #createword {
+        margin-left: 0%;
+        margin-top: 0.6%;
+        background-image: url(../Image/Board_3.png);
+        background-size: cover;
+        width: 165px;
+        height: 405px;
+    }
+
+    #rightword {
+        font-size: 14px;
+        color: #ffd800;
+        font-weight: bold;
+        margin-top: 60px;
+        margin-bottom:25px;
+    }
+
+    #rightanswerlist {
+        color: #ffffff;
+        font-size: 20px;
+    }
+
+    #playagain1 {
+        margin: 0px;
+        font-size: 32px;
+        margin-top: 23px;
+        color: #ffffff;
+        height: 400px;
+        margin-left: 50px;
+    }
+
+    #congrats {
+        padding-top: 160px;
+    }
+
+    #playagain {
+        width: 100%;
+    }
+
+    #btnnext {
+        font-size: 20px;
+        padding: 0px;
+        margin-top: 82px;
+    }   
+
+    #nextthis {
+        width: 130px;
+    }
+    #checkthis {
+        width: 130px;
+    }
+
+    #background3 {
+        height: 540px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: inherit;
+        background-attachment: fixed;
+        width: 100%;
+    }
+
+    #btnstart {
+        padding: 0px;
+        margin-top: 200px;
+        margin-left: 320px;
+    }
+
+    #imgstart {
+        width: 150px;
+    }
+
+    #btnplay {
+        font-size: 24px;
+    }
+
+    #sortable {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        margin-left: 150px;
+    }
+
+        #sortable li {
+            margin: 3px 3px 10px 0;
+            padding: 0px;
+            float: left;
+            font-size: 6em;
+            font-weight: 900;
+            background-color: transparent;
+            border: none;
+            color: #ffd800;
+            text-align: center;
+            cursor: pointer;
+            /*width: 85px;*/
+        }
+
+    .rightanswer {
+        -webkit-columns: 150px 2;
+        -moz-columns: 150px 2;
+        columns: 150px 2;
+    }
+
+    .monkey {
+        width: 340px;
+        height: 210px;
+        margin: 2% auto;
+        background: url('../Image/Mon1000.png') left center;
+        z-index: -1;
+    }
+
+    .animatemonkey {
+        width: 340px;
+        height: 210px;
+        margin: 2% auto;
+        background: url('../Image/Mon1000.png') left center;
+        animation: play .5s steps(10) 1; /*1 for only 1 loop, you can any many loops using infinite*/
+        z-index: -1;
+    }
+
+    .stopmonkey {
+        width: 340px;
+        height: 210px;
+        margin: 2% auto;
+        background: url('../Image/Mon1000.png') left center;
+        animation: play .5s steps(1) 1; /*1 for only 1 loop, you can any many loops using infinite*/
+        z-index: -1;
+    }
+
+    @keyframes play {
+        100% {
+            background-position: -3398px;
+        }
+    }
+
+    #dvmonkey {
+        position: relative;
+        top: -465px;
+        margin-bottom: -465px;
+        margin-left: -160px;
+        left: -160px;
+    }
+}
+
+/*@media screen and (min-width: 1080px) {
+    #dvhead {
+        margin-top: 5%;
+    }
+
+    #headname {
+        font-size: 32px;
+        color: #ffffff;
+        text-align: center;
+        background-image: url(../Image/Board_1.png);
+        background-size: cover;
+        width: 285px;
+        height: 70px;
+        left: 0.6%;
+    }
+
+    #timescore {
+        text-align: center;
+        background-image: none;
+        background-size: cover;
+        width: 133px;
+        height: 73px;
+        left: 4%;
+        color: #ffffff;
+        font-size: 20px;
+    }
+
+    .textaline {
+        margin-top: 7px;
+    }
+
+    #game {
+        margin-top: 50px;
+    }
+
+    #sortable {
+        margin-top: 50px;
+    }
+
+    #idcontrol {
+        margin-top: 30px;
+        margin-left: 40px;
+    }
+
+    #btnname {
+        font-size: 30px;
+    }
+
+    #createword {
+        margin-left: 70px;
+    }
+
+    #rightword {
+        font-size: 15px;
+        color: #ffd800;
+        font-weight: bold;
+        margin-top: 40px;
+        border-bottom: 3px solid #000000;
+    }
+
+    #rightanswerlist {
+        color: #ffffff;
+        font-size: 18px;
+    }
+
+    #playagain1 {
+        margin-top: 200px;
+        font-size: 44px;
+        color: #ffffff;
+        height: 400px;
+    }
+
+    #btnplay {
+        font-size: 30px;
+    }
+
+
+    #sortable {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+        #sortable li {
+            margin: 3px 3px 3px 0;
+            padding: 1px;
+            float: left;
+            width: 150px;
+            height: 100px;
+            font-size: 7em;
+            text-align: center;
+        }
+
+    .rightanswer {
+        -webkit-columns: 150px 2;
+        -moz-columns: 150px 2;
+        columns: 150px 2;
+    }
+}*/
+
+/*@media screen and (min-width: 1150px) {
+    #dvhead {
+        margin-top: 5%;
+    }
+
+    #headname {
+        font-size: 33px;
+        color: #ffffff;
+        text-align: center;
+        background-image: url(../Image/Board_1.png);
+        background-size: cover;
+        width: 310px;
+        height: 80px;
+        left: 0.6%;
+    }
+
+    #timescore {
+        text-align: center;
+        background-image: none;
+        background-size: cover;
+        width: 150px;
+        height: 80px;
+        left: 4%;
+        color: #ffffff;
+        font-size: 22px;
+    }
+
+    .textaline {
+        margin-top: 7px;
+    }
+
+    #game {
+        margin-top: 50px;
+    }
+
+    #sortable {
+        margin-top: 50px;
+    }
+
+    #idcontrol {
+        margin-top: 30px;
+        margin-left: 40px;
+    }
+
+    #btnname {
+        font-size: 30px;
+    }
+
+    #createword {
+        margin-left: 70px;
+    }
+
+    #rightword {
+        font-size: 15px;
+        color: #ffd800;
+        font-weight: bold;
+        margin-top: 40px;
+    }
+
+    #rightanswerlist {
+        color: #ffffff;
+        font-size: 18px;
+    }
+
+    #playagain1 {
+        margin-top: 200px;
+        font-size: 44px;
+        color: #ffffff;
+        height: 400px;
+    }
+
+    #btnplay {
+        font-size: 30px;
+    }
+
+
+    #sortable {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+        #sortable li {
+            margin: 3px 3px 3px 0;
+            padding: 1px;
+            float: left;
+            width: 200px;
+            height: 150px;
+            font-size: 7em;
+            text-align: center;
+        }
+
+    .rightanswer {
+        -webkit-columns: 150px 2;
+        -moz-columns: 150px 2;
+        columns: 150px 2;
+    }
+}*/
+
+@media screen and (min-width: 1300px) {
+    #dvhead {
+        margin-top: 5%;
+    }
+
+    #background3 {
+        height: 662px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: inherit;
+        background-attachment: fixed;
+        width: 100%;
+    }
+
+    #btnstart {
+        padding: 0px;
+        margin-top: 300px;
+        margin-left: 570px;
+    }
+
+    #headname {
+        font-size: 36px;
+        color: #ffffff;
+        text-align: left;
+        background-size: cover;
+        width: 340px;
+        height: 85px;
+        left: 0.6%;
+    }
+
+    #imgstart {
+        width: 250px;
+    }
+
+    #timescore {
+        text-align: center;
+        background-image: none;
+        background-size: cover;
+        width: 165px;
+        height: 90px;
+        left: 9%;
+        margin-top: -1%;
+        color: #ffffff;
+        font-size: 24px;
+    }
+
+    .textaline {
+        margin-top: 7px;
+    }
+
+    #game {
+        margin-top: 10%;
+    }
+
+    #sortable {
+        margin-top: 50px;
+    }
+
+    #idcontrol {
+        margin-top: 1%;
+        margin-left: 0%;
+    }
+
+    #btnname {
+        font-size: 30px;
+    }
+
+    #btnnext {
+        font-size: 30px;
+        padding: 0px;
+        margin-top: 115px;
+    }   
+
+    #nextthis {
+        width: 150px;
+    }
+    #createword {
+        margin-left: 0%;
+        margin-top: 0.1%;
+        background-image: url(../Image/Board_3.png);
+        background-size: cover;
+        width: 210px;
+        height: 510px;
+    }
+
+    #rightword {
+        font-size: 14px;
+        color: #ffd800;
+        font-weight: bold;
+        margin-top: 80px;
+        margin-bottom:25px;
+        /*border-bottom: 3px solid #000000;*/
+    }
+
+    #rightanswerlist {
+        color: #ffffff;
+        font-size: 28px;
+    }
+
+    #playagain1 {
+        margin-top: 88px;
+        font-size: 44px;
+        color: #ffffff;
+        height: 400px;
+        margin-left: 102px;
+    }
+
+    #btnplay {
+        font-size: 30px;
+    }
+
+    #checkthis {
+        width: 150px;
+    }
+
+    #sortable {
+        list-style-type: none;
+        margin: 0;
+        margin-left: 160px;
+        padding: 0;
+        /*width: 100%;*/
+    }
+
+        #sortable li {
+            margin: 3px 3px 20px 0;
+            padding: 0px;
+            float: left;
+            font-size: 8.6em;
+            font-weight: 700;
+            background-color: transparent;
+            border: none;
+            color: #ffd800;
+            text-align: center;
+            cursor: pointer;
+            /*width: 130px;*/
+        }
+
+    .rightanswer {
+        -webkit-columns: 150px 2;
+        -moz-columns: 150px 2;
+        columns: 150px 2;
+    }
+
+    .monkey {
+        width: 522px;
+        height: 328px;
+        margin: 2% auto;
+        background: url('../Image/Mon1300.png') left center;
+        z-index: -1;
+    }
+
+    .animatemonkey {
+        width: 522px;
+        height: 328px;
+        margin: 2% auto;
+        background: url('../Image/Mon1300.png') left center;
+        animation: play .5s steps(10) 1; /*1 for only 1 loop, you can any many loops using infinite*/
+        z-index: -1;
+    }
+
+    .stopmonkey {
+        width: 522px;
+        height: 328px;
+        margin: 2% auto;
+        background: url('../Image/Mon1300.png') left center;
+        animation: play .5s steps(1) 1; /*1 for only 1 loop, you can any many loops using infinite*/
+        z-index: -1;
+    }
+
+    @keyframes play {
+        100% {
+            background-position: -5225px;
+        }
+    }
+
+    #dvmonkey {
+        position: relative;
+        top: -590px;
+        margin-bottom: -590px;
+        margin-left: -200px;
+        left: -200px;
+    }
+}
+
+/*@media screen and (min-width: 1500px) {
+    #dvhead {
+        margin-top: 5%;
+    }
+
+    #headname {
+        font-size: 48px;
+        color: #ffffff;
+        text-align: center;
+        background-image: url(../Image/Board_1.png);
+        background-size: cover;
+        width: 380px;
+        height: 90px;
+        left: 0.6%;
+    }
+
+    #timescore {
+        text-align: center;
+        background-image: none;
+        background-size: cover;
+        width: 180px;
+        height: 100px;
+        left: 4%;
+        color: #ffffff;
+        font-size: 28px;
+    }
+
+    .textaline {
+        margin-top: 7px;
+    }
+
+    #game {
+        margin-top: 50px;
+    }
+
+    #sortable {
+        margin-top: 50px;
+    }
+
+    #idcontrol {
+        margin-top: 30px;
+        margin-left: 40px;
+    }
+
+    #btnname {
+        font-size: 30px;
+    }
+
+    #createword {
+        margin-left: 70px;
+    }
+
+    #rightword {
+        font-size: 15px;
+        color: #ffd800;
+        font-weight: bold;
+        margin-top: 40px;
+        border-bottom: 3px solid #000000;
+    }
+
+    #rightanswerlist {
+        color: #ffffff;
+        font-size: 18px;
+    }
+
+    #playagain1 {
+        margin-top: 200px;
+        font-size: 44px;
+        color: #ffffff;
+        height: 400px;
+    }
+
+    #btnplay {
+        font-size: 30px;
+    }
+
+
+    #sortable {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+        #sortable li {
+            margin: 3px 3px 3px 0;
+            padding: 1px;
+            float: left;
+            width: 200px;
+            height: 150px;
+            font-size: 7em;
+            text-align: center;
+        }
+
+    .rightanswer {
+        -webkit-columns: 150px 2;
+        -moz-columns: 150px 2;
+        columns: 150px 2;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    #dvhead {
+        margin-top: 5%;
+    }
+
+    #headname {
+        font-size: 48px;
+        color: #ffffff;
+        text-align: center;
+        background-image: url(../Image/Board_1.png);
+        background-size: cover;
+        width: 425px;
+        height: 100px;
+        left: 0.6%;
+    }
+
+    #timescore {
+        text-align: center;
+        background-image: none;
+        background-size: cover;
+        width: 205px;
+        height: 110px;
+        left: 4%;
+        color: #ffffff;
+        font-size: 32px;
+    }
+
+    .textaline {
+        margin-top: 7px;
+    }
+
+    #game {
+        margin-top: 50px;
+    }
+
+    #sortable {
+        margin-top: 50px;
+    }
+
+    #idcontrol {
+        margin-top: 30px;
+        margin-left: 40px;
+    }
+
+    #btnname {
+        font-size: 30px;
+    }
+
+    #createword {
+        margin-left: 70px;
+    }
+
+    #rightword {
+        font-size: 15px;
+        color: #ffd800;
+        font-weight: bold;
+        margin-top: 40px;
+        border-bottom: 3px solid #000000;
+    }
+
+    #rightanswerlist {
+        color: #ffffff;
+        font-size: 18px;
+    }
+
+    #playagain1 {
+        margin-top: 200px;
+        font-size: 44px;
+        color: #ffffff;
+        height: 400px;
+    }
+
+    #btnplay {
+        font-size: 30px;
+    }
+
+
+    #sortable {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+        #sortable li {
+            margin: 3px 3px 3px 0;
+            padding: 1px;
+            float: left;
+            width: 200px;
+            height: 150px;
+            font-size: 7em;
+            text-align: center;
+        }
+
+    .rightanswer {
+        -webkit-columns: 150px 2;
+        -moz-columns: 150px 2;
+        columns: 150px 2;
+    }
+}*/
+
+@media screen and (min-width: 1800px) {
+    #dvhead {
+        margin-top: 5%;
+    }
+
+    #imgstart {
+        width: 250px;
+    }
+
+    #headname {
+        font-size: 52px;
+        color: #ffffff;
+        text-align: center;
+        background-size: cover;
+        width: 470px;
+        height: 120px;
+        left: 0.6%;
+    }
+
+    #timescore {
+        text-align: center;
+        background-image: none;
+        background-size: cover;
+        width: 230px;
+        height: 125px;
+        left: 9%;
+        color: #ffffff;
+        font-size: 38px;
+    }
+
+    .textaline {
+        margin-top: 9px;
+    }
+
+    #game {
+        margin-top: 10%;
+    }
+
+    #idcontrol {
+        margin-top: 2%;
+        margin-left: 0%;
+    }
+
+    #btnname {
+        font-size: 48px;
+    }
+
+    #btnnext {
+        font-size: 48px;
+        padding: 0px;
+        margin-top: 147px;
+    }
+
+    #createword {
+        margin-left: 0%;
+        margin-top: 0.1%;
+        background-image: url(../Image/Board_3.png);
+        background-size: cover;
+        width: 300px;
+        height: 730px;
+    }
+
+    #rightword {
+        font-size: 20px;
+        color: #ffd800;
+        font-weight: bold;
+        margin-top: 120px;
+        margin-bottom:25px;
+    }
+
+    #rightanswerlist {
+        color: #ffffff;
+        font-size: 40px;
+    }
+
+    #nextthis {
+        width: 260px;
+    }
+
+    #checkthis {
+        width: 260px;
+    }
+
+    #background3 {
+        height: 973px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: inherit;
+        background-attachment: fixed;
+        width: 100%;
+    }
+
+    #btnstart {
+        padding: 0px;
+        margin-top: 390px;
+        margin-left: 820px;
+    }
+
+    #playagain1 {
+        margin-top: 148px;
+        font-size: 5em;
+        color: #ffffff;
+        margin-left: 113px;
+    }
+
+    #playagain {
+        width: 1930px;
+    }
+
+    #btnplay {
+        font-size: 48px;
+    }
+
+
+    #sortable {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        margin-left: 210px;
+    }
+
+        #sortable li {
+            margin: 3px 3px 20px 0;
+            padding: 0px;
+            float: left;
+            font-size: 11.2em;
+            font-weight: 900;
+            background-color: transparent;
+            border: none;
+            color: #ffd800;
+            text-align: center;
+            cursor: pointer;
+            /*width: 170px;*/
+        }
+
+    .rightanswer {
+        -webkit-columns: 150px 2;
+        -moz-columns: 150px 2;
+        columns: 150px 2;
+    }
+    
+
+    .monkey {
+        width: 770px;
+        height: 490px;
+        margin: 2% auto;
+        background: url('../Image/Mon1800.png') left center;
+        z-index: -1;
+    }
+
+    .animatemonkey {
+        width: 770px;
+        height: 490px;
+        margin: 2% auto;
+        background: url('../Image/Mon1800.png') left center;
+        animation: play .5s steps(10) 1; /*1 for only 1 loop, you can any many loops using infinite*/
+        z-index: -1;
+    }
+
+    .stopmonkey {
+        width: 770px;
+        height: 490px;
+        margin: 2% auto;
+        background: url('../Image/Mon1800.png') left center;
+        animation: play .5s steps(1) 1; /*1 for only 1 loop, you can any many loops using infinite*/
+        z-index: -1;
+    }
+
+    @keyframes play {
+        100% {
+            background-position: -7695px;
+        }
+    }
+
+    #dvmonkey {
+        position: relative;
+        top: -850px;
+        margin-bottom: -850px;
+        margin-left: -260px;
+        left: -260px;
+    }
+}
