@@ -1,6 +1,10 @@
 ﻿
 var picid = "0";
 var wordid = "0";
+var soundhowl=new Howl({
+				  src: ['Content/sound/wrong1.mp3']
+				});
+				
 (function () {
 
     var shuffleArray = function (array) {
@@ -46,8 +50,8 @@ var wordid = "0";
         $scope.score = 0;        
         $scope.currentlist = [];
         $scope.displayScore = function () {
-            $scope.StopTimer();
-            $scope.screen = "score";
+            //$scope.StopTimer();
+            $scope.screen = 'score';
         };
         $scope.displayGame = function () {
             b = $("#P1");
@@ -83,16 +87,12 @@ var wordid = "0";
         
         $scope.nextclick = function () {
             $scope.getnextpic();
-            $scope.curnum = $scope.getrandompic();
-            wordid = $scope.picture.Wlist[$scope.curnum].ID;
-            c = $("#" + wordid);
+
             //c.addClass('anim');
         }
         $scope.previousclick = function () {
             $scope.getprevpic();
-            $scope.curnum = $scope.getrandompic();
-            wordid = $scope.picture.Wlist[$scope.curnum].ID;
-            c = $("#" + wordid);
+
             //c.addClass('anim');
         }
 
@@ -105,7 +105,7 @@ var wordid = "0";
                 $scope.picture.Wlist = shuffleArray($scope.picture.Wlist);
                 for (a in $scope.picture.Wlist) {
                     $scope.picture.Wlist[a].played = false;
-                    c = $("#" + $scope.picture.Wlist[a].ID);
+                    //c = $("#" + $scope.picture.Wlist[a].ID);
                     //c.removeClass('anim');
                 }
 
@@ -115,6 +115,16 @@ var wordid = "0";
                 b = $("#" + $scope.picture.PID);
                 b.css('display', 'inline');
 
+				
+				                    $scope.currentlist=[];
+					
+
+			
+                    $scope.curnum = $scope.getrandompic();
+                    wordid = $scope.picture.Wlist[$scope.curnum].ID;
+                    c = $("#" + wordid);
+                    playsound2(wordid);
+					
             }
             if ($scope.i == 0)
             {
@@ -127,7 +137,10 @@ var wordid = "0";
 
 
         $scope.getnextpic = function () {
-            if ($scope.i < 3) {
+			$scope.score = 0;
+			$scope.currentlist=[];
+			console.log($scope.i);
+            if ($scope.i < 3 && $scope.screen == "game") {
                 b = $("#" + $scope.picture.PID);
                 b.css('display', 'none');
                 $scope.i = $scope.i + 1;
@@ -140,10 +153,17 @@ var wordid = "0";
                 }
                 $scope.picid = $scope.picture.PID;
                 picid = $scope.picture.PID;
-                $scope.score = 0;
+                
                 b = $("#" + $scope.picture.PID);
                 b.css('display', 'inline');
 
+			
+                $scope.curnum = $scope.getrandompic();
+                wordid = $scope.picture.Wlist[$scope.curnum].ID;
+                c = $("#" + wordid);
+                playsound2(wordid);
+
+					
                 if ($scope.i == 0) {
                     $scope.prev = false;
                 }
@@ -152,7 +172,10 @@ var wordid = "0";
                 }
             }
         else {
-                $scope.displayScore();
+				console.log("stop timer getnextpic");
+				$scope.screen = "score" ;
+                $scope.StopTimer();
+				
             }
         }     
 
@@ -169,14 +192,13 @@ var wordid = "0";
             else {
                 return no;
             }
-            
         };
 
 
         $scope.getnextword = function () {            
             c = $("#" + wordid);
-            c.removeClass('anim');
-            c.css('fill', 'none');    
+            //c.removeClass('anim');
+            //c.css('fill', 'none');    
             $scope.picture.Wlist[$scope.curnum].played = true;
             $scope.currentlist.push($scope.picture.Wlist[$scope.curnum].MyWords);
 
@@ -223,9 +245,9 @@ var wordid = "0";
             //Initialize the Timer to run every 1000 milliseconds i.e. one second.
             $scope.Timer = $interval(function () {
 
-                if ($scope.maxsec == 0 || $scope.score == 200 ) {
+                if ($scope.maxsec == 0) {
                     //alert("Timer Stopped");
-                    $scope.displayScore();
+                    $scope.StopTimer();
                 }
                 else {
                     $scope.maxsec = $scope.maxsec - 1;
@@ -243,10 +265,12 @@ var wordid = "0";
 
         //Timer stop function.
         $scope.StopTimer = function () {
-
+			console.log("timer stopped");
+			$scope.displayScore();
+			console.log("timer displayScore");
             //Set the Timer stop message.
             $scope.Message = "Timer stopped.";
-
+			
             //Cancel the Timer.
             if (angular.isDefined($scope.Timer)) {
                 $interval.cancel($scope.Timer);
@@ -262,37 +286,61 @@ var wordid = "0";
 
                 //var audio = new Audio('Content/sound/congrats.mp3');
                 //audio.play();
-                var sound_array = ["Content/sound/Rooster.mp3"];
+                //var sound_array = ["Content/sound/correct.mp3"];
 
-                var sound = sound_array[Math.floor(Math.random() * sound_array.length)];
-                var audio = new Audio(sound);
-                audio.play();
+				soundhowl.stop();
+				soundhowl = new Howl({
+				  src: ['Content/sound/correct.mp3']
+				});
+
+				soundhowl.play();
                 
 
-                if ($scope.score == 50) {
-                    $scope.getnextpic();
-                    $scope.currentlist=[];
+				console.log($scope.score);
+				if ($scope.i == 3 && $scope.screen == "game" && $scope.score == 50) {
+					console.log("stop timer in next word");
+					$scope.screen = "score";
+					//$scope.StopTimer();
 
-                    $scope.curnum = $scope.getrandompic();
-                    wordid = $scope.picture.Wlist[$scope.curnum].ID;
-                    c = $("#" + wordid);
-                    playsound2(wordid);
-                    //c.addClass('anim');
-                }
-                else {
-                    $scope.getnextword();
-                }
-                
+				}
+				else if ($scope.score == 50) {
+						$scope.currentlist.push($scope.picture.Wlist[$scope.curnum].MyWords);
+
+						setTimeout(function(){ 
+						
+						$scope.getnextpic();
+						
+						}, 2000);
+
+						//c.addClass('anim');
+					}
+					else {
+						$scope.getnextword();
+					}                
             } else
+			{				
+				// var audio = new Audio('Content/sound/wrong1.mp3');
+                // audio.play();
 
-                //var audio = new Audio('Content/sound/wrong.mp3');
-                //audio.play();
+				soundhowl.stop();
+				soundhowl = new Howl({
+				  src: ['Content/sound/wrong1.mp3']
+				});
 
-                var sound_array1 = ["Content/sound/Chickencoop.mp3"];
-                var sound1 = sound_array1[Math.floor(Math.random() * sound_array1.length())];
-                var audio1 = new Audio(sound1);
-                audio1.play();
-                
+				soundhowl.play();
+
+                // var sound_array1 = ["Content/sound/wrong1.mp3","Content/sound/wrong2.mp3","Content/sound/wrong3.mp3"];
+				// console.log(sound_array1);
+                // var sound1 = sound_array1[Math.floor(Math.random() * 2)];
+                // var audio1 = new Audio(sound1);
+                // audio1.play();
+			}   
+        };
+
+        $scope.pad = function (num, size) {
+            var s = num + "";
+            while (s.length < size) s = "0" + s;
+            return s;
         };
     }
     );

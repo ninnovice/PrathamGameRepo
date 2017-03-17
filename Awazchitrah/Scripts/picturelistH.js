@@ -5,7 +5,7 @@
        "Wlist":
         [
            { "ID": "P1_2", "MyWords": "आम" },
-           { "ID": "P1_8", "MyWords": "कुँआ" },
+           { "ID": "P1_8", "MyWords": "कुआँ" },
            { "ID": "P1_10", "MyWords": "मटका" },
            { "ID": "P1_11", "MyWords": "बकरी" },
            { "ID": "P1_14", "MyWords": "औरत" }

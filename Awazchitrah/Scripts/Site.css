@@ -1,7 +1,8 @@
-﻿
-.ps-top-to-bottom {
+﻿.ps-top-to-bottom {
   position: relative;
   border-top: 3px solid black;
+  margin-top:30px;
+  height:auto;
 }
 .ps-top-to-bottom:before, .ps-top-to-bottom:after {
   content: "";
@@ -29,6 +30,15 @@
    background-attachment: fixed;
    width: 100%;
 }
+
+.background1 {
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: inherit;
+   background-attachment: fixed;
+   width: 100%;
+}
+
 .btnclr{
     color: black;
     background-color:#5dc6f0;
@@ -42,24 +52,21 @@
 }
 .scoreimage{
 background-image: url('../Images/Final-Score.png');
-height:250px;width:244px;      
+height:150px;width:146px;      
 position: relative;
   left:50%;
   transform: translate(-50%,-50%);
-  padding-top:40px;
-  top:120px;
+  padding-top:20px;
+  top:100px;
 }
 .svgborder  {
         border:2px solid black;
         background:white;  
 }
-
 .removesidepadding{    
     padding-left: 0px;
     padding-right: 0px;
 }
-
-
 .anim {
     background-color: none;
     -webkit-animation-name: highlight; /* Safari 4.0 - 8.0 */
@@ -75,4 +82,47 @@ position: relative;
 @keyframes highlight {
     from {fill: none;}
     to {fill: #ff6666;}
+}
+#btnplay {
+        margin-bottom: -100%;
+        margin-left: 46%;        
+    }
+.csshover{
+			fill:transparent;
+			fill-opacity:0.1;
+		}
+.csshover:hover,click{
+			fill:#ff6666;
+			fill-opacity:0.5;
+			cursor:pointer;			
+		}
+.prevbtn{
+			margin-top:250px;
+		}
+.nxtbtn{
+			margin-top:90px;transform: rotate(180deg); -ms-transform: rotate(180deg);-webkit-transform: rotate(180deg);
+		}
+.removemargin{
+    margin:0px;
+}
+.removepadding{
+    padding:0px;
+}
+.svgborderinner{
+    border-right:2px solid black;padding-left:0px;padding-right:0px;
+}
+.fntsmayscore{
+    font-size:18px; font-weight:700;
+}
+.fntweight{
+    font-weight:700;
+}
+.fntrightwordlist{
+    font-size:25px;font-weight:700;
+}
+.scorescreenlast{
+    min-height:300px;margin-top:50px;
+}
+.fntlastscore{
+    font-weight:500;font-size:80px;cursor:none;
 }
