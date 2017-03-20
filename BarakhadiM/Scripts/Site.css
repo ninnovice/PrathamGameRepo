@@ -1,0 +1,88 @@
+﻿.bgimg {
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-position: inherit;
+    width: 100%;
+}
+.topspace{
+    padding-top:35px;
+}
+.topnm{
+    font-weight:bolder;
+}
+.midspace{
+    padding-top:10px;
+}
+.minheight{
+    min-height:150px;
+}
+.nm{
+    font-size:15px;font-weight:900;
+}
+.wordbank{
+    padding-top:5px;
+    color:#c7254e;
+}
+.btnallpoint{
+    min-width:50px;color:white;background-color:#007ec2;border-radius:10px;pointer-events:none;
+}
+.btnbottomtext{
+    position: absolute;bottom:10px;left:250px;
+}
+.word1{
+    margin:3px;
+    color:white;
+    background-color:#00468c;
+    font-size:70px;
+    border-radius:5px;
+}
+.wordmid {
+    margin:3px;
+    color:white;
+    background-color:#007ec2;
+    font-size:70px;
+    border-radius:5px;
+}
+.btnbottm {
+    margin:3px;
+    color:white;
+    background-color:#007ec2;
+    font-size:30px;
+    border-radius:5px;
+}
+.anstxtscore{
+    color:black;
+    font-size:18px;
+    border-radius:10px;
+    background-color:white; 
+    width: 380px;
+    min-height:400px;   
+}
+.bottom-align-text {
+    position: relative;
+    top: 400px;
+    left:-5%;
+}
+.text{
+    z-index:100;
+    position:absolute;    
+    color:white;
+    font-size:24px;
+    font-weight:bold;
+    left:210px;
+    top:93px;
+}
+.scorescreen{
+    font-size:30px;
+}
+/*.border-grid{
+    border:1px solid red;    
+}*/
+.scoresup{   
+    font-size: initial;
+    z-index:100;
+    position:relative;    
+    color:white;  
+    left:-10px;
+    top:-60px;
+}

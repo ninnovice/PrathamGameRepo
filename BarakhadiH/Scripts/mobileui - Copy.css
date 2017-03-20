@@ -1,0 +1,523 @@
+﻿
+#background1 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: inherit;
+    background-attachment: fixed;
+    width: 100%;
+}
+
+#background2 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: inherit;
+    background-attachment: fixed;
+}
+.ScrollStyle{
+    max-height: 280px;
+    overflow-y: scroll;
+}
+
+
+@media screen and (max-width: 499px) {/*500*/
+                                       
+    #btnplay {
+        margin-bottom: -85%;
+        margin-left: 75%;
+    }
+
+    .btnbottm {
+        margin: 3px;
+        color: white;
+        background-color: #007ec2;
+        font-size: 12px;
+        border-radius: 5px;
+    }
+}
+
+@media screen and (min-width: 500px) {/*400*/
+                                       
+    #btnplay {
+        margin-bottom: -85%;
+        margin-left: 75%;
+    }
+
+    .btnbottm {
+        margin: 3px;
+        color: white;
+        background-color: #007ec2;
+        font-size: 16px;
+        border-radius: 5px;
+    }
+}
+
+@media screen and (min-width: 850px) {/*250*/
+                                      
+    #btnplay {
+        margin-bottom: -104%;
+        margin-left: 81%;
+    }
+
+    .btnbottm {
+        margin: 3px;
+        color: white;
+        background-color: #007ec2;
+        font-size: 22px;
+        border-radius: 5px;
+    }
+}
+
+@media screen and (min-width: 1000px) {/*133*/
+    #imgtime{
+        width:70px;
+    }
+
+    #imgjokar{
+        top:220px;  
+        left:-130px; 
+    }
+    .imgjok{
+        width:270px;
+    }
+    
+    .imgright{
+        width:50px;
+    }
+
+    .topspace {
+        padding-top: 30px;
+    }
+
+    .topnm {
+        font-weight: bolder;
+    }
+
+    .midspace {
+        padding-top: 10px;
+    }
+
+    .minheight {
+        min-height: 150px;
+    }
+
+    .nm {
+        font-size: 24px;
+        font-weight: 900;
+    }
+
+    .wordbank {
+        padding-top: 5px;
+        color: #c7254e;
+        font-size: 24px;
+    }
+
+    .txtrightans{
+        font-size: 22px;
+    }
+
+    .btnallpoint {
+        min-width: 50px;
+        color: white;
+        background-color: #007ec2;
+        border-radius: 10px;
+        pointer-events: none;
+    }
+
+    .btnbottomtext {
+        position: absolute;
+        bottom: 10px;
+        font-size: 20px;
+        left: 180px;
+    }
+
+    .word1 {   /*aakar ukar words*/
+        margin: 5px;        
+        color: white;
+        background-color: #00468c;
+        font-size: 30px;
+        border-radius: 10px;
+        z-index:200;
+        width:60px;
+    }
+
+    .wordmid {   /*main 2 words*/
+        margin: 5px;
+        color: white;
+        background-color: #007ec2;
+        font-size: 30px;
+        border-radius: 10px;
+        width:60px;
+        z-index:200;
+    }
+
+    .anstxtscore { /*words number*/
+        color: black;
+        font-size: 18px;
+        border-radius: 20px;
+        background-color: white;
+        width: 300px;
+        min-height: 300px;
+        margin-left:0px;
+        margin-top:-30px;
+    }
+
+    .bottom-align-text {
+        position: relative;
+        top: 400px;
+        left: -5%;
+    }
+
+    .text {
+        z-index: 100;
+        position: absolute;
+        color: black;
+        font-size: 20px;
+        font-weight: bold;
+        left: 152px;
+        top: 85px;
+    }
+
+    .scorescreen {
+        font-size: 24px;
+        border-radius: 20px;
+    }
+    .scoresup {
+        font-size: initial;
+        z-index: 100;
+        position: relative;
+        color: white;
+        left: -8px;
+        top: -20px;
+    }
+    
+    .btnbottmppa {
+        margin: 3px;
+        color: white;
+        background-color: #007ec2;
+        font-size: 30px;
+        border-radius: 20px;
+        margin-top:10px;
+    }
+    .imgjokpa{
+        width:250px;
+    }        
+    #btnplay {
+        margin-bottom: -90%;
+        margin-left: 77%;
+        border-radius: 10px;
+    }
+
+    .btnbottm {
+        margin: 3px;
+        color: white;
+        background-color: #007ec2;
+        font-size: 22px;
+        border-radius: 10px;
+        margin-top:40px;
+    }
+}
+
+@media screen and (min-width: 1300px) { /*100%*/    
+    #imgtime{
+        width:100px;
+    }
+
+    #imgjokar{
+        top:250px;  
+        left:-210px; 
+    }
+    .imgjok{
+        width:400px;
+    }
+    
+    .imgright{
+        width:80px;
+    }
+
+    .topspace {
+        padding-top: 35px;
+    }
+
+    .topnm {
+        font-weight: bolder;
+    }
+
+    .midspace {
+        padding-top: 10px;
+    }
+
+    .minheight {
+        min-height: 150px;
+    }
+
+    .nm {
+        font-size: 30px;
+        font-weight: 900;
+    }
+
+    .wordbank {
+        padding-top: 5px;
+        color: #c7254e;
+        font-size: 28px;
+    }
+
+    .txtrightans{
+        font-size: 28px;
+    }
+
+    .btnallpoint {
+        min-width: 50px;
+        color: white;
+        background-color: #007ec2;
+        border-radius: 10px;
+        pointer-events: none;
+    }
+
+    .btnbottomtext {
+        position: absolute;
+        bottom: 10px;
+        font-size: 28px;
+        left: 220px;
+    }
+
+    .word1 {   /*aakar ukar words*/
+        margin: 5px;        
+        color: white;
+        background-color: #00468c;
+        font-size: 40px;
+        border-radius: 10px;
+        width:80px;
+        z-index:200;
+    }
+
+    .wordmid {   /*main 2 words*/
+        margin: 5px;
+        color: white;
+        background-color: #007ec2;
+        font-size: 40px;
+        border-radius: 10px;
+        width:80px;
+        z-index:200;
+    }
+
+    .anstxtscore { /*words number*/
+        color: black;
+        font-size: 18px;
+        border-radius: 20px;
+        background-color: white;
+        width: 350px;
+        min-height: 400px;
+        margin-left:30px;
+        margin-top:20px;
+    }
+
+    .bottom-align-text {
+        position: relative;
+        top: 400px;
+        left: -5%;
+    }
+
+    .text {
+        z-index: 100;
+        position: absolute;
+        color: black;
+        font-size: 28px;
+        font-weight: bold;
+        left: 200px;
+        top: 110px;
+    }
+
+    .scorescreen {
+        font-size: 30px;
+        border-radius: 20px;
+    }
+    .scoresup {
+        font-size: initial;
+        z-index: 100;
+        position: relative;
+        color: white;
+        left: -8px;
+        top: -30px;
+    }
+
+
+    #btnplay {
+        margin-bottom: -95%;
+        margin-left: 80%;
+    }
+
+    .btnbottm {
+        margin: 3px;
+        color: white;
+        background-color: #007ec2;
+        font-size: 36px;
+        border-radius: 20px;
+        margin-top:100px;
+        margin-left:25px;
+    }
+
+    .btnbottmppa {
+        margin: 3px;
+        color: white;
+        background-color: #007ec2;
+        font-size: 50px;
+        border-radius: 20px;
+        margin-top:10px;
+    }
+    .imgjokpa{
+        width:450px;
+    }
+}
+
+@media screen and (min-width: 1800px) { /* 67% */
+    #imgtime{
+        width:130px;
+    }
+
+    #imgjokar{
+        top:430px;  
+        left:-210px; 
+    }
+    .imgjok{
+        width:500px;
+    }
+    
+    .imgright{
+        width:150px;
+    }
+
+    .topspace {
+        padding-top: 85px;
+    }
+
+    .topnm {
+        font-weight: bolder;
+        font-size:72px;
+    }
+
+    .midspace {
+        padding-top: 10px;
+    }
+
+    .minheight {
+        min-height: 150px;
+    }
+
+    .nm {
+        font-size: 36px;
+        font-weight: 900;
+    }
+
+    .wordbank {
+        padding-top: 5px;
+        color: #c7254e;
+        font-size: 36px;
+    }
+
+    .txtrightans{
+        font-size: 36px;
+    }
+
+    .btnallpoint {
+        min-width: 50px;
+        color: white;
+        background-color: #007ec2;
+        border-radius: 10px;
+        pointer-events: none;
+    }
+
+    .btnbottomtext {
+        position: absolute;
+        bottom: 10px;
+        font-size: 36px;
+        left: 400px;
+    }
+
+    .word1 {   /*aakar ukar words*/
+        margin: 8px;        
+        color: white;
+        background-color: #00468c;
+        font-size: 70px;
+        border-radius: 10px;
+        width:120px;
+        z-index:200;
+    }
+
+    .wordmid {   /*main 2 words*/
+        margin: 8px;
+        color: white;
+        background-color: #007ec2;
+        font-size: 70px;
+        border-radius: 10px;
+        width:120px;
+        z-index:200;
+    }
+
+    .anstxtscore { /*words number*/
+        color: black;
+        font-size: 18px;
+        border-radius: 20px;
+        background-color: white;
+        width: 580px;
+        min-height: 600px;
+        margin-left:30px;
+        margin-top:20px;
+    }
+
+    .bottom-align-text {
+        position: relative;
+        top: 400px;
+        left: -5%;
+    }
+
+    .text {
+        z-index: 100;
+        position: absolute;
+        color: black;
+        font-size: 34px;
+        font-weight: bold;
+        left: 312px;
+        top: 180px;
+    }
+
+    .scorescreen {
+        font-size: 42px;
+        border-radius: 20px;
+    }
+    .scoresup {
+        font-size: initial;
+        z-index: 100;
+        position: relative;
+        color: white;
+        left: -10px;
+        top: -60px;
+    }
+
+
+    #btnplay {
+        margin-bottom: -151%;
+        margin-left: 95%;
+    }
+
+    .btnbottm {
+        margin: 3px;
+        color: white;
+        background-color: #007ec2;
+        font-size: 60px;
+        border-radius: 20px;
+        margin-top:100px;
+        margin-left:30px;
+    }
+
+    .btnbottmppa {
+        margin: 3px;
+        color: white;
+        background-color: #007ec2;
+        font-size: 60px;
+        border-radius: 20px;
+        margin-top:10px;
+    }
+    .imgjokpa{
+        width:700px;
+    }
+}
