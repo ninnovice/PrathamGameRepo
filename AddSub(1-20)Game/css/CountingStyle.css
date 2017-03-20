@@ -1,0 +1,387 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+body{
+	background-image: url("../images/bodyBg.png");
+	background-size: cover;
+	background-repeat:no-repeat;
+	background-position : center;
+}
+
+.myBtn:focus { outline:0 !important; }
+
+.myBtn{
+	width:80%;
+	margin-top:2%;	
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0px;
+}
+.btnLen{
+	width:100%
+}
+
+#imgBasket{
+	position:relative;
+	z-index:10;
+}
+
+#charImg{
+	min-height:150px;
+	height:30%;
+}
+
+#board{
+	padding-top:10%;
+	padding-bottom:15%;
+	background-image: url("../images/woodBg.png");
+	background-size: cover;
+	background-repeat:no-repeat;
+	background-position : top;
+}
+
+#buttons{
+	border-collapse:separate;
+	border-spacing:10px 10px;
+//	margin-right:50px;
+//	margin-top:50px;
+}
+
+.hasTableText {
+    color: #E65100;
+}
+
+.gotTableText {
+	color: #0091EA;
+}
+.totalTableText{
+	color: #2E7D32;
+}
+
+.spinItem{
+    animation-name: spin;
+    animation-duration: 4000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+#Counter{
+	height:15%;
+	min-height:80px;
+	background-image: url("../images/counterBg.png");
+	background-size: contain;
+	background-repeat:no-repeat;
+	background-position : center;
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+.homeScreen{
+	height:100%;
+}
+.addLevel{
+	padding-top:2%;
+	padding-bottom:2%;
+	text-align:center;
+	background-color:#26A69A;
+	border-radius:50px;
+	border-style: outset;
+	border-width: 15px;
+}
+.subLevel{
+	padding-top:2%;
+	padding-bottom:2%;
+	text-align:center;
+	background-color:#F44336;
+	border-radius:50px;
+	border-style: outset;
+	border-width: 15px;
+}
+.playAgain{
+	padding-top:2%;
+	padding-bottom:2%;
+	color:#ffffff;
+	text-align:center;
+	background-color:#2E7D32;
+	border-radius:50px;
+	border-style: outset;
+	border-width: 15px;
+
+}
+
+@-webkit-keyframes forTen {
+	0%   { background-color: #FFCA28; }
+	49% { background-color: #FFCA28; }
+	50% { background-color: #FFEE58; }
+	99% { background-color: #FFEE58; }
+	100% { background-color: #FFCA28; }
+}
+@-moz-keyframes forTen {
+	0%   { background-color: #FFCA28; }
+	49% { background-color: #FFCA28; }
+	50% { background-color: #FFEE58; }
+	99% { background-color: #FFEE58; }
+	100% { background-color: #FFCA28; }
+}
+@keyframes forTen {
+	0%   { background-color: #FFCA28; }
+	49% { background-color: #FFCA28; }
+	50% { background-color: #FFEE58; }
+	99% { background-color: #FFEE58; }
+	100% { background-color: #FFCA28; }
+}
+.changeColor {
+  -webkit-animation: forTen 1s infinite;
+  -moz-animation:    forTen 1s infinite;
+  animation:         forTen 1s infinite;
+}
+
+@-webkit-keyframes forAns {
+	0%   { background-color: #AED581; }
+	49% { background-color: #AED581; }
+	50% { background-color: #81C784; }
+	99% { background-color: #81C784; }
+	100% { background-color: #AED581; }
+}
+@-moz-keyframes forAns {
+	0%   { background-color: #AED581; }
+	49% { background-color: #AED581; }
+	50% { background-color: #81C784; }
+	99% { background-color: #81C784; }
+	100% { background-color: #AED581; }
+}
+@keyframes forAns {
+	0%   { background-color: #AED581; }
+	49% { background-color: #AED581; }
+	50% { background-color: #81C784; }
+	99% { background-color: #81C784; }
+	100% { background-color: #AED581; }
+}
+.changeColorAns {
+  -webkit-animation: forAns 1s infinite;
+  -moz-animation:    forAns 1s infinite;
+  animation:         forAns 1s infinite;
+}
+
+.item{
+	width:13%;
+	height:13%;
+}
+
+#hasItems {
+	height:40%;
+	background-size: 100% 95%;
+	background-repeat:no-repeat;
+	background-position : top;
+}
+
+#giveItems {
+	height:40%;
+	background-size: 90% 95%;
+	background-repeat:no-repeat;
+	background-position : top;
+}
+
+#giveItem1{
+	position:absolute;
+	left:12%;
+}
+#giveItem2{
+	position:absolute;
+	left:27%;
+}
+#giveItem3{
+	position:absolute;
+	left:42%;
+}
+#giveItem4{
+	position:absolute;
+	left:57%;
+}
+#giveItem5{
+	position:absolute;
+	left:72%;
+}
+#giveItem6{
+	position:absolute;
+	top:18%;
+	left:12%;
+}
+#giveItem7{
+	position:absolute;
+	top:18%;
+	left:27%;
+}
+#giveItem8{
+	position:absolute;
+	top:18%;
+	left:42%;
+}
+#giveItem9{
+	position:absolute;
+	top:18%;
+	left:57%;
+}
+#giveItem10{
+	position:absolute;
+	top:18%;
+	left:72%;
+}
+#giveItem11{
+	position:absolute;
+	top:36%;
+	left:12%;
+}
+#giveItem12{
+	position:absolute;
+	top:36%;
+	left:27%;
+}
+#giveItem13{
+	position:absolute;
+	top:36%;
+	left:42%;
+}
+#giveItem14{
+	position:absolute;
+	top:36%;
+	left:57%;
+}
+#giveItem15{
+	position:absolute;
+	top:36%;
+	left:72%;
+}
+#giveItem16{
+	position:absolute;
+	top:54%;
+	left:12%;
+}
+#giveItem17{
+	position:absolute;
+	top:54%;
+	left:27%;
+}
+#giveItem18{
+	position:absolute;
+	top:54%;
+	left:42%;
+}
+#giveItem19{
+	position:absolute;
+	top:54%;
+	left:57%;
+}
+#giveItem20{
+	position:absolute;
+	top:54%;
+	left:72%;
+}
+
+
+
+#hasItem1{
+	position:absolute;
+	left:10%;
+}
+#hasItem2{
+	position:absolute;
+	left:25%;
+}
+#hasItem3{
+	position:absolute;
+	left:40%;
+}
+#hasItem4{
+	position:absolute;
+	left:55%;
+}
+#hasItem5{
+	position:absolute;
+	left:70%;
+}
+#hasItem6{
+	position:absolute;
+	top:18%;
+	left:10%;
+}
+#hasItem7{
+	position:absolute;
+	top:18%;
+	left:25%;
+}
+#hasItem8{
+	position:absolute;
+	top:18%;
+	left:40%;
+}
+#hasItem9{
+	position:absolute;
+	top:18%;
+	left:55%;
+}
+#hasItem10{
+	position:absolute;
+	top:18%;
+	left:70%;
+}
+#hasItem11{
+	position:absolute;
+	top:48%;
+	left:10%;
+}
+#hasItem12{
+	position:absolute;
+	top:48%;
+	left:25%;
+}
+#hasItem13{
+	position:absolute;
+	top:48%;
+	left:40%;
+}
+#hasItem14{
+	position:absolute;
+	top:48%;
+	left:55%;
+}
+#hasItem15{
+	position:absolute;
+	top:48%;
+	left:70%;
+}
+#hasItem16{
+	position:absolute;
+	top:66%;
+	left:10%;
+}
+#hasItem17{
+	position:absolute;
+	top:66%;
+	left:25%;
+}
+#hasItem18{
+	position:absolute;
+	top:66%;
+	left:40%;
+}
+#hasItem19{
+	position:absolute;
+	top:66%;
+	left:55%;
+}
+#hasItem20{
+	position:absolute;
+	top:66%;
+	left:70%;
+}
