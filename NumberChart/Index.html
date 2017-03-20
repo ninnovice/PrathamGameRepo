@@ -1,0 +1,250 @@
+<html>
+  <head>
+      <title>Add Subtract</title>
+      <link href="css/bootstrap.css" rel="stylesheet" />
+      <script src="scripts/jquery-3.1.1.js"></script>
+      <script src="scripts/bootstrap.js"></script>
+      <script src="scripts/bootbox.min.js"></script>
+      <link href="css/Style.css" rel="stylesheet"/>
+      <link href="css/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet" />
+      <link href="css/bootstrap-select.min.css" rel="stylesheet"/>
+      <script src="scripts/bootstrap-select.min.js"></script>
+      <script src="scripts/AddSubtractGrid.js"></script>
+      <script src="scripts/Utils.js"></script>
+  </head>
+<body>
+ 	<div id="mainpage" class="col-sm-12 col-xs-12 col-md-12 col-lg-12">
+	 <div id="part1" class="col-sm-4 col-xs-4 col-md-4 col-lg-4 part">
+		 <b><br>कैसे<br>खेलोगे?</b>
+	 </div>
+	 <div id="part2" class="col-sm-4 col-xs-4 col-md-4 col-lg-4 part">
+	 	 <b><br>स्तर<br>1</b>
+	 </div>
+	 <div id="part3" class="col-sm-4 col-xs-4 col-md-4 col-lg-4 part">
+	 	 <b><br>स्तर<br>2</b>
+	 </div>
+ 	</div>
+  <div id="container" class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+    <div id="grid" class="col-md-7 col-lg-7">
+      <div id="row0" class="row gridHeight col-md-12 col-lg-12 col-sm-12 col-xs-12 gridAdd">
+        <div class="add grid col-md-1 col0"></div>
+        <div class="add grid col-md-1 col1">1</div>
+        <div class="add grid col-md-1 col2">2</div>
+        <div class="add grid col-md-1 col3">3</div>
+        <div class="add grid col-md-1 col4">4</div>
+        <div class="add grid col-md-1 col5">5</div>
+        <div class="add grid col-md-1 col6">6</div>
+        <div class="add grid col-md-1 col7">7</div>
+        <div class="add grid col-md-1 col8">8</div>
+        <div class="add grid col-md-1 col10">9</div>
+        <div class="add grid col-md-1 col11">10</div>
+        <div class="subtract grid col-md-1 col12">10</div>
+      </div>
+      <div id="row1" class="row gridHeight col-md-12 col-lg-12 col-sm-12 col-xs-12 gridmiddle">
+        <div class=" grid col-md-1 gridAdd col0">1</div>
+        <div class=" grid col-md-1 middle col1">2</div>
+        <div class=" grid col-md-1 middle col2">3</div>
+        <div class=" grid col-md-1 middle col3">4</div>
+        <div class=" grid col-md-1 middle col4">5</div>
+        <div class=" grid col-md-1 middle col5">6</div>
+        <div class=" grid col-md-1 middle col6">7</div>
+        <div class=" grid col-md-1 middle col7">8</div>
+        <div class=" grid col-md-1 middle col8">9</div>
+        <div class=" grid col-md-1 middle col10">10</div>
+        <div class=" grid col-md-1 middle col11">11</div>
+        <div class="subtract grid col-md-1 gridSub">9</div>
+      </div>
+      <div id="row2" class="row gridHeight col-md-12 col-lg-12 col-sm-12 col-xs-12 gridmiddle">
+        <div class=" grid col-md-1 gridAdd col0">2</div>
+        <div class=" grid col-md-1 middle col1 ">3</div>
+        <div class=" grid col-md-1 middle col2 ">4</div>
+        <div class=" grid col-md-1 middle col3 ">5</div>
+        <div class=" grid col-md-1 middle col4 ">6</div>
+        <div class=" grid col-md-1 middle col5 ">7</div>
+        <div class=" grid col-md-1 middle col6 ">8</div>
+        <div class=" grid col-md-1 middle col7 ">9</div>
+        <div class=" grid col-md-1 middle col8 ">10</div>
+        <div class=" grid col-md-1 middle col10 ">11</div>
+        <div class=" grid col-md-1 middle col11 ">12</div>
+        <div class="subtract grid col-md-1 gridSub">8</div>
+      </div>
+      <div id="row3" class="row gridHeight col-md-12 col-lg-12 col-sm-12 col-xs-12 gridmiddle">
+        <div class=" grid col-md-1 gridAdd col0 ">3</div>
+        <div class=" grid col-md-1 middle col1 ">4</div>
+        <div class=" grid col-md-1 middle col2 ">5</div>
+        <div class=" grid col-md-1 middle col3 ">6</div>
+        <div class=" grid col-md-1 middle col4 ">7</div>
+        <div class=" grid col-md-1 middle col5 ">8</div>
+        <div class=" grid col-md-1 middle col6 ">9</div>
+        <div class=" grid col-md-1 middle col7 ">10</div>
+        <div class=" grid col-md-1 middle col8 ">11</div>
+        <div class=" grid col-md-1 middle col10">12</div>
+        <div class=" grid col-md-1 middle col11">13</div>
+        <div class="subtract grid col-md-1 gridSub">7</div>
+      </div>
+      <div id="row4" class="row gridHeight col-md-12 col-lg-12 col-sm-12 col-xs-12 gridmiddle">
+        <div class=" grid col-md-1 gridAdd col0">4</div>
+        <div class=" grid col-md-1 middle col1 ">5</div>
+        <div class=" grid col-md-1 middle col2 ">6</div>
+        <div class=" grid col-md-1 middle col3 ">7</div>
+        <div class=" grid col-md-1 middle col4 ">8</div>
+        <div class=" grid col-md-1 middle col5 ">9</div>
+        <div class=" grid col-md-1 middle col6 ">10</div>
+        <div class=" grid col-md-1 middle col7 ">11</div>
+        <div class=" grid col-md-1 middle col8 ">12</div>
+        <div class=" grid col-md-1 middle col10">13</div>
+        <div class=" grid col-md-1 middle col11">14</div>
+        <div class="subtract grid col-md-1 gridSub">6</div>
+      </div>
+      <div id="row5" class="row gridHeight col-md-12 col-lg-12 col-sm-12 col-xs-12 gridmiddle">
+        <div class=" grid col-md-1 gridAdd col0">5</div>
+        <div class=" grid col-md-1 middle col1 ">6</div>
+        <div class=" grid col-md-1 middle col2 ">7</div>
+        <div class=" grid col-md-1 middle col3 ">8</div>
+        <div class=" grid col-md-1 middle col4 ">9</div>
+        <div class=" grid col-md-1 middle col5 ">10</div>
+        <div class=" grid col-md-1 middle col6 ">11</div>
+        <div class=" grid col-md-1 middle col7 ">12</div>
+        <div class=" grid col-md-1 middle col8 ">13</div>
+        <div class=" grid col-md-1 middle col10">14</div>
+        <div class=" grid col-md-1 middle col11">15</div>
+        <div class="subtract grid col-md-1 gridSub">5</div>
+      </div>
+      <div id="row6" class="row gridHeight col-md-12 col-lg-12 col-sm-12 col-xs-12 gridmiddle">
+        <div class=" grid col-md-1 gridAdd col0">6</div>
+        <div class=" grid col-md-1 middle col1 ">7</div>
+        <div class=" grid col-md-1 middle col2 ">8</div>
+        <div class=" grid col-md-1 middle col3 ">9</div>
+        <div class=" grid col-md-1 middle col4 ">10</div>
+        <div class=" grid col-md-1 middle col5 ">11</div>
+        <div class=" grid col-md-1 middle col6 ">12</div>
+        <div class=" grid col-md-1 middle col7 ">13</div>
+        <div class=" grid col-md-1 middle col8 ">14</div>
+        <div class=" grid col-md-1 middle col10">15</div>
+        <div class=" grid col-md-1 middle col11">16</div>
+        <div class="subtract grid col-md-1 gridSub">4</div>
+      </div>
+      <div id="row7" class="row gridHeight col-md-12 col-lg-12 col-sm-12 col-xs-12 gridmiddle">
+        <div class=" grid col-md-1 gridAdd col0">7</div>
+        <div class=" grid col-md-1 middle col1 ">8</div>
+        <div class=" grid col-md-1 middle col2 ">9</div>
+        <div class=" grid col-md-1 middle col3 ">10</div>
+        <div class=" grid col-md-1 middle col4 ">11</div>
+        <div class=" grid col-md-1 middle col5 ">12</div>
+        <div class=" grid col-md-1 middle col6 ">13</div>
+        <div class=" grid col-md-1 middle col7 ">14</div>
+        <div class=" grid col-md-1 middle col8 ">15</div>
+        <div class=" grid col-md-1 middle col10">16</div>
+        <div class=" grid col-md-1 middle col11">17</div>
+        <div class="subtract grid col-md-1 gridSub">3</div>
+      </div>
+      <div id="row8" class="row gridHeight col-md-12 col-lg-12 col-sm-12 col-xs-12 gridmiddle">
+        <div class=" grid col-md-1 gridAdd col0">8</div>
+        <div class=" grid col-md-1 middle col1 ">9</div>
+        <div class=" grid col-md-1 middle col2 ">10</div>
+        <div class=" grid col-md-1 middle col3 ">11</div>
+        <div class=" grid col-md-1 middle col4 ">12</div>
+        <div class=" grid col-md-1 middle col5 ">13</div>
+        <div class=" grid col-md-1 middle col6 ">14</div>
+        <div class=" grid col-md-1 middle col7 ">15</div>
+        <div class=" grid col-md-1 middle col8 ">16</div>
+        <div class=" grid col-md-1 middle col10">17</div>
+        <div class=" grid col-md-1 middle col11">18</div>
+        <div class="subtract grid col-md-1 gridSub">2</div>
+      </div>
+      <div id="row9" class="row gridHeight col-md-12 col-lg-12 col-sm-12 col-xs-12 gridmiddle">
+        <div class=" grid col-md-1 gridAdd col0">9</div>
+        <div class=" grid col-md-1 middle col1 ">10</div>
+        <div class=" grid col-md-1 middle col2 ">11</div>
+        <div class=" grid col-md-1 middle col3 ">12</div>
+        <div class=" grid col-md-1 middle col4 ">13</div>
+        <div class=" grid col-md-1 middle col5 ">14</div>
+        <div class=" grid col-md-1 middle col6 ">15</div>
+        <div class=" grid col-md-1 middle col7 ">16</div>
+        <div class=" grid col-md-1 middle col8 ">17</div>
+        <div class=" grid col-md-1 middle col10">18</div>
+        <div class=" grid col-md-1 middle col11">19</div>
+        <div class="subtract grid col-md-1 gridSub">1</div>
+      </div>
+      <div id="row10" class="row gridHeight col-md-12 col-lg-12 col-sm-12 col-xs-12 gridmiddle">
+        <div class=" grid col-md-1 gridAdd col0">10</div>
+        <div class=" grid col-md-1 middle col1 ">11</div>
+        <div class=" grid col-md-1 middle col2 ">12</div>
+        <div class=" grid col-md-1 middle col3 ">13</div>
+        <div class=" grid col-md-1 middle col4 ">14</div>
+        <div class=" grid col-md-1 middle col5 ">15</div>
+        <div class=" grid col-md-1 middle col6 ">16</div>
+        <div class=" grid col-md-1 middle col7 ">17</div>
+        <div class=" grid col-md-1 middle col8 ">18</div>
+        <div class=" grid col-md-1 middle col10">19</div>
+        <div class=" grid col-md-1 middle col11">20</div>
+        <div class="subtract grid col-md-1 gridSub">0</div>
+      </div>
+      <div id="row11" class="row gridHeight col-md-12 col-lg-12 col-sm-12 col-xs-12 gridSub">
+        <div class="subtract grid col-md-1 col0">10</div>
+        <div class="subtract grid col-md-1 col1">11</div>
+        <div class="subtract grid col-md-1 col2">12</div>
+        <div class="subtract grid col-md-1 col3">13</div>
+        <div class="subtract grid col-md-1 col4">14</div>
+        <div class="subtract grid col-md-1 col5">15</div>
+        <div class="subtract grid col-md-1 col6">16</div>
+        <div class="subtract grid col-md-1 col7">17</div>
+        <div class="subtract grid col-md-1 col8">18</div>
+        <div class="subtract grid col-md-1 col10">19</div>
+        <div class="subtract grid col-md-1 col11">20</div>
+        <div class="subtract grid col-md-1 "></div>
+      </div>
+    </div>
+    <div id="AddSubtract" class="col-md-5 col-lg-5">
+      <div class="row">
+       <div id="Instructions"></div>
+       <img id="homeGif" class="img-responsive" src="Images/Home.png" onclick="window.location.reload();">
+      </div>
+      <div id="Questions">
+        <div id="addOne" class="answerDivs ">
+          <input id="add1-1" type="number" class="forTransparent" style="text-align:center;"/>
+          <div class="onethird symbol"><span class="sym">+</span></div>
+          <input id="add1-2" type="number" class="forTransparent" style="text-align:center;"/>
+        </div>
+        <div id="addTwo" class="answerDivs ">
+          <input id="add2-1" type="number" class="forTransparent" style="text-align:center;"/>
+          <div class="onethird symbol"><span class="sym">+</span></div>
+          <input id="add2-2" type="number" class="forTransparent" style="text-align:center;"/>
+        </div>
+        <div id="addThree" class="answerDivs ">
+          <input id="add3-1" type="number" class="forTransparent" style="text-align:center;"/>
+          <div class="onethird symbol"><span class="sym">+</span></div>
+          <input id="add3-2" type="number" class="forTransparent" style="text-align:center;"/>
+        </div>
+        <div id="subOne" class="answerDivs ">
+          <input id="sub1-1" type="number" class="forTransparent" style="text-align:center;"/>
+          <div class="onethird symbol"><span class="sym">-</span></div>
+          <input id="sub1-2" type="number" class="forTransparent" style="text-align:center;"/>
+        </div>
+        <div id="subTwo" class="answerDivs ">
+          <input id="sub2-1" type="number" class="forTransparent" style="text-align:center;"/>
+          <div class="onethird symbol"><span class="sym">-</span></div>
+          <input id="sub2-2" type="number" class="forTransparent" style="text-align:center;"/>
+        </div>
+        <div id="subThree" class="answerDivs ">
+          <input id="sub3-1" type="number" class="forTransparent" style="text-align:center;"/>
+          <div class="onethird symbol"><span class="sym">-</span></div>
+          <input id="sub3-2" type="number" class="forTransparent" style="text-align:center;"/>
+        </div>
+        <div id="number" class="col-md-2 col-lg-2 col-sm-2 col-xs-2"></div>
+		<div class="col-md-12 col-lg-12 buttonsDiv">
+			<div class="col-md-4 col-lg-4">
+			<button id="submitAns" type="button" class="btn btn-success">अगला</button>
+			</div>
+			<div class="col-md-4 col-lg-4">
+			<button id="checkAns" type="button" class="btn btn-success">चेक</button>
+			</div>
+		</div>
+      </div>
+    </div>
+    <div id="popup">
+      <div id="message"></div>
+    </div>
+  </div>
+</body>
+</html>

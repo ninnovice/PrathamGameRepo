@@ -1,0 +1,297 @@
+body{
+	background-image: url("../Images/BG.jpg");
+	background-size: cover;
+    background-position: center;
+    background-repeat:no-repeat;
+}
+.gridHeight{
+	height:35px;
+}
+.part{
+	margin-top:10%;
+	background-image:url("../Images/bubble-_Red.png");	
+	background-size: contain;
+    background-position: center;
+    background-repeat:no-repeat;
+	height: 50%;
+	font-size:50px;
+	text-align: center;
+}
+
+.buttonsDiv{
+	margin-top:80%;	
+}
+
+#AddSubtract {
+  height: 100%;
+	width: 45%;
+}
+
+#grid {
+	margin-left: 5%;
+	height:95%;
+	width:50%;
+}
+
+.grid{
+  width: 8.33333333333%;
+      display: inline;
+      padding: 0;
+      text-align: center;
+      height: 32px;
+      font-size: 18px;
+      font-weight: bolder;
+      line-height: 2;
+}
+
+.gridAdd{
+  background-color: #92d050;
+      padding: 0;
+}
+
+.row{
+  height: 32px;
+}
+
+.gridmiddle{
+	 	color: rgb(211, 211, 211);
+        padding: 0;
+        background: white;
+}
+.gridSub{
+  background-color: red;
+      padding: 0;
+      color : white;
+}
+
+.add{
+  background-color: #92d050;
+}
+
+.subtract{
+  background-color: red;
+        color : white;
+}
+
+.animate {
+    -webkit-animation: animate_bg 1s;
+    animation: animate_bg 1s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animate_bg {
+    0%   {background:white;}
+    100% {background:red;}
+}
+
+@-webkit-keyframes animate_bg {
+  0%   {background:white;}
+  100% {background:red;}
+}
+
+#Instructions{
+  height: 10%;
+  padding: 0;
+}
+
+#submitAns{
+	border-radius: 20px;
+	background-color: black;
+	font-size: 200%;
+	margin-left: 0%;
+}
+
+#checkAns{
+	border-radius: 20px;
+	background-color: black;
+	font-size: 200%;
+	margin-left: 5%;
+}
+
+
+#homeGif{
+margin-left: -121%;
+height:100%;
+}
+
+#Questions{
+  height: 90%;
+  padding: 0;
+  text-align: center;
+}
+
+i{
+  font-size: xx-large;
+  font-weight: bolder !important;
+  top: 5px !important;
+}
+
+/*#addOne, #addTwo, #subOne, #subTwo{
+  width: 22%;
+  height: 10%;
+  margin-top: 2%;
+}*/
+
+.wrong{
+  border: thin solid red;
+}
+
+#AddSubtract{
+  text-align:center;
+}
+
+#submit{
+  margin-top: 3%;
+margin-left: -6%;
+}
+
+#addborder, #subborder{
+    width: 50%;
+    margin-left: 25%;
+}
+
+.answer{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#number{
+  	  position: absolute;
+      width: 35%;
+      height: 30%;
+	  min-height:160px;
+      background-image: url("../Images/bubble-_Red.png");
+   	  background-size: cover;
+      background-position: center;
+      background-repeat:no-repeat;
+      border-radius: 60%;
+      margin-left: 30.5%;
+      line-height: 2.5;
+      font-size: 70px;
+      font-weight: bolder;
+      margin-top: 18%;
+}
+
+.answerDivs{
+  height: 45px;
+  width: 30%;
+  position: absolute;
+  border: thin solid white;
+}
+
+#addOne{
+    margin-left: 35%;
+    background: rgb(164, 108, 162);
+}
+
+#addTwo{
+  margin-left: 66%;
+    margin-top: 40%;
+    background: rgb(100, 149, 237);
+}
+
+#addThree{
+  margin-top: 40%;
+  background: rgb(248, 195, 0);
+}
+
+#subOne{
+      margin-top: 18%;
+      background: rgb(231, 120, 23);
+}
+
+#subTwo{
+  margin-left: 66%;
+  margin-top: 18%;
+  background: rgb(230, 103, 134);
+}
+
+#subThree{
+  margin-top: 60%;
+  margin-left: 35%;
+  background: rgb(146, 208, 80);
+}
+
+.onethird{
+    width: 31.333333%;
+    /* height: initial; */
+    display: inline-block;
+
+}
+.sym{
+       font-size:30px;
+       font-weight: bold;
+}
+.symbol{
+	background: #ffffff;
+    height:100%;
+    border-right: thin solid white;
+    border-left: thin solid white;
+}
+
+input{
+  width: 30%;
+  background: transparent;
+border: none;
+height: 98%;
+font-size: 22px;
+}
+
+.onethird input:focus {
+    outline:none !important;
+}
+
+.levelImg {
+	height: 45%;
+	opacity: 0.7;    
+	margin-left: 8%;
+	margin-right: 5%;
+}
+
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.blink_me {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {  
+  50% { opacity: 0.5; }
+}
+
+.ahashakeheartache {
+			-webkit-animation: kf_shake 0.5s 1 linear;
+			-moz-animation: kf_shake 0.5s 1 linear;
+			-o-animation: kf_shake 0.5s 1 linear;
+		}
+		@-webkit-keyframes kf_shake {
+			0% { -webkit-transform: translate(30px); }
+			20% { -webkit-transform: translate(-30px); }
+			40% { -webkit-transform: translate(15px); }
+			60% { -webkit-transform: translate(-15px); }
+			80% { -webkit-transform: translate(8px); }
+			100% { -webkit-transform: translate(0px); }
+		}
+		@-moz-keyframes kf_shake {
+			0% { -moz-transform: translate(30px); }
+			20% { -moz-transform: translate(-30px); }
+			40% { -moz-transform: translate(15px); }
+			60% { -moz-transform: translate(-15px); }
+			80% { -moz-transform: translate(8px); }
+			100% { -moz-transform: translate(0px); }
+		}
+		@-o-keyframes kf_shake {
+			0% { -o-transform: translate(30px); }
+			20% { -o-transform: translate(-30px); }
+			40% { -o-transform: translate(15px); }
+			60% { -o-transform: translate(-15px); }
+			80% { -o-transform: translate(8px); }
+			100% { -o-origin-transform: translate(0px); }
+		}
