@@ -1,0 +1,177 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+
+	    <link rel="stylesheet" href="css/bootstrap.min.css">
+	    <link rel="stylesheet" href="css/CssShake.css">
+	    <link rel="stylesheet" href="css/CountingStyle.css">
+
+		
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/jquery.simple-text-rotator.js"></script>
+
+		<script type="text/javascript" src="code/CountingCode.js"></script>
+		<script type="text/javascript" src="data/CountingData.js"></script>
+
+	</head>
+	
+	<body class="cBody">
+		<audio id="gameSound"></audio>
+		<div class="col-xs-12 col-md-12 col-lg-12 homeScreen" align='center' style="margin-top:0%;">
+			<div class="col-xs-8 col-md-8 col-lg-8 col-xs-offset-2 col-md-offset-2 col-lg-offset-2" style=" text-align:center; margin-top:10%;">
+				<div class="col-xs-6 col-md-6 col-lg-6 addLevel" >
+					<h1><b class="lblAddition">Addition</b></h1>
+				</div>
+				<div class="col-xs-6 col-md-6 col-lg-6 subLevel">
+					<h1><b class="lblSubtract">Subtract</b></h1>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-12 col-md-12 col-lg-12 gameScreen">
+			<div class="backPress" id="homeDiv" style="height:5%; width:3%; margin-left:3%; float:left;">
+				<img class="img-responsive" src="images/homeIcon.png">
+			</div>
+			<div class="backPress" id="backDiv" style="height:5%; width:3%; margin-right:3%; float:right;">
+				<img class="img-responsive" src="images/backIcon.png">
+			</div>
+		</div>
+		<div class="col-xs-3 col-md-3 col-lg-3 gameScreen" align='center' style="margin-top:1%;">
+			<div id="board" class="col-xs-12 col-md-12 col-lg-12 gameScreen">
+				<table border="0" width="80%" style="text-align:right; color:#ffffff; margin-top:3%; font-size:30px;">
+					<tr>
+						<th style="text-align:center; letter-spacing: 10%;"></th>
+						<th style="text-align:center; letter-spacing: 10%;" class="lblTenth" >T</th>
+						<th style="text-align:center; letter-spacing: 10%;" class="lblUnit" >U</th>
+						<th style="text-align:center; letter-spacing: 10%;"></th>
+					</tr>
+					<tr>
+						<td></td>
+						<td class ="addNoOne">
+							<input  type="number" onkeyup="checkNo()" style="background-color:transparent; font-size:30px; width:100%; text-align: center;" id="firstNumT">
+						</td>
+						<td class ="addNoOne">
+							<input type="number" onkeyup="checkNo()" style="background-color:transparent; font-size:30px; width:100%; text-align: center;" id="firstNumU">
+						</td>
+						<td class ="hasTableText lblHas" align="left" style="font-size:25px; font-weight:bold;">
+							&nbsp;Has
+						</td>
+					</tr>
+					<tr>
+						<td class ="quesSign" >+</td>
+						<td class ="addNoTwo">
+							<input type="number" onkeyup="checkNo()" style="background-color:transparent; font-size:30px; width:100%; text-align: center;" id="secondNumT">
+						</td>
+						<td class ="addNoTwo">
+							<input type="number" onkeyup="checkNo()" style="background-color:transparent; font-size:30px; width:100%; text-align: center;" id="secondNumU">
+						</td>
+						<td class ="gotTableText lblGot" align="left" style="font-size:25px; font-weight:bold;">
+							&nbsp;Got
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td class ="addNoAnswer">
+							<input type="number" onkeyup="checkNo()" style="background-color:transparent; font-size:30px; width:100%; text-align: center;" id="AnswerT">
+						</td>
+						<td class ="addNoAnswer">
+							<input type="number" onkeyup="checkNo()" style="background-color:transparent; font-size:30px; width:100%; text-align: center;" id="AnswerU">
+						</td>
+						<td class ="totalTableText lblTotal" align="left" style="font-size:25px; font-weight:bold;">
+							&nbsp;Total
+						</td>
+					</tr>
+				</table>
+				<div id="bunchSentence" style="margin-top:1%; font-size:25px; color:#ECEFF1; text-align: center; font-weight:bold;"></div>
+
+				<table id="buttons" width="90%" style="text-align:center; color:#ECEFF1; margin-top:1%; font-size:25px;">
+					<tr>
+						<td>
+							<input type="button" value="+" class="btn-primary btn-lg myBtn btnLen myButtons" id="giveBtn" style="font-size:25px;">
+						</td>
+						<td>
+							<input type="button" value="-" class="btn-danger btn-lg myBtn btnLen myButtons" id="takeBtn" style="font-size:25px;">
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<input type="button" value="हो गया" style="font-size:25px; font-weight:bold;" class="ansSubmit btn-success btn-lg myBtn myButtons" id="submitAns">
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div class="col-xs-9 col-md-9 col-lg-9 gameScreen" style="font-size:30px;">
+			<div class="col-xs-12 col-md-12 col-lg-12" style="font-size:30px; margin-top:1%; color:#ECEFF1;" id="displayQuestion">
+			</div>
+
+			<div class="col-xs-12 col-md-12 col-lg-12" style="margin-top:2%;">
+				<div id="Counter" class="col-xs-2 col-md-2 col-lg-2" style="font-size:30px; padding-top:2%;">
+					<span id="scoreCounter" style="margin-top:50px; margin-left:30%;">0</span>
+				</div>
+				<div class="col-xs-6 col-md-6 col-lg-6">
+					<img id="charImg" class="img-responsive shake-slow monkeyImg">
+				</div>
+			</div>
+
+			<div class="col-xs-12 col-md-12 col-lg-12" style="margin-top:1%;">
+				<div class="col-xs-6 col-md-6 col-lg-6" id="hasItems">
+					<div class="item" id="hasItem1"><img id="imgItem1" class="img-responsive shake-slow"></div>
+					<div class="item" id="hasItem2"><img id="imgItem2" class="img-responsive shake-slow"></div>
+					<div class="item" id="hasItem3"><img id="imgItem3" class="img-responsive shake-slow"></div>
+					<div class="item" id="hasItem4"><img id="imgItem4" class="img-responsive shake-slow"></div>
+					<div class="item" id="hasItem5"><img id="imgItem5" class="img-responsive shake-slow"></div>
+					<div class="item" id="hasItem6"><img id="imgItem6" class="img-responsive shake-slow"></div>
+					<div class="item" id="hasItem7"><img id="imgItem7" class="img-responsive shake-slow"></div>
+					<div class="item" id="hasItem8"><img id="imgItem8" class="img-responsive shake-slow"></div>
+					<div class="item" id="hasItem9"><img id="imgItem9" class="img-responsive shake-slow"></div>
+					<div class="item" id="hasItem10"><img id="imgItem10" class="img-responsive shake-slow"></div>
+					<div class="item" id="hasItem11"><img id="imgItem11" class="img-responsive shake-slow"></div>
+					<div class="item" id="hasItem12"><img id="imgItem12" class="img-responsive shake-slow"></div>
+					<div class="item" id="hasItem13"><img id="imgItem13" class="img-responsive shake-slow"></div>
+					<div class="item" id="hasItem14"><img id="imgItem14" class="img-responsive shake-slow"></div>
+					<div class="item" id="hasItem15"><img id="imgItem15" class="img-responsive shake-slow"></div>
+					<div class="item" id="hasItem16"><img id="imgItem16" class="img-responsive shake-slow"></div>
+					<div class="item" id="hasItem17"><img id="imgItem17" class="img-responsive shake-slow"></div>
+					<div class="item" id="hasItem18"><img id="imgItem18" class="img-responsive shake-slow"></div>
+					<div class="item" id="hasItem19"><img id="imgItem19" class="img-responsive shake-slow"></div>
+					<div class="item" id="hasItem20"><img id="imgItem20" class="img-responsive shake-slow"></div>
+				</div>
+				<div class="col-xs-6 col-md-6 col-lg-6" id="giveItems">
+					<div class="item giveItemBg" id="giveItem1"><img id="imgAddItem1" class="img-responsive shake-slow"></div>
+					<div class="item giveItemBg" id="giveItem2"><img id="imgAddItem2" class="img-responsive shake-slow"></div>
+					<div class="item giveItemBg" id="giveItem3"><img id="imgAddItem3" class="img-responsive shake-slow"></div>
+					<div class="item giveItemBg" id="giveItem4"><img id="imgAddItem4" class="img-responsive shake-slow"></div>
+					<div class="item giveItemBg" id="giveItem5"><img id="imgAddItem5" class="img-responsive shake-slow"></div>
+					<div class="item giveItemBg" id="giveItem6"><img id="imgAddItem6" class="img-responsive shake-slow"></div>
+					<div class="item giveItemBg" id="giveItem7"><img id="imgAddItem7" class="img-responsive shake-slow"></div>
+					<div class="item giveItemBg" id="giveItem8"><img id="imgAddItem8" class="img-responsive shake-slow"></div>
+					<div class="item giveItemBg" id="giveItem9"><img id="imgAddItem9" class="img-responsive shake-slow"></div>
+					<div class="item giveItemBg" id="giveItem10"><img id="imgAddItem10" class="img-responsive shake-slow"></div>
+					<div class="item giveItemBg" id="giveItem11"><img id="imgAddItem11" class="img-responsive shake-slow"></div>
+					<div class="item giveItemBg" id="giveItem12"><img id="imgAddItem12" class="img-responsive shake-slow"></div>
+					<div class="item giveItemBg" id="giveItem13"><img id="imgAddItem13" class="img-responsive shake-slow"></div>
+					<div class="item giveItemBg" id="giveItem14"><img id="imgAddItem14" class="img-responsive shake-slow"></div>
+					<div class="item giveItemBg" id="giveItem15"><img id="imgAddItem15" class="img-responsive shake-slow"></div>
+					<div class="item giveItemBg" id="giveItem16"><img id="imgAddItem16" class="img-responsive shake-slow"></div>
+					<div class="item giveItemBg" id="giveItem17"><img id="imgAddItem17" class="img-responsive shake-slow"></div>
+					<div class="item giveItemBg" id="giveItem18"><img id="imgAddItem18" class="img-responsive shake-slow"></div>
+					<div class="item giveItemBg" id="giveItem19"><img id="imgAddItem19" class="img-responsive shake-slow"></div>
+					<div class="item giveItemBg" id="giveItem20"><img id="imgAddItem20" class="img-responsive shake-slow"></div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="col-xs-12 col-md-12 col-lg-12 gameOver">
+			<center>
+				<h1 style="font-size:80px; margin-top:6%; font-weight:bold; color:#ffffff" class="lblGameOver">Game Over</h1>
+			</center>
+			<div class="col-xs-6 col-md-6 col-lg-6 col-xs-offset-3 col-md-offset-3 col-lg-offset-3 backPress playAgain" style=" text-align:center; margin-top:6%;">
+				<h1><b class="lblPlayAgain">Play Again</b></h1>
+			</div>
+		</div>
+	</body>
+</html>
