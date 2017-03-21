@@ -40,11 +40,11 @@
    background-attachment: fixed;
    width: 100%;
 }
-.body1 {
-            background-image: url('Images/Background.png');
-        }
+    .body1 {
+        background-image: url('../Images/Background.png');
+    }
 .body2 {
-            background-image: url('Images/Awaz-Chitra.png');
+            background-image: url('../Images/Awaz-Chitra.png');
         }
 
 .btnclr{
@@ -180,10 +180,10 @@ position: relative;
    width: 100%;
 }
 .body1 {
-            background-image: url('Images/Background.png');
+            background-image: url('../Images/Background.png');
         }
 .body2 {
-            background-image: url('Images/Awaz-Chitra.png');
+            background-image: url('../Images/Awaz-Chitra.png');
         }
 
 .btnclr{
@@ -318,10 +318,10 @@ position: relative;
    width: 100%;
 }
 .body1 {
-            background-image: url('Images/Background.png');
+            background-image: url('../Images/Background.png');
         }
 .body2 {
-            background-image: url('Images/Awaz-Chitra.png');
+            background-image: url('../Images/Awaz-Chitra.png');
         }
 
 .btnclr{
@@ -455,10 +455,10 @@ position: relative;
    width: 100%;
 }
 .body1 {
-            background-image: url('Images/Background.png');
+            background-image: url('../Images/Background.png');
         }
 .body2 {
-            background-image: url('Images/Awaz-Chitra.png');
+            background-image: url('../Images/Awaz-Chitra.png');
         }
 
 .btnclr{
@@ -592,10 +592,10 @@ position: relative;
    width: 100%;
 }
 .body1 {
-            background-image: url('Images/Background.png');
+            background-image: url('../Images/Background.png');
         }
 .body2 {
-            background-image: url('Images/Awaz-Chitra.png');
+            background-image: url('../Images/Awaz-Chitra.png');
         }
 
 .btnclr{
@@ -729,10 +729,10 @@ position: relative;
    width: 100%;
 }
 .body1 {
-            background-image: url('Images/Background.png');
+            background-image: url('../Images/Background.png');
         }
 .body2 {
-            background-image: url('Images/Awaz-Chitra.png');
+            background-image: url('../Images/Awaz-Chitra.png');
         }
 .btnclr{
     color: black;
