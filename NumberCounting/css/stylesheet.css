@@ -1,0 +1,439 @@
+@media screen and (min-width: 400px) {
+    body{font-size: 13px;}
+    .levelOneMsgStyle{
+      font-size: 18px;
+    }
+    .optionButtons{
+      font-size: 23px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    body{font-size: 15px;}
+    .levelOneMsgStyle{
+      font-size: 22px;
+    }
+    .levelTag,.optionButtons,#msg1imagescount,#msg2imagescount,#msg3imagescount{
+      font-size: 24px;
+    }
+ 
+}
+@media screen and (min-width: 1100px) {
+    body{font-size: 18px;}
+    .levelTag,.optionButtons,#msg1imagescount,#msg2imagescount,#msg3imagescount{
+      font-size: 25px;
+    }
+    .optionButtons > Div{
+      padding-top: 23%;
+    }
+}
+
+#countingGame {
+    background-position: center;
+    background-size: cover;
+    background-repeat:no-repeat;
+    position: fixed;
+    margin-left: 0%;
+    margin-right:0%;
+    margin-top:  0%;
+    width:100%;
+    height:100%;
+}
+
+.levelButtonsImagesRow{
+    margin-top: 23%;
+}
+
+.levelOneButtonDiv{
+    width: 19%;      left: 11%;
+}
+
+.levelTwoButtonDiv{
+    width: 19%;      left: 31%;
+}
+
+#levelOnePage,#levelTwoPage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.homeIcon{
+  width: 40%;
+}
+
+.levelTag {
+  box-shadow: 1px -1px 0px 0px #8a2a21;
+  width: 22%;
+  background:linear-gradient(to bottom, #c62d1f 5%, #1709db 100%);
+  background-color:#c62d1f;
+  border-radius:34px;
+  border:0px solid #d02718;
+  display:inline-block;
+  color:#ffffff;
+  font-family:Georgia;
+  font-weight:bold;
+  text-decoration:none;
+  text-shadow:0px 0px 0px #810e05;
+  margin-right: 3%;
+  top:3;
+}
+
+.SubmitButtonStyle {
+  width: 74%;
+}
+
+.Speaker{
+  width: 74%;
+}
+
+.divheight{
+  height: 70%;
+}
+
+.fitImage {
+    height:98%;
+    width: 98%;
+    background-position: center;
+    background-size: cover;
+    background-repeat:no-repeat;
+}
+
+.objectSize {
+    height:80%;
+    width: 80%;
+    background-position: center;
+    background-size: cover;
+    background-repeat:no-repeat;
+}
+
+
+.levelOneMsgBox{
+  height: 8%;
+}
+
+.levelOneMsgStyle{
+   color: white;
+   font-weight: bold;
+   background-repeat: no-repeat;
+   text-align: center;
+   border-radius: 35px;
+   height: 100%;
+   padding-top: 1%;
+}
+
+.level1CharacterObjectsBox{
+  position: relative;
+  width: 100%;
+  height: 95%;
+  top:4%;
+}
+
+.levelTwoMsgBox{
+  position: relative;
+  width: 100%;
+  height: 25%; 
+}
+
+.levelTwoMsgStyle{
+   color: white;
+   font-weight: bold;
+   background-repeat: no-repeat;
+   border-radius: 35px;
+   border: 1px solid darkgreen;
+   height: 33%;
+}
+
+.level2CharacterObjectsBox{
+  position: relative;
+  width: 100%;
+  height: 90%;
+}
+
+.optionButtons{
+  height: 95%;
+  text-align: center;
+  margin-left: 5%;
+  color: #ECEFF1;
+  background-color: black;
+  border-radius: 10px;
+  width: 57px;
+  font-weight: bold;
+}
+
+.blink_me {
+ animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {  
+ 50% { opacity: 0.5; }
+}
+
+
+#level1GiveObjectInDiv,#level2GiveObjectInDiv {
+    padding: 10px;
+}
+#level1GiveObjectFromDiv,#level2GiveObjectFromDiv {
+    padding: 10px;
+}
+
+
+
+
+
+/*Category 1 -- Girl Ice Cream         */
+#Category1GiveObjectIn{
+  padding-top: 7%;    padding-right: 2%
+}
+
+.Category1GiveObjectInRowHeight{  height: 30%;
+}
+.Category1GiveObjectFromRowHeight{  height: 24%;
+}
+
+.Category1GiveObjectFromImgDiv{                                          
+    padding: 0%;
+    width: 17%;
+    height: 96%;
+}
+.Category1GiveObjectFromRow1Position{
+  top: 3%;  left: 5%;
+}
+.Category1GiveObjectFromRow2Position{
+  top: -4%;  left: 5%;
+}
+
+.Category1GiveObjectInImgDiv{                                                     
+    padding: 0%;
+    width: 17%;
+    height: 96%;
+}
+.Category1GiveObjectInRow1Position{
+    top: -2%;    left: 13%;
+}
+.Category1GiveObjectInRow2Position{
+    top: -4%;   left: 13%;
+}
+
+
+/* Category 2 : Elephant..*/
+#Category2GiveObjectIn{
+    padding-top: 7%;
+    padding-right: 2%
+}
+.Category2GiveObjectInRowHeight{  height: 30%;
+}
+.Category2GiveObjectFromRowHeight{  height: 24%;
+}
+
+.Category2GiveObjectFromImgDiv{                                                     
+    padding: 0%;
+    width: 19%;
+    height: 96%;
+}
+.Category2GiveObjectFromRow1Position{
+  top: 5%;  left: 6%;
+}
+.Category2GiveObjectFromRow2Position{
+  top: 0%;  left: 6%;
+}
+
+.Category2GiveObjectInImgDiv{                                                     
+    padding: 0%;
+    width: 17%;
+    height: 79%;
+}
+.Category2GiveObjectInRow1Position{
+    top: 0%;    left: 10%;
+}
+.Category2GiveObjectInRow2Position{
+    top: -8%;   left: 10%;
+}
+
+
+
+/* Category 3 : Monkey--Banana..*/
+#Category3GiveObjectIn{
+    padding-top: 7%;
+    padding-right: 2%
+}
+.Category3GiveObjectInRowHeight{  height: 27%;
+}
+
+.Category3GiveObjectFromRowHeight{  height: 23%;
+}
+.Category3GiveObjectFromImgDiv{                                                     
+    padding: 0%;
+    width: 17%;
+    height: 96%;
+}
+.Category3GiveObjectFromRow1Position{
+  top: 5%;  left: 5%;
+}
+.Category3GiveObjectFromRow2Position{
+  top: -2%;  left: 5%;
+}
+
+.Category3GiveObjectInImgDiv{                                                     
+    padding: 0%;
+    width: 17%;
+    height: 96%;
+}
+.Category3GiveObjectInRow1Position{
+    top: 0%;    left: 10%;
+}
+.Category3GiveObjectInRow2Position{
+    top: -5%;   left: 10%;
+}
+
+
+
+/* Category 4 : rabbit--carrot..*/
+#Category4GiveObjectIn{
+    padding-top: 7%;
+    padding-right: 2%
+}
+.Category4GiveObjectInRowHeight{  height: 14%;
+}
+.Category4GiveObjectFromRowHeight{  height: 14%;
+}
+.Category4GiveObjectFromImgDiv{                                                     
+    padding: 0%;
+    width: 17%;
+    height: 96%;
+}
+.Category4GiveObjectFromRow1Position{
+  top: 15%;  left: 8%;
+}
+.Category4GiveObjectFromRow2Position{
+  top: 20%;  left: 8%;
+}
+
+.Category4GiveObjectInImgDiv{                                                     
+    padding: 0%;
+    width: 17%;
+    height: 96%;
+}
+.Category4GiveObjectInRow1Position{
+    top: 10%;    left: 10%;
+}
+.Category4GiveObjectInRow2Position{
+      top: 17%;    left: 10%;
+}
+
+
+
+/* Category 5 : Cat Fish..*/
+.Category5Character{
+    padding-top: 37%;
+    margin-top: -16%;
+}
+#Category5GiveObjectIn{
+    padding-top: 7%;
+    padding-right: 2%
+}
+.Category5GiveObjectInRowHeight{  height: 19%;
+}
+
+.Category5GiveObjectFromRowHeight{  height: 19%;
+}
+.Category5GiveObjectFromImgDiv{                                                     
+    padding: 0%;
+    width: 18%;
+    height: 96%;
+}
+.Category5GiveObjectFromRow1Position{
+  top: 15%;  left: 8%;
+}
+.Category5GiveObjectFromRow2Position{
+  top: 20%;  left: 8%;
+}
+
+
+.Category5GiveObjectInImgDiv{                                                     
+    padding: 0%;
+    width: 17%;
+    height: 96%;
+}
+.Category5GiveObjectInRow1Position{
+   top: 6%;    left: 10%;
+}
+.Category5GiveObjectInRow2Position{
+   top: 10%;    left: 10%;
+}
+
+
+/* Category 6 : Mother Rose..*/
+.Category6Character{
+  width: 74%;
+}
+#Category6GiveObjectIn{
+    padding-top: 7%;
+    padding-right: 2%
+}
+.Category6GiveObjectInRowHeight{  height: 19%;
+}
+
+.Category6GiveObjectFromRowHeight{  height: 19%;
+}
+.Category6GiveObjectFromImgDiv{                                                     
+    padding: 0%;
+    width: 18%;
+    height: 96%;
+}
+.Category6GiveObjectFromRow1Position{
+  top: 15%;  left: 8%;
+}
+.Category6GiveObjectFromRow2Position{
+  top: 20%;  left: 8%;
+}
+
+
+.Category6GiveObjectInImgDiv{                                                     
+    padding: 0%;
+    width: 17%;
+    height: 96%;
+}
+.Category6GiveObjectInRow1Position{
+   top: 6%;    left: 10%;
+}
+.Category6GiveObjectInRow2Position{
+   top: 10%;    left: 10%;
+}
+
+
+
+/* Category 7 : GrandMother Apple..*/
+#Category7GiveObjectIn{
+    padding-top: 7%;
+    padding-right: 2%
+}
+.Category7GiveObjectInRowHeight{  height: 19%;
+}
+
+.Category7GiveObjectFromRowHeight{  height: 19%;
+}
+.Category7GiveObjectFromImgDiv{                                                     
+    padding: 0%;
+    width: 18%;
+    height: 96%;
+}
+.Category7GiveObjectFromRow1Position{
+  top: 15%;  left: 8%;
+}
+.Category7GiveObjectFromRow2Position{
+  top: 20%;  left: 8%;
+}
+
+
+.Category7GiveObjectInImgDiv{                                                     
+    padding: 0%;
+    width: 17%;
+    height: 96%;
+}
+.Category7GiveObjectInRow1Position{
+   top: 4%;    left: 10%;
+}
+.Category7GiveObjectInRow2Position{
+   top: 6%;    left: 10%;
+}
