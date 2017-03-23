@@ -1,0 +1,64 @@
+<html>
+	<head>
+	<title>Crumbling Sentences</title>
+	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.min.css"/>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script src = "js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css"/>
+    <link rel="stylesheet" type="text/css" href="css/magic.css"/>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+	<script type="text/javascript" src="data/CrumblingSentencesJSONData_M.js"></script>
+	<script type="text/javascript" src="data/CrumblingHardCodedData.js"></script>
+	<script type="text/javascript" src="code/newScript.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/stylesheet.css"/>
+	</head>
+	<body id="background" onload="Crumbling.init();">
+		<div id="coverPage">
+		<!-- 	<img id="BackImg" class="img-responsive col-md-12 col-xs-12 col-sm-12 col-lg-12"/> -->
+			<img id="playGame" src="images/playButton.png" class="img-responsive col-md-2 col-xs-2 col-sm-2 col-lg-2" onclick="Crumbling.addSentence();"/>
+			<!-- <button id="playGame" class="btn-lg" onclick="Crumbling.addSentence();"></button> -->
+		</div>
+		<div id="gamePage">
+			<div id="game" class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+				<div id="soundDiv" class="col-lg-2 col-md-2 col-xs-2 col-sm-2">
+					<img id="volume" src="images/Music_Play.png" class="img-responsive col-lg-12 col-md-12 col-xs-12 col-sm-12" onclick="Crumbling.playSoundAgain();">
+					<img id="stop" src="images/Music_Stop.png" class="img-responsive col-lg-12 col-md-12 col-xs-12 col-sm-12" onclick="Crumbling.stopSound();">
+				</div>
+				<div id="containment-wrapper" >
+					<div id="divContainingSentence"  style="height:100px;padding:0px;">
+						<div id="correctsentence" ></div>
+						<div id="sentence"></div>
+					</div>
+				</div>
+				<!-- <div id="outerDiv"  style="max-height:45%;margin-top:20%"></div> -->
+			</div>
+			<img id="home" src="images/home.png" class="img-responsive col-lg-offset-10 col-md-offset-10 col-xs-offst-10 col-sm-offset-10 left col-lg-2 col-md-2 col-xs-2 col-sm-2 left" onclick="location.reload(true);" />
+			<img id="breakWords" src="images/hammer.png" class="blink_me img-responsive col-lg-offset-10 col-md-offset-10 col-xs-offst-10 col-sm-offset-10 left col-lg-1 col-md-1 col-xs-1 col-sm-1 left" onclick="Crumbling.addSpaceForSentences();" />
+			<img id="next" src="images/backbutton.png" class="img-responsive  col-lg-offset-10 col-md-offset-10 col-xs-offst-10 col-sm-offset-10 left col-lg-1 col-md-1 col-xs-1 col-sm-1 left" onclick="Crumbling.next();" />
+			<img id="joker" src="images/joker.png" class="col-lg-6 col-md-6 col-xs-6 col-sm-6 col-lg-offset-3 col-md-offset-3 col-xs-offst-3 col-sm-offset-3 img-responsive" style="height:215px;">
+			<div id="myModal" class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+				  <!-- Modal content -->
+				  <div class="myModalContent">
+				  	<div id="messageBox" class="col-lg-6 col-md-6 col-xs-6 col-sm-6 col-lg-offset-3 col-md-offset-3 col-xs-offst-3 col-sm-offset-3">
+					  	<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6">
+					  		<!-- <p id="showMessage"></p> -->
+					  		<img id="joker" src="images/joker.png" class="col-lg-12 col-md-12 col-xs-12 col-sm-12 img-responsive" style="height:215px;" onclick="Crumbling.next();">
+					  	</div>
+					  	<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6" >
+					  		<img id="nextButton" src="css/next.jpg" class="col-lg-10 col-md-10 col-xs-10 col-sm-10 img-responsive" onclick="Crumbling.next();">
+					  	</div>
+				  	</div>
+				  </div>
+			</div>
+			<div id="lastmsg" style="font-size:45px;text-align:center" class="col-lg-6 col-md-6 col-xs-6 col-sm-6 col-lg-offset-3 col-md-offset-3 col-xs-offst-3 col-sm-offset-3">Game Finished.
+			</div>
+			<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+				<audio id="playSound"></audio>
+				<audio id="playSentence"></audio>
+			</div>
+		</div>
+	</body>
+</html>
