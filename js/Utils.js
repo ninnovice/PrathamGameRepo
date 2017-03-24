@@ -1,0 +1,2 @@
+﻿	var Utils=[];
+	Utils.Path="";
