@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+
+<title>शब्द यात्रा</title>  
+	<script src="../js/Utils.js"></script>
+	<script src="Scripts/angular.js"></script>
+    <script src="Scripts/jquery.min.js"></script>
+    <script src="Scripts/jquery-ui.js"></script>
+    <link href="Scripts/jquery-ui.css" rel="stylesheet" />
+    <link href="Scripts/bootstrap.css" rel="stylesheet" />
+    <script src="Scripts/wordlist.js"></script>
+	<script src="Scripts/ngDraggable.js"></script>
+	<script src="Scripts/CombApp.js"></script>
+	<script src="Scripts/jquery.ui.touch-punch.min.js"></script>
+    <link href="Scripts/mobileui.css" rel="stylesheet" />
+    
+</head>
+	<body class="background2"  ng-app="CombApp">	
+	    <audio id="gameSound"></audio>
+
+	<div ng-controller="CombController as comb" >
+    <div ng-show="gamescreen=='game'">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 topspace">   
+                <div class="row midspace" id="2" ng-show="comb.screen=='screen-2'">                    
+                        <div class="row text-center">
+                            <div class="btn word1" ng-drag="true" ng-drag-data="word" data-allow-transform="true" ng-repeat="word in comb.UkarWords | limitTo:6"><sup class="scoresup">{{comb.ReturnPoint(word)}}&nbsp;&nbsp;</sup>{{word}}</div>
+                        </div>
+                        <div class="row text-center midspace">
+                            <ul id="sortable">
+                                <li id="li0" class="btn wordmid" ng-drop="true" ng-drop-success="onDrop(0,$data)">
+									<sup class="scoresup">{{comb.ReturnPoint(comb.word[0])}}</sup><span>{{words[0]}}</span>
+								</li>
+                                <li id="li1" class="btn wordmid" ng-drop="true" ng-drop-success="onDrop(1,$data)">
+									<sup class="scoresup">{{comb.ReturnPoint(comb.word[1])}}</sup><span>{{words[1]}}</span>
+								</li>
+                                <li id="li2" class="btn wordmid" ng-drop="true" ng-drop-success="onDrop(2,$data)" ng-show="words.length>2">
+									<sup class="scoresup">{{comb.ReturnPoint(comb.word[2])}}</sup><span>{{words[2]}}</span>
+								</li>
+                            </ul>
+                        </div>
+                        <div class="row text-center midspace">
+                            <div class="btn word1" ng-drag="true" ng-drag-data="word" data-allow-transform="true" ng-repeat="word in comb.UkarWords | limitTo:6:6"><sup class="scoresup">{{comb.ReturnPoint(word)}}</sup>{{word}}</div>
+                        </div>
+                        <div class="row text-center midspace">
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4"></div>
+                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                <p class="img-responsive btn" ng-click="comb.UndoWord()"><img class="imgright" src="Content/Button_02.png" /></p>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                <p class="img-responsive btn" ng-click="comb.Check()"><img class="imgright" src="Content/Button_01.png" /> {{comb.answer}}</p>
+                            </div>                             
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4"></div>                        
+                        </div>
+                        <div class="row text-center midspace">
+                            <button class="btn btnbottm text-center" ng-click="comb.changeword()">नये अक्षरे</button>                            
+                        </div>
+                </div>       
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+            <div class="text-center bottom-align-text" id="imgjokar">                
+                <img id="R1" ng-show="joker=='normal'" class="imgjok" />
+                <img id="W2" ng-show="joker=='right'" class="imgjok"  />
+                <img id="W3" ng-show="joker=='error'" class="imgjok"  />
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 topspace">
+           <div class="text-center minheight">
+               <span class="nm">​समय</span><br />
+               <img id="imgtime" src="Content/Stop-Watch.png"/><p class="text">{{pad(maxsec,3)}}</p>
+           </div>
+                <div class="text-center anstxtscore">
+                    <div class="wordbank">शब्दकोष</div>
+                    <div class="row ScrollStyle" >
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 " ng-repeat="score in comb.pointlist">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 border-grid txtrightans">{{score.word}}</div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 border-grid txtrightans">{{score.points}}</div>
+                        </div>
+                    </div>
+                    <div class="btnbottomtext">
+                        <span>कुल अंक&nbsp;&nbsp;</span>
+                        <button class="btnallpoint">{{comb.overallpoints}}</button>
+                    </div>
+                    <p><span class="anstxt h1">{{comb.word2}}</span></p>
+                </div>          
+        </div>
+    </div>
+    <div id="playagain" class="text-center" ng-show="gamescreen=='score'">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><br />
+            <div class="row h1 text-center topnm topspace">कुल अंक</div><br />
+            <div class="row"><button class="btn btnbottmppa text-center">{{comb.overallpoints}}</button></div><br />            
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4"></div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4"><span class="text-center"><img class="imgjokpa" src="Content/joker_04.png" /></span></div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4"></div>
+            </div>
+            <div class="row"><span class="btn btn-info scorescreen" ng-click="comb.playAgain()">PLAY AGAIN</span></div>   
+        </div>     
+    </div>
+        <script type="text/javascript">
+    $(function () {
+        $("#sortable").sortable({
+            update: function (event, ui) {
+            }
+        });
+        $("#sortable").disableSelection();
+    });
+        </script>  
+</div>
+        
+</body>
+
+</html>
