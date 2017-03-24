@@ -11,6 +11,7 @@ var wordid = "0";
         $("#imgscore").attr("src", Utils.Path + "Images/Score.png");
         $("#imghome").attr("src", Utils.Path + "Images/Home.png");
         $("#imgarrow").attr("src", Utils.Path + "Images/Arrow.png");
+		$("#imgarrow2").attr("src", Utils.Path + "Images/Arrow.png");
         
     }
 
