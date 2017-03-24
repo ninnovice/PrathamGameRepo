@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>आकार</title>
+  <meta name="description" content="Signature Pad - HTML5 canvas based smooth signature drawing using variable width spline interpolation.">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+
+ <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+ <script type="text/javascript" src="js/jquery.min.js"></script>
+ <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+ <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+ <script type="text/javascript" src="js/bootstrap.min.js"></script>
+ <script type="text/javascript" src="../js/Utils.js"></script>
+ <link rel="stylesheet" href="css/signature-pad.css">
+</head>
+<body>
+ <div id="container">
+ 	<div id="heading">
+ 		<div id="home" class="col-sm-2 col-xs-2 col-md-2 col-lg-2">
+     		<img id="HomeImage" src="" class="img-responsive" onclick="window.location.reload()">
+ 		</div>
+ 		<div id="outerScrollbar" class="col-sm-10 col-xs-10 col-md-10 col-lg-10">
+		<div class="forBorder">
+		<div id="prevArrow" class="col-sm-1 col-xs-1 col-md-1 col-lg-1" style="width:11.333333%;" onclick="previousScroll()">
+			<img id="BackScroll" src="" class="img-responsive">
+		</div>
+		<div id="scrollbar" class="col-sm-9 col-xs-9 col-md-9 col-lg-9"></div>
+		<div id="nextArrow" class="col-sm-1 col-xs-1 col-md-1 col-lg-1" style="width:11.333333%;" onclick="nextScroll()">
+			<img id="NextScroll" src="" class="img-responsive">
+		</div>
+		</div>
+ 		</div>
+<!--  		<div id="back" class="col-sm-2 col-xs-2 col-md-2 col-lg-2">
+     		<img id="image" src="img/backbutton.png" class="img-responsive" onclick="window.location.reload()" style="float:right;"></img>
+ 		</div> -->
+ 	</div>
+ <div id="mainpage" class="col-sm-12 col-xs-12 col-md-12 col-lg-12">
+	 <div id="part1" class="col-sm-4 col-xs-4 col-md-4 col-lg-4" style="margin-top:5%;">
+		 <img id="Aakar" class="levelImg img-responsive" src="">
+	 <div style="text-align:center;color:rgb(243, 174, 0)"><h1>आकार</h1></div>
+	 </div>
+	 <div id="part2" class="col-sm-4 col-xs-4 col-md-4 col-lg-4" style="margin-top:5%;">
+	 	 <img id="Akshar" class="levelImg img-responsive" src="">
+	 	 <div style="text-align:center;color:rgb(132, 194, 37);"><h1>अक्षर</h1></div>
+	 </div>
+	 <div id="part3" class="col-sm-4 col-xs-4 col-md-4 col-lg-4" style="margin-top:5%;">
+	 	 <img id="Ank" class="levelImg img-responsive" src="">
+	 	 <div style="text-align:center;color:rgb(228, 82, 145);"><h1>अंक</h1></div>
+	 </div>
+ </div>
+ <div id="level1">
+    <div id="signature-pad" class="m-signature-pad">
+        <div id="canvas-body" class="m-signature-pad--body">             
+            <div class="col-sm-6 col-xs-6 col-md-6 col-lg-6 blockheight">
+                <div id="showGif1" class="showGif">
+                	<img src="" class="img-responsive soundButtons" data-action="soundStart">
+                	<img src="" class="img-responsive restartButtons" data-action="reStart">
+               	 </div>
+            </div>
+            <div class="col-sm-6 col-xs-6 col-md-6 col-lg-6 blockheight">
+                <canvas id="canvas1" style="position:absolute;"></canvas>
+                <canvas id="canvasinner1" style="position:absolute;"></canvas>
+                <img src="" class="img-responsive clearButtons" data-action="clear">
+            </div>
+        </div>
+        <div class="m-signature-pad--footer">
+          <div class="description">
+              <a class="colorBlock" onclick="setMarker(243, 174, 0 , 1 ,this)" style="background:rgb(243, 174, 0);"></a>
+              <a class="colorBlock" onclick="setMarker(132, 194, 37 , 1 ,this)" style="background:rgb(132, 194, 37);"></a>
+              <a class="colorBlock" onclick="setMarker(228, 82, 145 , 1 ,this)" style="background:rgb(228, 82, 145);"></a>
+              <a class="colorBlock" onclick="setMarker(100, 200, 150 , 1 ,this)" style="background:rgb(100, 200, 150);"></a>
+              <a class="colorBlock" onclick="setMarker(150, 100, 200 , 1 ,this)" style="background:rgb(150, 100, 200);"></a>
+              <a class="colorBlock" onclick="setMarker(50, 100, 150 , 1 ,this)" style="background:rgb(50, 100, 150);"></a>
+              <a class="colorBlock" onclick="setMarker(200, 100, 50 , 1 ,this)" style="background:rgb(200, 100, 50);"></a>
+              <a class="colorBlock" onclick="setMarker(0, 184, 147 , 1 ,this)" style="background:rgb(0, 184, 147);"></a>
+          </div>
+          <div class="left">
+              <img src="" class="img-responsive nextButtons Pratham" data-action="">
+          </div>
+      	  <div class="right">
+          	  <img src="" class="img-responsive nextButtons Next" data-action="next">
+      	  </div>
+        </div>
+     </div>
+  </div>
+<div id="level2">
+    <div id="signature-pad2" class="m-signature-pad">
+        <div id="canvas-body2" class="m-signature-pad--body">
+            <div class="col-sm-6 col-xs-6 col-md-6 col-lg-6 blockheight">
+                <div id="showGif2" class="showGif">
+                	<img src="" class="img-responsive soundButtons" data-action="soundStart">
+            		<img src="" class="img-responsive restartButtons" data-action="reStart">
+                </div>
+            </div>
+            <div class="col-sm-6 col-xs-6 col-md-6 col-lg-6 blockheight">
+                <canvas id="canvas2" style="position:absolute;"></canvas>
+                <canvas id="canvasinner2" style="position:absolute;"></canvas>
+                <img src="" class="img-responsive clearButtons" data-action="clear">
+            </div>
+        </div>
+        <div class="m-signature-pad--footer">
+          <div class="description">
+              <a class="colorBlock" onclick="setMarker(243, 174, 0 , 2 ,this)" style="background:rgb(243, 174, 0);"></a>
+              <a class="colorBlock" onclick="setMarker(132, 194, 37 , 2 ,this)" style="background:rgb(132, 194, 37);"></a>
+              <a class="colorBlock" onclick="setMarker(228, 82, 145 , 2 ,this)" style="background:rgb(228, 82, 145);"></a>
+              <a class="colorBlock" onclick="setMarker(100, 200, 150 , 2 ,this)" style="background:rgb(100, 200, 150);"></a>
+              <a class="colorBlock" onclick="setMarker(150, 100, 200 , 2 ,this)" style="background:rgb(150, 100, 200);"></a>
+              <a class="colorBlock" onclick="setMarker(50, 100, 150 , 2 ,this)" style="background:rgb(50, 100, 150);"></a>
+              <a class="colorBlock" onclick="setMarker(200, 100, 50 , 2 ,this)" style="background:rgb(200, 100, 50);"></a>
+              <a class="colorBlock" onclick="setMarker(0, 184, 147 , 2 ,this)" style="background:rgb(0, 184, 147);"></a>
+          </div>
+          <div class="left">
+              <img src="" class="img-responsive nextButtons Pratham" data-action="">
+          </div>
+      	  <div class="right">
+          	  <img src="" class="img-responsive nextButtons Next" data-action="next">
+      	  </div>
+        </div>
+    </div>
+</div>
+<div id="level3">
+    <div id="signature-pad3" class="m-signature-pad">
+        <div id="canvas-body3" class="m-signature-pad--body">
+            <div class="col-sm-6 col-xs-6 col-md-6 col-lg-6 blockheight">
+                <div id="showGif3" class="showGif">
+                	<img src="" class="img-responsive soundButtons" data-action="soundStart">
+                	<img src="" class="img-responsive restartButtons" data-action="reStart">
+                </div>
+            </div>
+            <div class="col-sm-6 col-xs-6 col-md-6 col-lg-6 blockheight">
+                <canvas id="canvas3" style="position:absolute;"></canvas>
+                <canvas id="canvasinner3" style="position:absolute;"></canvas>
+                <img src="" class="img-responsive clearButtons" data-action="clear">
+            </div>
+        </div>
+        <div class="m-signature-pad--footer">
+          <div class="description">
+              <a class="colorBlock" onclick="setMarker(243, 174, 0 , 3 ,this)" style="background:rgb(243, 174, 0);"></a>
+              <a class="colorBlock" onclick="setMarker(132, 194, 37 , 3 ,this)" style="background:rgb(132, 194, 37);"></a>
+              <a class="colorBlock" onclick="setMarker(228, 82, 145 , 3 ,this)" style="background:rgb(228, 82, 145);"></a>
+              <a class="colorBlock" onclick="setMarker(100, 200, 150 , 3 ,this)" style="background:rgb(100, 200, 150);"></a>
+              <a class="colorBlock" onclick="setMarker(150, 100, 200 , 3 ,this)" style="background:rgb(150, 100, 200);"></a>
+              <a class="colorBlock" onclick="setMarker(50, 100, 150 , 3 ,this)" style="background:rgb(50, 100, 150);"></a>
+              <a class="colorBlock" onclick="setMarker(200, 100, 50 , 3 ,this)" style="background:rgb(200, 100, 50);"></a>
+              <a class="colorBlock" onclick="setMarker(0, 184, 147 , 3 ,this)" style="background:rgb(0, 184, 147);"></a>
+          </div>
+          <div class="left">
+              <img src="" class="img-responsive nextButtons Pratham" data-action="">
+          </div>
+      	  <div class="right">
+          	  <img src="" class="img-responsive nextButtons Next" data-action="next">
+      	  </div>
+        </div>
+    </div>
+</div>
+</div>
+  <script src="data/data.js"></script>
+  <script src="js/sketch.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/ocrad.js"></script>
+</body>
+</html>
