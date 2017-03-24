@@ -1,0 +1,128 @@
+﻿.ps-top-to-bottom {
+  position: relative;
+  border-top: 3px solid black;
+  margin-top:30px;
+  height:auto;
+}
+.ps-top-to-bottom:before, .ps-top-to-bottom:after {
+  content: "";
+  position: absolute;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#000), to(transparent));
+  background-image: -webkit-linear-gradient(#000, transparent);
+  background-image: -moz-linear-gradient(#000, transparent);
+  background-image: -o-linear-gradient(#000, transparent);
+  background-image: linear-gradient(#000, transparent);
+  top: -3px;
+  bottom: -3px;
+  width: 3px;
+}
+.ps-top-to-bottom:before {
+  left: -3px;
+}
+.ps-top-to-bottom:after {
+  right: -3px;
+}
+
+#background1 {
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: inherit;
+   background-attachment: fixed;
+   width: 100%;
+}
+
+.background1 {
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: inherit;
+   background-attachment: fixed;
+   width: 100%;
+}
+
+.btnclr{
+    color: black;
+    background-color:#5dc6f0;
+    font-weight:900;
+    font-size:x-large;
+}
+.cntr {
+    position: absolute;
+    top: 35%;
+    left: 35%;
+}
+.scoreimage{
+background-image: url('../Images/Final-Score.png');
+height:150px;width:146px;      
+position: relative;
+  left:50%;
+  transform: translate(-50%,-50%);
+  padding-top:20px;
+  top:100px;
+}
+.svgborder  {
+        border:2px solid black;
+        background:white;  
+}
+.removesidepadding{    
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.anim {
+    background-color: none;
+    -webkit-animation-name: highlight; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: .5s; /* Safari 4.0 - 8.0 */
+    animation: highlight 1s infinite;
+}
+@-webkit-keyframes highlight {
+    from {fill: none;}
+    to {fill: #ff6666;}
+}
+
+/* Standard syntax */
+@keyframes highlight {
+    from {fill: none;}
+    to {fill: #ff6666;}
+}
+#btnplay {
+        margin-bottom: -100%;
+        margin-left: 46%;        
+    }
+.csshover{
+			fill:transparent;
+			fill-opacity:0.1;
+		}
+.csshover:hover,click{
+			fill:#ff6666;
+			fill-opacity:0.5;
+			cursor:pointer;			
+		}
+.prevbtn{
+			margin-top:250px;
+		}
+.nxtbtn{
+			margin-top:90px;transform: rotate(180deg); -ms-transform: rotate(180deg);-webkit-transform: rotate(180deg);
+		}
+.removemargin{
+    margin:0px;
+}
+.removepadding{
+    padding:0px;
+}
+.svgborderinner{
+    border-right:2px solid black;padding-left:0px;padding-right:0px;
+}
+.fntsmayscore{
+    font-size:18px; font-weight:700;
+}
+.fntweight{
+    font-weight:700;
+}
+.fntrightwordlist{
+    font-size:25px;font-weight:700;
+}
+.scorescreenlast{
+    min-height:300px;margin-top:50px;
+}
+.fntlastscore{
+    font-weight:500;font-size:80px;cursor:none;
+}
