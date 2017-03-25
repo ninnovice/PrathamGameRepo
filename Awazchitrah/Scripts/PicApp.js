@@ -1,11 +1,34 @@
 ﻿
 var picid = "0";
 var wordid = "0";
-var soundhowl=new Howl({
-				  src: ['Content/sound/wrong1.mp3']
-				});
-				
+//var soundhowl=new Howl({
+//				  src: ['Content/sound/wrong1.mp3']
+//				});
+
+function playSoundnew(filepath) {
+    var numAudio = "#gameSound";
+    $(numAudio).prop("src", Utils.Path + filepath);
+    $(numAudio).trigger('play');
+}
 (function () {
+
+    var tracing = [];
+
+    function setImagesThroughScript() {
+        $(".body1").css("background-image", "url('" + Utils.Path + "Images/Background.png')");
+        $(".scoreimage").css("background-image", "url('" + Utils.Path + "Images/Final-Score.png')");
+
+
+        $("#arrow1").attr("src", Utils.Path + "Images/Arrow.png");
+        $("#arrow2").attr("src", Utils.Path + "Images/Arrow.png");
+        $("#stopwatch").attr("src", Utils.Path + "Images/Stop-Watch.png");
+        $("#score").attr("src", Utils.Path + "Images/Score.png");
+        $("#home").attr("src", Utils.Path + "Images/Home.png");
+        $("#audio").attr("src", Utils.Path + "Images/audio.png");
+		$("#play").attr("src", Utils.Path + "Images/playButton.png");
+    }
+
+
 
     var shuffleArray = function (array) {
         var m = array.length, t, i;
@@ -33,6 +56,21 @@ var soundhowl=new Howl({
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
     
+    $(document).ready(function () {
+        console.log("check ready");
+
+        // Android.getPath("TracingGame");
+        setTimeout(function () {
+            console.log("check ready");
+            if (navigator.userAgent.match(/Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile/i)) {/*For Tablet */ tracing.deviceFlag = 1; }
+            else {/* for Desktop */ tracing.deviceFlag = 0; }
+
+            // document.getElementById("mainpage").style.display = 'block';
+            setImagesThroughScript();
+            console.log(tracing.deviceFlag);
+        }, 10);
+    });
+
     var picturecardmoule = angular.module("PicApp", []);
 
     picturecardmoule.controller("PicturecardController", function ($scope, $interval) {
@@ -288,13 +326,14 @@ var soundhowl=new Howl({
                 //audio.play();
                 //var sound_array = ["Content/sound/correct.mp3"];
 
-				soundhowl.stop();
-				soundhowl = new Howl({
-				  src: ['Content/sound/correct.mp3']
-				});
+				//soundhowl.stop();
+				//soundhowl = new Howl({
+				//  src: ['Content/sound/correct.mp3']
+				//});
 
-				soundhowl.play();
-                
+				//soundhowl.play();
+                playSoundnew("Content/sound/correct.mp3");
+
 
 				console.log($scope.score);
 				if ($scope.i == 3 && $scope.screen == "game" && $scope.score == 50) {
@@ -322,12 +361,13 @@ var soundhowl=new Howl({
 				// var audio = new Audio('Content/sound/wrong1.mp3');
                 // audio.play();
 
-				soundhowl.stop();
-				soundhowl = new Howl({
-				  src: ['Content/sound/wrong1.mp3']
-				});
+				//soundhowl.stop();
+				//soundhowl = new Howl({
+				//  src: ['Content/sound/wrong1.mp3']
+				//});
+                //soundhowl.play();
 
-				soundhowl.play();
+                playSoundnew("Content/sound/wrong1.mp3");
 
                 // var sound_array1 = ["Content/sound/wrong1.mp3","Content/sound/wrong2.mp3","Content/sound/wrong3.mp3"];
 				// console.log(sound_array1);

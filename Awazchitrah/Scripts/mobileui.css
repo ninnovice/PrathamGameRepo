@@ -25,27 +25,14 @@
   right: -3px;
 }
 
-#background1 {
-   background-repeat: no-repeat;
-   background-size: cover;
-   background-position: inherit;
-   background-attachment: fixed;
-   width: 100%;
-}
-
 .background1 {
    background-repeat: no-repeat;
-   background-size: cover;
+   background-size: 100% 100%;
    background-position: inherit;
    background-attachment: fixed;
-   width: 100%;
+   
 }
-    .body1 {
-        background-image: url('../Images/Background.png');
-    }
-.body2 {
-            background-image: url('../Images/Awaz-Chitra.png');
-        }
+
 
 .btnclr{
     color: black;
@@ -59,7 +46,7 @@
     left: 35%;
 }
 .scoreimage{
-background-image: url('../Images/Final-Score.png');
+
 height:150px;width:146px;      
 position: relative;
   left:50%;
@@ -92,8 +79,8 @@ position: relative;
     to {fill: #ff6666;}
 }
 #btnplay {
-        margin-bottom: -100%;
-        margin-left: 55%;        
+    margin-top: 25%;
+        margin-left: 50%;        
     }
 .csshover{
 			fill:transparent;
@@ -179,12 +166,6 @@ position: relative;
    background-attachment: fixed;
    width: 100%;
 }
-.body1 {
-            background-image: url('../Images/Background.png');
-        }
-.body2 {
-            background-image: url('../Images/Awaz-Chitra.png');
-        }
 
 .btnclr{
     color: black;
@@ -198,7 +179,6 @@ position: relative;
     left: 35%;
 }
 .scoreimage{
-background-image: url('../Images/Final-Score.png');
 height:150px;width:146px;      
 position: relative;
   left:50%;
@@ -231,8 +211,8 @@ position: relative;
     to {fill: #ff6666;}
 }
 #btnplay {
-        margin-bottom: -100%;
-        margin-left: 55%;        
+    margin-top: 25%;
+        margin-left: 50%;        
     }
 .csshover{
 			fill:transparent;
@@ -317,12 +297,6 @@ position: relative;
    background-attachment: fixed;
    width: 100%;
 }
-.body1 {
-            background-image: url('../Images/Background.png');
-        }
-.body2 {
-            background-image: url('../Images/Awaz-Chitra.png');
-        }
 
 .btnclr{
     color: black;
@@ -336,7 +310,6 @@ position: relative;
     left: 35%;
 }
 .scoreimage{
-background-image: url('../Images/Final-Score.png');
 height:150px;width:146px;      
 position: relative;
   left:50%;
@@ -369,8 +342,8 @@ position: relative;
     to {fill: #ff6666;}
 }
 #btnplay {
-        margin-bottom: -100%;
-        margin-left: 55%;        
+    margin-top: 40%;
+        margin-left: 50%;        
     }
 .csshover{
 			fill:transparent;
@@ -397,7 +370,7 @@ position: relative;
     border-right:2px solid black;padding-left:0px;padding-right:0px;
 }
 .fntsmayscore{
-    font-size:11px; font-weight:700;
+    font-size:15px; font-weight:700;
 }
 .fntweight{
     font-weight:500;
@@ -454,12 +427,6 @@ position: relative;
    background-attachment: fixed;
    width: 100%;
 }
-.body1 {
-            background-image: url('../Images/Background.png');
-        }
-.body2 {
-            background-image: url('../Images/Awaz-Chitra.png');
-        }
 
 .btnclr{
     color: black;
@@ -473,7 +440,6 @@ position: relative;
     left: 40%;
 }
 .scoreimage{
-background-image: url('../Images/Final-Score.png');
 height:150px;width:146px;      
 position: relative;
   left:50%;
@@ -506,8 +472,8 @@ position: relative;
     to {fill: #ff6666;}
 }
 #btnplay {
-        margin-bottom: -110%;
-        margin-left: 50%;        
+    margin-top: 40%;
+        margin-left: 45%;        
     }
 .csshover{
 			fill:transparent;
@@ -591,12 +557,6 @@ position: relative;
    background-attachment: fixed;
    width: 100%;
 }
-.body1 {
-            background-image: url('../Images/Background.png');
-        }
-.body2 {
-            background-image: url('../Images/Awaz-Chitra.png');
-        }
 
 .btnclr{
     color: black;
@@ -610,7 +570,6 @@ position: relative;
     left: 40%;
 }
 .scoreimage{
-background-image: url('../Images/Final-Score.png');
 height:150px;width:146px;      
 position: relative;
   left:50%;
@@ -643,8 +602,8 @@ position: relative;
     to {fill: #ff6666;}
 }
 #btnplay {
-        margin-bottom: -110%;
-        margin-left: 50%;        
+    margin-top: 60%;
+    margin-left: 50%;    
     }
 .csshover{
 			fill:transparent;
@@ -728,12 +687,7 @@ position: relative;
    background-attachment: fixed;
    width: 100%;
 }
-.body1 {
-            background-image: url('../Images/Background.png');
-        }
-.body2 {
-            background-image: url('../Images/Awaz-Chitra.png');
-        }
+
 .btnclr{
     color: black;
     background-color:#5dc6f0;
@@ -746,7 +700,6 @@ position: relative;
     left: 40%;
 }
 .scoreimage{
-background-image: url('../Images/Final-Score.png');
 height:150px;width:146px;      
 position: relative;
   left:50%;
@@ -779,8 +732,8 @@ position: relative;
     to {fill: #ff6666;}
 }
 #btnplay {
-        margin-bottom: -120%;
-        margin-left: 50%;        
+    margin-top: 70%;
+    margin-left: 50%;    
     }
 .csshover{
 			fill:transparent;

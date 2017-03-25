@@ -3,19 +3,27 @@
 <head>
     <title>आवाज चित्र</title>
     <meta charset="utf-8"/>
+    <script src="../js/Utils.js"></script>
     <link href="Scripts/bootstrap.css" rel="stylesheet" />
     <link href="Scripts/mobileui.css" rel="stylesheet" />
     <script src="Scripts/jquery-3.1.1.js"></script>
     <script src="Scripts/picturelistH.js"></script>
-    <script src="../js/Utils.js"></script>
-   
-
+    <script src="../js/Utils.js"></script>  
 </head>
-<body id="background1" class="body2" >    
+<body class="background1" >    
     <div class="container">
-        <a class="btn btn-primary btnclr" href="PRL1.html" id="btnplay">​​PLAY</a>
+	
+        <a class="btn " href="PRL1.html" id="btnplay"><img class="img-responsive" id="play"/></a>
     </div>   
 </body>
+
+<script>
+    $(".background1").css("background-image", "url('" + Utils.Path + "Images/Awaz-Chitra.png')");
+	 $("#play").attr("src", Utils.Path + "Images/playButton.png");
+	 
+	 
+</script>
+
 </html>
 
 
