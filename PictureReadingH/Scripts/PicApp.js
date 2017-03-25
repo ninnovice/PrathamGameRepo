@@ -1,7 +1,25 @@
-﻿
-var picid = "0";
+﻿var picid = "0";
 var wordid = "0";
 (function () {
+    var tracing = [];
+
+    function setImagesThroughScript() {
+        $(".background2").css("background-image", "url('" + Utils.Path + "Images/Background.png')");
+        $(".scoreimage").css("background-image", "url('" + Utils.Path + "Images/Final-Score.png')");
+
+        $("#imgstopwatch").attr("src", Utils.Path + "Images/Stop-Watch.png");
+        $("#imgscore").attr("src", Utils.Path + "Images/Score.png");
+        $("#imghome").attr("src", Utils.Path + "Images/Home.png");
+        $("#imgarrow").attr("src", Utils.Path + "Images/Arrow.png");
+		$("#imgarrow2").attr("src", Utils.Path + "Images/Arrow.png");
+        $("#play").attr("src", Utils.Path + "Images/playButton.png");
+    }
+
+    function playSound(filepath) {
+        var numAudio = "#gameSound";
+        $(numAudio).prop("src", Utils.Path + filepath);
+        $(numAudio).trigger('play');
+    }
 
     var shuffleArray = function (array) {
         var m = array.length, t, i;
@@ -28,7 +46,22 @@ var wordid = "0";
     function getRandomInt(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
-    
+        
+    $(document).ready(function () {
+        console.log("check ready");
+
+        // Android.getPath("TracingGame");
+        setTimeout(function () {
+            console.log("check ready");
+            if (navigator.userAgent.match(/Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile/i)) {/*For Tablet */ tracing.deviceFlag = 1; }
+            else {/* for Desktop */ tracing.deviceFlag = 0; }
+
+            // document.getElementById("mainpage").style.display = 'block';
+            setImagesThroughScript();
+            console.log(tracing.deviceFlag);
+        }, 10);
+    });
+
     var picturecardmoule = angular.module("PicApp", []);
 
     picturecardmoule.controller("PicturecardController", function ($scope, $interval) {
@@ -238,8 +271,9 @@ var wordid = "0";
                 //audio.play();
                 var sound_array = ["Content/sound/Rooster.mp3"];
                 var sound = sound_array[Math.floor(Math.random() * sound_array.length)];
-                var audio = new Audio(sound);
-                audio.play();
+
+                playSound(sound);
+
                 
 
                 if (this.score == 100) {
@@ -260,8 +294,10 @@ var wordid = "0";
 
                 var sound_array1 = ["Content/sound/Chickencoop.mp3"];
                 var sound1 = sound_array1[Math.floor(Math.random() * sound_array1.length)];
-                var audio1 = new Audio(sound1);
-                audio1.play();
+                
+                playSound(sound1);
+                //var audio1 = new Audio(sound1);
+                //audio1.play();
                 
         };
         $scope.pad = function (num, size) {
