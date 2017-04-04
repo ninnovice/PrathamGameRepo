@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number chart Identification</title>
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css"></link>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css"></link>
+    <script src = "js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/magic.css"></link>
+    <link rel="stylesheet" href="css/animations.css"></link>
+    <link rel="stylesheet" href="css/styleSheet.css"></link>
+    <script src="code/mainScript.js"></script>
+    <script src="js/numberIdentificationData.js"></script>
+</head>
+<body id="background">
+  <div id="coverPage">
+    <img id="playGame"  class=" img-responsive col-lg-2 col-md-2 col-xs-2 col-sm-2" onclick="NumberIdenti.startGame();"/>
+  </div>
+  <div id="gamePage">
+    <div id="homeDiv"class="col-lg-2 col-md-2 col-xs-2 col-sm-2">
+        <img id="home"  class="img-responsive widgets" onclick="location.reload(true)"/>
+        <img id="volume"  style="padding:0px !important" class="img-responsive widgets " onclick="NumberIdenti.playSoundAgain();">
+        <img id="playAgain" src="Images/Aksharkhadi_Next.png" class="img-responsive widgets" onclick="NumberIdenti.showQuestion();"/>
+    </div>
+    <div id="numberChartDiv" class="col-lg-8 col-md-8 col-xs-8 col-sm-8 col-lg-offset-1 col-md-offset-1 col-xs-offset-1 col-sm-offset-1">
+    </div>
+  </div>
+  <audio id="playSound"></audio>
+  <p id="title"></p>
+</body>
+</html>
