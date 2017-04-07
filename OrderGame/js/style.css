@@ -1,0 +1,249 @@
+﻿/* Add some margin to the page and set a default font and colour */
+
+body {
+    margin: 30px;
+    font-family: "Georgia", serif;
+    line-height: 1.8em;
+    /*color: #333;*/
+    background-image: url('../image/background.jpg');
+}
+
+/* Give headings their own font */
+
+h1, h2, h3, h4 {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+/* Main content area */
+
+#content {
+    margin: 80px 70px;
+    text-align: center;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* Header/footer boxes */
+
+.wideBox {
+    clear: both;
+    text-align: center;
+    margin: 70px;
+    padding: 10px;
+    background: #ebedf2;
+    /*border: 1px solid #333;*/
+}
+
+    .wideBox h1 {
+        font-weight: bold;
+        margin: 20px;
+        color: #666;
+        font-size: 1.5em;
+    }
+
+/* Slots for final card positions */
+
+#cardSlots {
+    margin: 20px auto 0 130px;
+    /*background: #ddf;*/
+}
+
+
+
+
+/* The initial pile of unsorted cards */
+
+#cardPile {
+    margin: 20px auto 0 130px;
+    /*background: #ffd;*/
+}
+
+#cardSlots, #cardPile {
+    width: 1100px;
+    height: 200px;
+    /*padding: 20px;*/
+    /*border: 2px solid #333;*/
+    /*-moz-border-radius: 10px;
+            -webkit-border-radius: 10px;*/
+    /*border-radius: 10px;*/
+    /*-moz-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+            -webkit-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+            box-shadow: 0 0 .3em rgba(0, 0, 0, .8);*/
+}
+
+    /* Individual cards and slots */
+
+    #cardSlots div {
+        margin-right: -13px;
+        float: left;
+        width: 210px;
+        height: 140px;
+        /*padding: 10px;*/
+        padding-top: 40px;
+        padding-bottom: 0;
+        /*border: 2px solid #333;*/
+        /*-moz-border-radius: 10px;
+                -webkit-border-radius: 10px;*/
+        /*border-radius: 10px;*/
+        /*margin: 0 0 0 10px;*/
+        /*background: #fff;*/
+        background-image: url('../image/2_black.png');
+    }
+
+    #cardPile div {
+        float: left;
+        width: 190px;
+        height: 140px;
+        padding: 10px;
+        padding-top: 40px;
+        padding-bottom: 0;
+        /*border: 2px solid #333;*/
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        /*border-radius: 10px;*/
+        margin: 0 0 0 10px;
+        /*background-image: url('../image/2.png');*/
+    }
+
+        #cardSlots div:first-child, #cardPile div:first-child {
+            margin-left: 0;
+        }
+
+    #cardSlots div.hovered {
+        /*background: #aaa;*/
+    }
+
+    /*#cardSlots div {
+                border-style: dashed;
+            }*/
+
+    #cardPile div {
+        color: #000;
+        font-size: 50px;
+        /*text-shadow: 0 0 3px #000;*/
+        /*background-image: url('../image/2.png');*/
+    }
+
+        #cardPile div.ui-draggable-dragging {
+            /*-moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+                    -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+                    box-shadow: 0 0 .5em rgba(0, 0, 0, .8);*/
+        }
+
+/* Individually coloured cards */
+
+/*#card1.correct {
+            background: red;
+        }
+
+        #card2.correct {
+            background: brown;
+        }
+
+        #card3.correct {
+            background: orange;
+        }
+
+        #card4.correct {
+            background: yellow;
+        }
+
+        #card5.correct {
+            background: green;
+        }*/
+
+#successMessage {
+    position: absolute;
+    left: 450px;
+    top: 200px;
+    padding-top: 20px;
+    width: 400px;
+    height: 150px;
+    z-index: 100;
+    background: #006fb9;
+    color: white;
+    border-radius: 10px;
+}
+
+#btnplayagain {
+    margin-top: 20px;
+    width: 100px;
+    height: 45px;
+    color: white;
+    background-color: #5cb85c;
+    border-radius: 5px;
+}
+
+ #btncheck {
+    /*margin-top: 20px;*/
+    width: 150px;
+    height: 60px;
+    color: white;
+    background-color: #5cb85c;
+    border-radius: 5px;
+    font-size:20px;
+}
+
+#btnstart {
+    margin-left:330px;
+    margin-top:250px;
+    width: 600px;
+    height: 80px;
+    color: white;
+    background-color:#FF66FF;
+    border-radius: 30px;
+    font-size:40px;
+}
+
+#btnnum {
+   
+     margin-top:250px;
+    width: 500px;
+    height: 70px;
+    color: white;
+    background-color: #5cb85c;
+     border-radius: 20px;
+    font-size:30px;
+}
+
+#btnshapes {
+    margin-top:250px;
+    width: 500px;
+    height: 70px;
+    color: white;
+    background-color: #3399FF;
+     border-radius: 20px;
+    font-size:30px;
+}
+
+.levelAs {
+    margin-right:20px;
+     padding-top:5px;
+    width: 300px;
+    height: 60px;
+    color: white;
+    background-color: #75357A;
+    border-radius: 5px;
+    font-size:17px;
+
+}
+.levelDes {
+     padding-top:5px;
+    width: 300px;
+    height: 60px;
+    color: white;
+    background-color: #ED1849;
+    border-radius: 5px;
+    font-size:17px;
+
+}
+#orderlevel {
+    margin-top:150px;
+    margin-left:310px;
+}
+
+.heading {
+    color:black;
+    font-size:30px;
+}

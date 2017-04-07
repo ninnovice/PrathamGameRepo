@@ -1,0 +1,104 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+
+    <title>Pratham - Order Game</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <link href="js/style.css" rel="stylesheet" />
+    <script src="js/orderdata.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+</head>
+<body>
+    <audio id="gameSound"></audio>
+
+
+    <div id="startdv">
+            <button id="btnstart">Start</button>
+        </div>
+       <table style="text-align:center;margin-left:150px;">
+            <tr>
+                <td>
+                    <div id="numbers">
+                        <button id="btnnum">Numbers</button></div>
+                </td>
+                <td>
+                    <div id="shapesc">
+                        <button id="btnshapes">Shapes</button></div>
+                </td>
+            </tr>
+           
+        </table>
+     <div id="orderlevel">
+            <table>
+                <tr>
+                    <th class="heading">Assending</th>
+                    <th class="heading">Dessending</th>
+                </tr>
+                <tr>
+                    <td>
+                        <button id="btn1to5" class="levelAs">1 to 5</button>
+                    </td>
+
+                    <td>
+                        <button id="btn5to1" class="levelDes">5 to 1</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button id="btn6to10" class="levelAs">6 to 10</button>
+                    </td>
+                    <td>
+                        <button id="btn10to6" class="levelDes">10 to 6</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button id="btn11to15" class="levelAs">11 to 15</button>
+                    </td>
+                    <td>
+                        <button id="btn15to11" class="levelDes">15 to 11 </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button id="btn16to20" class="levelAs">16 to 20</button>
+                    </td>
+                    <td>
+                        <button id="btn20to15" class="levelDes">20 to 15</button>
+                    </td>
+                </tr>
+            </table>
+
+            <!--   <div id="assending">
+            </div>
+            <div id="descending">
+            </div>-->
+        </div>
+
+
+    <div id="content">
+       
+
+        <div id="engine">
+            <img src="image/engine.png" style="float: left; margin-top: -60px; margin-right: -10px;" />
+        </div>
+        <div id="cardSlots"></div>
+
+        <div id="cardPile"></div>
+        <div id="successMessage">
+            <div id="correct" style="font-size: 20px;">Thats right ! well done !</div>
+            <div id="wrong" style="font-size: 20px;">Thats wrong ! Play Again!</div>
+            <br />
+            <button id="btnplayagain">Play Again</button>
+
+        </div>
+        <div id="checkMessage">
+            <button id="btncheck">check</button>
+        </div>
+    </div>
+
+</body>
+</html>
+<script src="js/orderGame.js"></script>
