@@ -1,0 +1,148 @@
+@media screen and (min-width: 400px) {
+    body{font-size: 13px;}
+  
+}
+
+@media screen and (min-width: 900px) {
+    body{font-size: 15px;}
+}
+@media screen and (min-width: 1100px) {
+    body{font-size: 18px;}
+}
+
+#AbacusGameMainDiv {
+    background-position: center;
+    background-size: cover;
+    background-repeat:no-repeat;
+    position: fixed;
+    margin-left: 0%;
+    margin-right:0%;
+    margin-top:  0%;
+    width:100%;
+    height:100%;
+    color: cornflowerblue;
+}
+
+.levelImages{
+    width: 80%;
+    margin-top: 130%;
+}
+
+#gamePage{
+    width:100%;
+    height:100%;
+    display: none;
+}
+
+#AskedNumberInText{
+    font-size: 36px;
+    font-weight: bold;
+    color: darkblue;
+    text-align: -webkit-center;
+}
+
+#AskedQues{
+    font-size: 32px;
+    font-weight: bold;
+    text-align: -webkit-center;
+    border-bottom: 1px solid black;
+}
+
+#ballPickerBox{
+    height: 100%;
+    font-size: 43px;
+    font-weight: bold;
+    margin-top:6%;
+    background-color:rgba(248, 248, 255,0.8);
+    border-radius: 20px;
+    display: none;
+}
+
+#abacusPadOuterDiv{
+    height: 100%;
+}
+
+#abacusPad{
+     background-color: rgba(248, 248, 255,0.8);
+    border-radius: 60px;
+        text-align: -webkit-center;
+        border: 1px solid;
+}
+
+#column1,#column2,#column3,#column4{
+    padding: 0px;
+}
+.NoOfBallsInColumn {
+       text-align: -webkit-center;
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 1%;
+border-bottom: 1px solid;
+}
+.ball{
+     width: 36%;
+}
+
+#column4 >.BeadsImages >.marginLeft,#column3 >.BeadsImages >.marginLeft{
+      
+}
+.ballInPickerBox{
+    width:69%;
+            float: left;
+
+}
+
+.placeName{
+     font-size: 29px; 
+         border-bottom: 1px solid;  
+}
+
+#AskedNumberInText > #TextOfThousandsPlace,#AskedNumberInText > #TextOfHundredsPlace {
+    width: 15%;
+    color: orange;
+    text-decoration: underline;
+    padding: 0px;
+    text-align: -webkit-right;
+    display: none;
+}
+
+
+#AskedNumberInText > #TextOfSou{
+    padding: 0px;width: 11%;
+display: none;
+}
+#AskedNumberInText > #TextOfhazar{
+display: none;
+}
+#AskedNumberInText > #TextOfTensPlace{
+    padding: 0px;width: 32%;color: blueviolet;
+    text-decoration: underline;margin-left: 2%;     text-align: left;
+display: none;
+}
+
+#AnsTitle{
+    margin-top:6%;background-color:rgba(248, 248, 255,0.8);border-radius: 20px;
+    font-size: 29px;text-align: center; display: none;
+}
+#AnsList1{
+    text-align: center;
+    font-size: 30px;width: 30%;
+    margin-top: 1%;
+    background-color: rgba(248, 248, 255,0.8);
+    border-radius: 20px;
+color:orange; display: none;
+}
+
+#AnsList2{
+    text-align: center;
+    font-size: 30px;width: 30%;
+    margin-top: 1%;
+    color: blueviolet;
+    background-color: rgba(248, 248, 255,0.8);
+    border-radius: 20px; display: none;
+}
+
+.ButtonsIcon{
+    margin-left: 4%;
+    width: 11%;
+}
