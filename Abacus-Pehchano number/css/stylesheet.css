@@ -1,0 +1,116 @@
+@media screen and (min-width: 400px) {
+    body{font-size: 13px;}
+   
+}
+
+@media screen and (min-width: 900px) {
+    body{font-size: 15px;}
+}
+@media screen and (min-width: 1100px) {
+    body{font-size: 18px;}
+}
+
+#AbacusGameMainDiv {
+    background-position: center;
+    background-size: cover;
+    background-repeat:no-repeat;
+    position: fixed;
+    margin-left: 0%;
+    margin-right:0%;
+    margin-top:  0%;
+    width:100%;
+    height:100%;
+    background-color: gray;
+}
+
+#gamePage{
+    width:100%;
+    height:100%;
+    background-color: lavender;
+}
+#ballsWithValue{
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 2%;
+}
+#ballsWithValue > img{
+    width: 12%;
+}
+
+#ballsBox{
+position: relative;
+    background: black;
+    height: 100%;
+        width: 56%;
+    border-radius: 48px;
+    border: 6px solid moccasin
+}
+#DivForQuestionInText{
+    width: 34%;
+    height: 100%;
+    border-radius: 50px;
+    background-color: brown
+}
+#NumberInTextRow{
+    margin-top: 13%;
+    text-align: -webkit-center;
+    font-size: 34px;
+    font-weight: bold;
+    color: floralwhite;
+    background-color: black;
+    border-radius: 30px;
+}
+
+#NumberInTextRow > #ThousandPlace ,#NumberInTextRow > #HundredPlace {
+    width: 18%;
+    color: orange;
+    text-decoration: underline;
+    padding: 0px;
+    text-align: -webkit-right;
+}
+
+#NumberInTextRow > #HundredPlace {
+    text-align: -webkit-right;
+    width: 12%;
+    color: orange;
+    text-decoration: underline;
+    padding: 0px;
+}
+
+#NumberInTextRow > #TensPlace {
+    width: 32%;
+    padding: 0px;
+    text-align: left;
+}
+ 
+.ButtonsRow{
+    margin-top: 26%;
+}
+.SubmitIcon,.NextIcon{
+    width: 94%;
+}
+#AnsTitle{
+    background-color: lemonchiffon;
+    border-radius: 37px;
+    text-align: -webkit-center;
+    margin: 1%;
+    font-weight: bold;
+}
+#AnsOptionsBox{
+   border-radius: 33px;
+    background-color: gray;
+    height: 100%;
+    width: 10%;
+    font-size: 39px;
+}
+.AnsOptions{
+
+    text-align: -webkit-center;
+
+    font-weight: bold;
+}
+
+ .ballInBallsBox {
+    position:absolute;
+        width: 11%;
+}
