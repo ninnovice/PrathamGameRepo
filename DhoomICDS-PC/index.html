@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dhoom</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	
+	<link rel="stylesheet" href="css/magic.css">
+ 	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/ChorGameStyle.css">
+
+	<script type="text/javascript" src="js/jquery.simple-text-rotator.js"></script>
+	<script type="text/javascript" src="js/jquery.splitflap.js"></script>
+	<script type="text/javascript" src="js/utility.js" ></script>
+	<!-- <script type="text/javascript" src="../js/Utils.js"></script> -->
+
+	  <script type="text/javascript" src="code/DhoomGameJs.js" ></script>
+	<script type="text/javascript" src="data/svgData.js" ></script>
+	<script type="text/javascript" src="data/data.js" ></script>
+	
+	<script>
+		//chorChor.resId=getURLParameter("resId");
+	</script>
+	<style>
+	</style>
+  </head>
+
+  <body class="mainBg" id="mainBg">
+	<audio id="gameSound" ></audio>
+	<audio id="gameSoundBg" >
+		<!--<source src="soundFile/BackgroundTrack.mp3" type="audio/mpeg">-->
+	</audio>
+	
+	<div class="col-xs-8 col-md-8 col-lg-8 col-xs-offset-1 col-md-offset-1 col-lg-offset-1" id="gameVideo" >
+		<video id="gameVid" width="100%" height="100%" autoplay style="margin-left:13%; margin-top:5%;">
+			<!--<source type="video/mp4">-->
+		</video>
+	</div>
+	
+	<div id="gamePlayButton">
+		<div class="col-xs-12 col-lg-12 col-md-12">
+		<div id="tempDiv" class="col-xs-2 col-lg-2 col-md-2">
+		</div>
+		<div class="text-center col-xs-10 col-lg-10 col-md-10 col-xs-offset-1 col-md-offset-1 col-lg-offset-1 StartingButtons" style="color:#ffffff;">
+			<h1 style="font-size:350%">DHOOM</h1>
+			</div>
+			<div class="text-center col-xs-10 col-lg-10 col-md-10 col-xs-offset-1 col-md-offset-1 col-lg-offset-1 StartingButtons" style="padding-left:5%">
+				<div class="text-center col-xs-4 col-lg-4 col-md-4 col-xs-offset-1 col-md-offset-1 col-lg-offset-1 playButton">
+					<h2><strong>PLAY</strong></h2>
+				</div>
+				<div data-toggle="modal" data-target="#myModal" class="text-center col-xs-4 col-lg-4 col-md-4 col-xs-offset-1 col-md-offset-1 col-lg-offset-1 InstructionsButton">
+					<strong>INSTRUCTIONS</strong>
+				</div>
+				<!-- Modal -->
+				<div id="myModal" class="modal fade" role="dialog">
+				  <div class="modal-dialog">
+
+					<!-- Modal content-->
+					<div class="modal-content">
+					  <div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">DHOOM Instructions</h4>
+					  </div>
+					  <div class="modal-body">
+						<p style="text-align:justify;" class="modalInstructions">
+							In this game the thief robs a bank and runs away.<br>
+							You have to help the police to catch the thief by giving the correct answers.
+							The question will appear on the screen with the answer, this answer may or may not be correct.<br><br>
+							If the answer is correct then you have to click on the ( <b>&#10004</b> ) correct button and if the answer is wrong then you have to click on ( <b>X</b> ) wrong button.
+						</p>
+					  </div>
+					  <div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					  </div>
+					</div>
+
+				  </div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-xs-12 col-sm-12 col-lg-12 col-md-12 levelDisplay">
+			<div class="copLevel">
+				<img class='copCycleImg copLevel img-responsive'>
+			</div>
+			<div class="copLevel">
+				<img class='copHorseImg copLevel img-responsive'>
+			</div>
+			<div class="copLevel">
+				<img class='copBikeImg copLevel img-responsive'>
+			</div>
+			<div class="copLevel">
+				<img class='copCopterImg copLevel img-responsive'>
+			</div>
+		</div>
+		
+	</div>
+	
+	<div class="midHide1 GameDiv forIntroHide" style="margin:0px; padding:0px;">
+		<div id="topSection" style=" width:100%; margin:0px; padding:0px;">
+			<div id = "topSection1" class="GameDiv">
+				<div id="roadImage" class="endHide border1" style="z-index:4; width:48%;  float:left; margin:0px; padding:0px;">
+					<div id="roadRotate"class="downShadow roadRotate" ></div>
+				</div>
+
+				<div id="frameDivider" class="endHide" style="position:relative; z-index:3; width:4%; float:left; margin:0px; padding:0px;">
+				</div>
+				  
+				<div id="roadImage2" class="endHide border2" style="z-index:1; width:48%; float:left; margin:0px; padding:0px;">
+					<div id="roadRotate2"class="downShadow roadRotate2" ></div>
+				</div>
+
+                <div id='myCopCycle' class='endHide col-xs-3 col-lg-3 col-md-3 move' style='position:absolute; z-index:3;  top:8%; left:-50%;'>
+                    <img width='60%' class='copCycleImg img-responsive center-block'>
+                </div>
+
+                <div id='myCopHorse' class='endHide col-xs-3 col-lg-3 col-md-3 move' style='position:absolute; z-index:2; top:4%; left:-50%;'>
+                    <img width='85%' class='copHorseImg img-responsive center-block'>
+                </div>
+                
+                <div id='myCopBike' class='endHide col-xs-3 col-lg-3 col-md-3 move' style='position:absolute; z-index:2; top:8%; left:-50%;'>
+                    <img width='67%'  class='copBikeImg img-responsive center-block'>
+                </div>
+                
+                <div id='myCopCopter' class='endHide col-xs-3 col-lg-3 col-md-3 move' style='position:absolute; z-index:2; top:-8%; left:-50%;'>
+                    <img width='150%'  class='copCopterImg img-responsive center-block'>
+                </div> 
+                
+                <div id='myThief' class='endHide col-xs-3 col-lg-3 col-md-3' style='position:absolute; z-index:2; top:8%; left:-50%;'>
+                    <img width='70%' class='thiefLookingAhead img-responsive center-block'>
+                    <img width='70%' class='thiefLookingBehind img-responsive center-block'>
+                </div>
+				
+			</div>
+		  
+			<div id="mapOuter" class="col-xs-2 col-md-2 col-lg-2 mapOuterClass GameDiv"  style="left:-3%">
+				<img style="width:130%; height:345px;" id="myMap" style="z-index:2" class="mapBGImg mapOuterClass">
+				<div id='copMarker' class='col-xs-4 col-lg-4 col-md-4 mapOuterClass' style='position:absolute; z-index: 3; bottom:5%; left:40%;'>
+					<img style="width:120%;" class='copMarkerImg center-block'>
+				</div>
+				<div id='thiefMarker' class='col-xs-4 col-lg-4 col-md-4 mapOuterClass' style='position:absolute; z-index: 2; bottom:25%; left:40%;'>
+					<img style="width:120%;" class='thiefMarkerImg center-block'>
+				</div>
+				<div id='airportMarker' class='col-xs-4 col-lg-4 col-md-4 mapOuterClass' style='position:absolute; z-index: 3; bottom:65%; left:10%;'>
+					<img style="width:120%;" class='airportMarkerImg center-block'>
+				</div>
+				<div id='PrisonMarker' class='col-xs-4 col-lg-4 col-md-4 mapOuterClass' style='position:absolute; z-index: 2; bottom:65%; left:70%;'>
+					<img style="width:120%;" class='PrisonMarkerImg center-block'>
+				</div>
+			</div>
+		</div>
+		<div id="BottomSection" class="col-xs-12 col-md-12 col-lg-12 endHide GameDiv" style="margin-top:0.5%;">
+			<div class="col-xs-12 col-md-12 col-lg-12">
+				<div id="equation" class="col-xs-9 col-md-9 col-lg-9 border downShadow">
+					<div id="question" class="text-center textStrong" style="color:#000000; margin-top:1.5%;"></div>
+					<div id="question2" class="text-center textStrong" style="color:#000000; margin-top:1.5%;">
+					</div>
+				</div>
+<!--				<div id="scoreOuter2" class="col-xs-1 col-md-1 col-lg-1 endHide" style="margin-top:2%;">
+				</div> -->
+				<div id="ansButtons" class="col-xs-3 col-md-3 col-lg-3 endHide" style="padding-left:5%; margin-top:2%;">
+					<button id="correctBtn" style="margin-left:3%;" type="button" class="btn btn-success btn-circle btn-xl ansBtns correctBtn"><i class="glyphicon glyphicon-ok"></i></button>
+					<button id="wrongBtn" style="margin-left:9%;" type="button" class="btn btn-danger btn-circle btn-xl ansBtns wrongBtn"><i class="glyphicon glyphicon-remove"></i></button>
+				</div> 
+				<!------------------------------------------------
+ 				<div class="col-xs-1 col-md-1 col-lg-1">
+					<span>Level : </span><span id="currentLevel" style='color:#ffffff;'></span>
+				</div>
+				-------------------------------------------------->
+			</div>
+		</div> 
+	</div>
+
+	<div id="scoreOuter" class="col-xs-3 col-md-3 col-lg-3 forIntroHide endHide" style="position:absolute; padding-left:3%; margin-top:34%;">
+		<div id="score" style='color:#ffffff; '>
+			<span id="test" style="color:#ffffff; display:inline;	"></span>
+		</div>
+	</div>
+	
+	<!--------------------------------------------------------------------------------------------------------------------------------->
+
+	<div id="controlRoomSection" class="col-xs-12 col-md-12 col-lg-12 midHide2 GameDiv" style="color:#D50000;  ">
+	
+		<div id="chaseCam" class="col-xs-5 col-md-5 col-lg-5 fullBorder GameDiv" style="position:absolute; z-index: 3; top:2%; left:6.5%; height: 350px;">
+			<div id='myCopBike2' class='col-xs-4 col-lg-4 col-md-4 forHide' style='position:absolute; z-index: 3; bottom:10%; left:1%;'>
+				<img width='180' height='160' class='copBikeImg img-responsive center-block'>
+			</div>
+			<div id='myCopCopter2' class='col-xs-6 col-lg-6 col-md-6 forHide' style='position:absolute; z-index: 3; bottom:42%; left:1%;'>
+				<img width='180' height='160' class='copCopterImg img-responsive center-block'>
+			</div>
+			<div id='myThief' class='col-xs-4 col-lg-4 col-md-4 ' style='position:absolute; z-index: 3; bottom:7%; left:61%;'>
+				<img width='280' height='160' class='thiefLookingAhead img-responsive center-block'>
+			</div>
+		</div>
+		
+		<div id="mapView" class="col-xs-5 col-md-5 col-lg-5 fullBorder GameDiv" style="position:absolute; z-index: 3; top:2%; left:53.2%; height: 350px;">
+			<div id='copMarker' class='col-xs-2 col-lg-2 col-md-2 mapOuterClass' style='position:absolute; z-index: 3; bottom:4%; left:40%;'>
+				<img style="width:120%;" class='copMarkerImg center-block'>
+			</div>
+			<div id='thiefMarker' class='col-xs-2 col-lg-2 col-md-2 mapOuterClass' style='position:absolute; z-index: 2; bottom:45%; left:40%;'>
+				<img style="width:120%;" class='thiefMarkerImg center-block'>
+			</div>
+			<div id='airportMarker' class='col-xs-2 col-lg-2 col-md-2 mapOuterClass' style='position:absolute; z-index: 3; bottom:65%; left:10%;'>
+				<img style="width:120%;" class='airportMarkerImg center-block'>
+			</div>
+			<div id='PrisonMarker' class='col-xs-2 col-lg-2 col-md-2 mapOuterClass' style='position:absolute; z-index: 2; bottom:65%; left:70%;'>
+				<img style="width:120%;" class='PrisonMarkerImg center-block'>
+			</div>
+		</div>
+	</div>
+
+
+	<!-------------------------------- COP WIN ------------------------------- -->
+
+	<div class="col-xs-12 col-md-12 col-lg-12 CopWin"><br><br>
+		<div class="col-xs-4 col-md-4 col-lg-4">
+			<img class='copImg img-responsive center-block'>
+		</div>
+		<div id="end" class="col-xs-4 col-md-4 col-lg-4 text-center">
+			<div class="text-center col-xs-12 col-md-12 col-lg-12" >
+				<h1 style="color:#FFFFFF" class="text-center">SCORE</h1>
+				<br><br>
+			</div>
+			<div class="text-center col-xs-12 col-md-12 col-lg-12" >
+				<h1 style="color:#FFFFFF" class="text-center"><span id="test1" style='color:#ffffff;'></span></h1>
+			</div>
+			<div class="text-center col-xs-6 col-md-6 col-lg-6 col-xs-offset-3 col-md-offset-3 col-lg-offset-3 dec" style="background-color:#CDDC39; margin-top:10%;" onClick="dhoom.playGame()">
+				<h3><strong style="color:#000000">REPLAY</strong></h3>
+			</div>
+		</div>
+		<div  class='col-xs-4 col-lg-4 col-md-4'>
+			<img class='criminalImg img-responsive center-block'>
+		</div>
+	</div>
+
+
+	<!-------------------------------- CRIMINAL WIN ------------------------------- -->
+
+	<div class="col-xs-12 col-md-12 col-lg-12 CriminalWin"><br><br>
+		<div class="col-xs-4 col-md-4 col-lg-4">
+			<img class='sadCopImg img-responsive center-block'>
+		</div>
+		<div id="end" class="col-xs-4 col-md-4 col-lg-4 text-center">
+			<div class="text-center col-xs-12 col-md-12 col-lg-12" >
+				<h1 style="color:#FFFFFF" class="text-center">SCORE</h1>
+				<br><br>
+			</div>
+			<div class="text-center col-xs-12 col-md-12 col-lg-12" >
+				<h1 style="color:#FFFFFF" class="text-center"><span id="test2" style='color:#ffffff;'></span></h1>
+			</div>
+			<div class="text-center col-xs-6 col-md-6 col-lg-6 col-xs-offset-3 col-md-offset-3 col-lg-offset-3 dec" style="background-color:#CDDC39; margin-top:10%;" onClick="dhoom.playGame()">
+				<h3><strong style="color:#000000">REPLAY</strong></h3>
+			</div>
+		</div>
+		<div  class='col-xs-4 col-lg-4 col-md-4'>
+			<img class='happyCriminalImg img-responsive center-block'>
+		</div>
+	</div>
+
+</body>
+</html>
