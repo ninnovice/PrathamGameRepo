@@ -1,0 +1,49 @@
+body{
+	background-color:#cadcfa;
+	overflow:hidden;
+}
+
+.upperAndLowerDiv{
+	height: 40%;
+	margin: 1% 0% 0% 0%;
+}
+
+.sameHeight{
+	height: 100%;
+	border: 1px solid black;
+	border-radius: 50px;
+	background-position: center;
+    background-size: contain;
+    background-repeat:no-repeat;
+}
+
+.buttonClass{
+	height: 70%;
+	background-color: brown;
+	margin: 1% 4% 1% 4%;
+	border-radius: 100px;
+}
+
+.allImages{
+	height: 100%;
+}
+
+#leftScrolling,#rightScrolling,#container{
+	padding: 0px ! important;
+}
+
+#container{
+	height: 89%;
+}
+
+#homeLogo{
+	height: 10%;	
+	background-position: center;
+    background-size: contain;
+    background-repeat:no-repeat;
+}
+
+#middleButtons{
+	height: 14%;
+	margin: 1% 0% 0% 0%;
+}
