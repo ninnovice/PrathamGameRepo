@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Control Room</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	
+	<link rel="stylesheet" href="css/magic.css">
+ 	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/ChorGameStyle.css">
+
+	<script type="text/javascript" src="js/jquery.simple-text-rotator.js"></script>
+	<script type="text/javascript" src="js/utility.js" ></script>
+<!-- 	<script type="text/javascript" src="js/ChorGameJs.js" ></script> -->
+	<script type="text/javascript" src="js/data.js" ></script>
+	
+	<script>
+		chorChor.resId=getURLParameter("resId");
+	</script>
+<!-- 	https://www.facebook.com/profile.php?id=100004257846031 -->
+	<style>
+		.playButton{
+			border-style: solid;
+			border-width:8px;
+			border-color:#ffffff;
+			border-radius:80px;
+			margin-top:4%;
+			height:130px;
+			padding-top: 15px;
+			background-color:#FF9800;
+			color:#ffffff;
+			font-size:200%;
+		}
+		.levelDisplay {
+			border-top-style: solid;
+			border-bottom-style: solid;
+			border-width:8px;
+			border-color:#ffffff;
+			margin-top:5%;
+			height:280px;
+			padding-top: 5px;
+			background-color:#4CAF50;
+			color:#ffffff;
+		}
+		.copLevel{
+			width:16%;
+			align:left;
+			margin-left:2%;
+			margin-top:3%;
+			display:inline;
+		}
+		h2 {
+			color:#ffffff;
+		}
+	</style>
+  </head>
+
+  <body class="mainBg" id="mainBg">
+	<div>
+<div id="controlRoomSection" class="col-xs-12 col-md-12 col-lg-12 midHide2 GameDiv" style="color:#D50000; height:650px; ">
+	
+		<div id="chaseCam" class="col-xs-5 col-md-5 col-lg-5 fullBorder GameDiv" style="position:absolute; z-index: 3; top:2%; left:6.5%; height: 350px;">
+<!-- 			<div id='myCopRunning2' class='col-xs-4 col-lg-4 col-md-4 forHide ' style='position:absolute; z-index: 3; bottom:10%; left:1%;'>
+				<img src='images/CopRunning.gif' width='170' height='150' class=' img-responsive center-block'>
+			</div>
+			<div id='myCopCycle2' class='col-xs-4 col-lg-4 col-md-4 forHide ' style='position:absolute; z-index: 3; bottom:10%; left:1%;'>
+				<img src='images/CopCycle.gif' width='170' height='150' class=' img-responsive center-block'>
+			</div>
+			<div id='myCopHorse2' class='col-xs-7 col-lg-7 col-md-7 forHide' style='position:absolute; z-index: 3;top:10%; left:1%;'>
+				<img src='images/CopHorse.gif' width='300' height='280' class=' img-responsive center-block'>
+			</div>
+ -->			<div id='myCopBike2' class='col-xs-4 col-lg-4 col-md-4 forHide' style='position:absolute; z-index: 3; bottom:10%; left:1%;'>
+				<img src='images/CopBike.gif' width='180' height='160' class=' img-responsive center-block'>
+			</div>
+			<div id='myCopCopter2' class='col-xs-6 col-lg-6 col-md-6 forHide' style='position:absolute; z-index: 3; bottom:45%; left:1%;'>
+				<img src='images/CopCopter.gif' width='180' height='160' class=' img-responsive center-block'>
+			</div>
+			<div id='myThief' class='col-xs-4 col-lg-4 col-md-4 ' style='position:absolute; z-index: 3; bottom:7%; left:61%;'>
+				<img src='images/ThiefBike.gif' width='280' height='160' class=' img-responsive center-block'>
+			</div>
+		</div>
+		
+		<div id="mapView" class="col-xs-5 col-md-5 col-lg-5 fullBorder GameDiv" style="position:absolute; z-index: 3; top:2%; left:53.2%; height: 350px;">
+			<div id='copMarker' class='col-xs-2 col-lg-2 col-md-2 mapOuterClass' style='position:absolute; z-index: 3; bottom:4%; left:40%;'>
+				<img src='images/copMarker.png' style="width:120%;" class='center-block'>
+			</div>
+			<div id='thiefMarker' class='col-xs-2 col-lg-2 col-md-2 mapOuterClass' style='position:absolute; z-index: 2; bottom:45%; left:40%;'>
+				<img src='images/thiefMarker.png' style="width:120%;" class='center-block'>
+			</div>
+			<div id='airportMarker' class='col-xs-2 col-lg-2 col-md-2 mapOuterClass' style='position:absolute; z-index: 3; bottom:65%; left:10%;'>
+				<img src='images/airportMarker.png' style="width:120%;" class='center-block'>
+			</div>
+			<div id='PrisonMarker' class='col-xs-2 col-lg-2 col-md-2 mapOuterClass' style='position:absolute; z-index: 2; bottom:65%; left:70%;'>
+				<img src='images/PrisonMarker.png' style="width:120%;" class='center-block'>
+			</div>
+		</div>
+</div>
+	</div>	
+  </body>
+</html>
