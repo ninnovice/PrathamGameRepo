@@ -1,0 +1,305 @@
+html{
+    height:100%;
+}
+body {
+	color:#000000;
+	background-color:#000000;
+}
+.dhoomHeading{
+	height:30%;
+}
+.menuBtns{
+	margin-top:4%;
+	height:66%;
+}
+#gameVideo,#gamePlayButton{
+	height:100%;
+}
+.playBtnTop{
+	height:40%;
+}
+#topSection{
+	height:47%;
+}
+.levelDisplay{
+	height:35%;
+	margin-top:5%;
+}
+#BottomSection{
+	height:45%;
+}
+.mainBg{
+/*    background-position: 100% 90%; */
+    background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover; 
+	background-size: cover;
+}
+
+.playButton{
+	padding-top:1%;
+    border-style: outset;
+	border-width:12px;
+	border-color:#ffffff;
+	border-radius:80px;
+	height:65%;
+	background-color:#4CAF50;
+	color:#ffffff;
+	font-size:200%;
+}
+.InstructionsButton{
+	padding-top:2%;
+    border-style: outset;
+    border-width:12px;
+	border-color:#ffffff;
+	border-radius:80px;
+	height:65%;
+	background-color:#FF9800;
+	color:#ffffff;
+	font-size:200%;
+}
+.levelDisplay {
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-width:8px;
+	border-color:#607D8B;
+	margin-top:2%;
+	height:50%;
+	padding-top: 1px;
+	background-color:#B0BEC5;
+	color:#ffffff;
+}
+.copLevel{
+	width:16%;
+	margin-left:3.5%;
+	display:inline;
+}
+h2 {
+	color:#ffffff;
+}
+
+.textStrong{
+	font-weight: bold;
+	font-size: 140%;
+}
+
+button:focus { outline:0 !important; }
+
+.frac { display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    letter-spacing: 0.001em;
+    text-align: center;
+}
+.frac > span {
+    display: block;
+    padding: 0.1em;
+}
+.frac span.bottom {
+    border-top: thin solid black;
+}
+.frac span.symbol {
+    display: none;
+} 
+
+.fraction {
+  display: inline-flex;
+  flex-direction: column;
+  padding: 1em;
+  align-items: center;
+}
+.numerator {
+  border-bottom: 2px solid grey;
+}
+
+.border{
+	border-top-right-radius: 30px;
+	border-bottom-right-radius: 30px;
+	background-color:#FFEA00;
+    background-repeat: repeat-x;
+	background-size: 10% 40px;
+}
+
+#frameDivider{
+	height: 100%;
+}
+
+.mapOuter{
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover; 
+	background-size: cover;
+	height:200px;
+}
+
+.leftClass {
+	height: 190px;
+	margin:3%;
+	margin-left:11%;
+	margin-right:5%;
+}
+.rightClass {
+	height: 190px;
+	margin:3%;
+	margin-left:5%;
+	margin-right:5%;
+}
+.dec{
+	border-style: solid;
+	border-width:5px;
+	border-radius:50px;
+	margin-bottom:5px;
+	margin-top:10px;
+	padding-bottom:15px;
+	padding-top:10px;
+	border-color:#ffffff;
+}
+
+h2 {
+	color:#ffffff;
+}
+
+
+#equation, #ansButtons {
+	margin-top: 2%;
+	color:#ffffff;
+	font-size:180%;
+}
+
+.btn-circle {
+  width: 5%;
+  height: 5%;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 15px;
+}
+.btn-circle.btn-lg {
+  width: 5%;
+  height: 5%;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 25px;
+}
+.btn-circle.btn-xl {
+  width: 100%;
+  height: 25%;
+  /* padding: 10px 16px; */
+  font-size: 24px;
+  line-height: 1.33;
+  border-radius: 50%;
+}
+
+.btn:focus {
+outline:0px;
+}
+
+.roadRotate {
+	background-position: bottom;
+	background-size: cover;
+/* 	-webkit-background-size: 100% 350px;
+	-moz-background-size: 100% 350px;
+	-o-background-size: 100% 350px; 
+	background-size: 100% 350px; */
+/*	width: 100%;
+*/	height: 100%;
+}
+.roadRotate2 {
+	background-position: bottom;
+	background-size: cover;
+/* 	-webkit-background-size: 100% 350px;
+	-moz-background-size: 100% 350px;
+	-o-background-size: 100% 350px; 
+	background-size: 100% 350px; */
+/*	width: 100%;
+*/	height: 100%;
+}
+
+#controlRoomSection {
+	background-position: bottom;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover; 
+	background-size: cover;
+}
+
+#chaseCam {
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover; 
+	background-size: cover;
+}
+#mapView {
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover; 
+	background-size: cover;
+}
+
+.fullBorder{
+	border-style: solid;
+	border-color: #9E9E9E;
+	border-width: 15px;
+}
+.border1{
+	border-right-style: solid;
+    border-bottom-style: solid;
+	border-color: #9E9E9E;
+	border-width: 15px;
+}
+.border2{
+	border-left-style: solid;
+    border-bottom-style: solid;
+	border-color: #9E9E9E;
+	border-width: 15px;
+	
+}
+
+@media all and (min-width: 960px) {
+	.InstructionsButton{
+		/* padding-top:25px; */
+	}
+	.StartingButtons {
+        font-size: 14px;
+    }
+}
+ 
+@media all and (max-width: 959px) and (min-width: 840px) {
+	.StartingButtons {
+        font-size: 12px;
+    }
+	.InstructionsButton{
+		/* padding-top:30px; */
+	}
+}
+ 
+@media all and (max-width: 839px) and (min-width: 320px) {
+	.StartingButtons {
+        font-size: 7px;
+    }
+	.InstructionsButton{
+		/* padding-top:30px; */
+	}
+
+}
+/* .roadRotate {
+	background-image: url('../images/RoadBg.jpg');
+	width: 100%;
+	height: 350px;
+	
+	-webkit-animation: backgroundScroll 1s linear infinite;
+	animation: backgroundScroll 1s linear infinite;
+}
+ 
+@-webkit-keyframes backgroundScroll {
+	from {background-position: 0 0;}
+	to {background-position: 100% 0;}
+}
+ 
+@keyframes backgroundScroll {
+	from {background-position: 0 0;}
+	to {background-position: 100% 0;}
+} */
