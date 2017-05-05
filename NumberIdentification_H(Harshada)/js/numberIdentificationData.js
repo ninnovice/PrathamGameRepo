@@ -1,0 +1,303 @@
+NumberIdenti.jsonData=[
+{
+	"inEnglish": "1",
+	"inLang": "1",
+	"word": "एक",
+	"sound": "chrt_H_1.mp3",
+	"questionId": 1
+}, {
+	"inEnglish": "2",
+	"inLang": "2",
+	"word": "दो",
+	"sound": "chrt_H_2.mp3",
+	"questionId": 2
+}, {
+	"inEnglish": "3",
+	"inLang": "3",
+	"word": "तीन",
+	"sound": "chrt_H_3.mp3",
+	"questionId": 3
+}, {
+	"inEnglish": "4",
+	"inLang": "4",
+	"word": "चार",
+	"sound": "chrt_H_4.mp3",
+	"questionId": 4
+}, {
+	"inEnglish": "5",
+	"inLang": "5",
+	"word": "पांच",
+	"sound": "chrt_H_5.mp3",
+	"questionId": 5
+}, {
+	"inEnglish": "6",
+	"inLang": "6",
+	"word": "छः",
+	"sound": "chrt_H_6.mp3",
+	"questionId": 6
+}, {
+	"inEnglish": "7",
+	"inLang": "7",
+	"word": "सात",
+	"sound": "chrt_H_7.mp3",
+	"questionId": 7
+}, {
+	"inEnglish": "8",
+	"inLang": "8",
+	"word": "आठ",
+	"sound": "chrt_H_8.mp3",
+	"questionId": 8
+}, {
+	"inEnglish": "9",
+	"inLang": "9",
+	"word": "नौ",
+	"sound": "chrt_H_9.mp3",
+	"questionId": 9
+}, {
+	"inEnglish": "10",
+	"inLang": "10",
+	"word": "दस",
+	"sound": "chrt_H_10.mp3",
+	"questionId": 10
+}, {
+	"inEnglish": "11",
+	"inLang": "11",
+	"word": "ग्यारह",
+	"sound": "chrt_H_11.mp3",
+	"questionId": 11
+}, {
+	"inEnglish": "12",
+	"inLang": "12",
+	"word": "बारह",
+	"sound": "chrt_H_12.mp3",
+	"questionId": 12
+}, {
+	"inEnglish": "13",
+	"inLang": "13",
+	"word": "तेरह",
+	"sound": "chrt_H_13.mp3",
+	"questionId": 13
+}, {
+	"inEnglish": "14",
+	"inLang": "14",
+	"word": "चौदह",
+	"sound": "chrt_H_14.mp3",
+	"questionId": 14
+}, {
+	"inEnglish": "15",
+	"inLang": "15",
+	"word": "पंद्रह",
+	"sound": "chrt_H_15.mp3",
+	"questionId": 15
+}, {
+	"inEnglish": "16",
+	"inLang": "16",
+	"word": "सोलह",
+	"sound": "chrt_H_16.mp3",
+	"questionId": 16
+}, {
+	"inEnglish": "17",
+	"inLang": "17",
+	"word": "सत्रह",
+	"sound": "chrt_H_17.mp3",
+	"questionId": 17
+}, {
+	"inEnglish": "18",
+	"inLang": "18",
+	"word": "अट्ठारह",
+	"sound": "chrt_H_18.mp3",
+	"questionId": 18
+}, {
+	"inEnglish": "19",
+	"inLang": "19",
+	"word": "उन्निस",
+	"sound": "chrt_H_19.mp3",
+	"questionId": 19
+}, {
+	"inEnglish": "20",
+	"inLang": "20",
+	"word": "बीस",
+	"sound": "chrt_H_20.mp3",
+	"questionId": 20
+}, {
+	"inEnglish": "21",
+	"inLang": "21",
+	"word": "इक्कीस",
+	"sound": "chrt_H_21.mp3",
+	"questionId": 21
+}, {
+	"inEnglish": "22",
+	"inLang": "22",
+	"word": "बाईस",
+	"sound": "chrt_H_22.mp3",
+	"questionId": 22
+}, {
+	"inEnglish": "23",
+	"inLang": "23",
+	"word": "तेईस",
+	"sound": "chrt_H_23.mp3",
+	"questionId": 23
+}, {
+	"inEnglish": "24",
+	"inLang": "24",
+	"word": "चौबीस",
+	"sound": "chrt_H_24.mp3",
+	"questionId": 24
+}, {
+	"inEnglish": "25",
+	"inLang": "25",
+	"word": "पच्चीस",
+	"sound": "chrt_H_25.mp3",
+	"questionId": 25
+}, {
+	"inEnglish": "26",
+	"inLang": "26",
+	"word": "छब्बीस",
+	"sound": "chrt_H_26.mp3",
+	"questionId": 26
+}, {
+	"inEnglish": "27",
+	"inLang": "27",
+	"word": "सत्ताईस",
+	"sound": "chrt_H_27.mp3",
+	"questionId": 27
+}, {
+	"inEnglish": "28",
+	"inLang": "28",
+	"word": "अट्ठाईस",
+	"sound": "chrt_H_28.mp3",
+	"questionId": 28
+}, {
+	"inEnglish": "29",
+	"inLang": "29",
+	"word": "उनतीस",
+	"sound": "chrt_H_29.mp3",
+	"questionId": 29
+}, {
+	"inEnglish": "30",
+	"inLang": "30",
+	"word": "तीस",
+	"sound": "chrt_H_30.mp3",
+	"questionId": 30
+}, {
+	"inEnglish": "31",
+	"inLang": "31",
+	"word": "इकतीस",
+	"sound": "chrt_H_31.mp3",
+	"questionId": 31
+}, {
+	"inEnglish": "32",
+	"inLang": "32",
+	"word": "बत्तीस",
+	"sound": "chrt_H_32.mp3",
+	"questionId": 32
+}, {
+	"inEnglish": "33",
+	"inLang": "33",
+	"word": "तैंतीस",
+	"sound": "chrt_H_33.mp3",
+	"questionId": 33
+}, {
+	"inEnglish": "34",
+	"inLang": "34",
+	"word": "चौंतीस",
+	"sound": "chrt_H_34.mp3",
+	"questionId": 34
+}, {
+	"inEnglish": "35",
+	"inLang": "35",
+	"word": "पैंतीस",
+	"sound": "chrt_H_35.mp3",
+	"questionId": 35
+}, {
+	"inEnglish": "36",
+	"inLang": "36",
+	"word": "छ्त्तीस",
+	"sound": "chrt_H_36.mp3",
+	"questionId": 36
+}, {
+	"inEnglish": "37",
+	"inLang": "37",
+	"word": "सैंतीस",
+	"sound": "chrt_H_37.mp3",
+	"questionId": 37
+}, {
+	"inEnglish": "38",
+	"inLang": "38",
+	"word": "अड़तीस",
+	"sound": "chrt_H_38.mp3",
+	"questionId": 38
+}, {
+	"inEnglish": "39",
+	"inLang": "39",
+	"word": "उनतालीस",
+	"sound": "chrt_H_39.mp3",
+	"questionId": 39
+}, {
+	"inEnglish": "40",
+	"inLang": "40",
+	"word": "चालीस",
+	"sound": "chrt_H_40.mp3",
+	"questionId": 40
+}, {
+	"inEnglish": "41",
+	"inLang": "41",
+	"word": "इकतालीस",
+	"sound": "chrt_H_41.mp3",
+	"questionId": 41
+}, {
+	"inEnglish": "42",
+	"inLang": "42",
+	"word": "बयालीस",
+	"sound": "chrt_H_42.mp3",
+	"questionId": 42
+}, {
+	"inEnglish": "43",
+	"inLang": "43",
+	"word": "तैंतालीस",
+	"sound": "chrt_H_43.mp3",
+	"questionId": 43
+}, {
+	"inEnglish": "44",
+	"inLang": "44",
+	"word": "चौंतालीस",
+	"sound": "chrt_H_44.mp3",
+	"questionId": 44
+}, {
+	"inEnglish": "45",
+	"inLang": "45",
+	"word": " पैंतालीस",
+	"sound": "chrt_H_45.mp3",
+	"questionId": 45
+}, {
+	"inEnglish": "46",
+	"inLang": "46",
+	"word": "छियालीस",
+	"sound": "chrt_H_46.mp3",
+	"questionId": 46
+}, {
+	"inEnglish": "47",
+	"inLang": "47",
+	"word": "सैंतालीस",
+	"sound": "chrt_H_47.mp3",
+	"questionId": 47
+}, {
+	"inEnglish": "48",
+	"inLang": "48",
+	"word": "अड़तालीस",
+	"sound": "chrt_H_48.mp3",
+	"questionId": 48
+}, {
+	"inEnglish": "49",
+	"inLang": "49",
+	"word": "उनचास ",
+	"sound": "chrt_H_49.mp3",
+	"questionId": 49
+}, {
+	"inEnglish": "50",
+	"inLang": "50",
+	"word": "पचास",
+	"sound": "chrt_H_50.mp3",
+	"questionId": 50
+}
+];
