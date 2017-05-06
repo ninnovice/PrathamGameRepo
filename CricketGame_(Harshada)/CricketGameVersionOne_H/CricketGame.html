@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Cricket Game</title>
+		<meta charset="utf-8"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<meta http-equiv="cache-control" content="max-age=0" />
+		<meta http-equiv="cache-control" content="no-cache" />
+		<meta http-equiv="expires" content="0" />
+		<meta http-equiv="pragma" content="no-cache" />
+
+		<link rel="shortcut icon" href="images/favi.ico">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/magic.css">
+		<link rel="stylesheet" type="text/css" href="css/magic.min.css">
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+
+		<link rel="stylesheet" href="css/CricketGameCSS.css">
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+		<script src="js/jquery.ui.touch-punch.min.js"></script>
+		<script src="code/utility.js"></script>
+		<script type="text/javascript" src="data/CricketDataDependingUponLanguage.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/PlayersData.js"></script>
+		<script type="text/javascript" src="js/dummyPlayersList.js"></script>
+		<script type="text/javascript" src="code/tempJS.js"></script>
+	</head>
+	<body id="background" onload="Init();addDivs();">
+		<div id="backToHomeIcon" class="col-lg-1 col-md-1 col-xs-1 col-sm-1 col-lg-offset-11 col-md-offset-11 col-xs-offset-10 col-sm-offset-10 left" style="margin-top:-15px;">
+			<i class="fa fa-home fa-5x" aria-hidden="true"  onclick="passResId('CricketGameCoverPage.html');"></i>
+		</div>
+	<div id="divShowingPlayers">
+		<!-- <h1 id="choosePlayersMessage"  class="col-lg-10 col-md-10 col-xs-10 col-sm-10 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1" style="text-align:center">खेळाडू निवडा शतक बनवा.</h1> -->
+		<img class="img-responsive col-lg-10 col-md-10 col-xs-10 col-sm-10 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1" id="choosePlayers" >
+		<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+				<div id="firstdiv" class="col-lg-10 col-md-10 col-xs-10 col-sm-10 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1" style="margin-top:0px;">
+				</div>
+				<audio id="startingCrowd"></audio>
+		</div>
+	</div>
+	<div id="divshowingCricketBall" class="col-lg-12 col-md-12 col-xs-12 col-sm-12" >
+		<div id="smalldiv" class="hideAndSeek col-lg-4 col-md-5 col-xs-5 col-sm-5">
+				<div id="stage1" class="col-lg-4 col-md-5 col-sm-6 col-xs-6 ">
+					<div id="rotate1"  class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			        	<div id="ring-1" class=" stop col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			        		<div class="poster1 col-lg-12 col-md-12 col-sm-12 col-xs-12" id="d1" style="-webkit-transform: rotateX(0deg) translateZ(180px); "><p id="p1" class="balls"></p></div>
+					        <div class="poster1 col-lg-12 col-md-12 col-sm-12 col-xs-12" id="d2" style="-webkit-transform: rotateX(30deg) translateZ(180px); "><p id="p2" class="balls"></p></div>
+					        <div class="poster1 col-lg-12 col-md-12 col-sm-12 col-xs-12" id="d3" style="-webkit-transform: rotateX(60deg) translateZ(180px); "><p id="p3" class="balls"></p></div>
+					        <div class="poster1 col-lg-12 col-md-12 col-sm-12 col-xs-12" id="d4" style="-webkit-transform: rotateX(90deg) translateZ(180px); "><p id="p4" class="balls"></p></div>
+					        <div class="poster1 col-lg-12 col-md-12 col-sm-12 col-xs-12" id="d5" style="-webkit-transform: rotateX(120deg) translateZ(180px); "><p id="p5" class="balls"></p></div>
+					        <div class="poster1 col-lg-12 col-md-12 col-sm-12 col-xs-12" id="d6" style="-webkit-transform: rotateX(150deg) translateZ(180px); "><p id="p6" class="balls"></p></div>
+					        <div class="poster1 col-lg-12 col-md-12 col-sm-12 col-xs-12" id="d7" style="-webkit-transform: rotateX(180deg) translateZ(180px); "><p id="p7" class="balls"></p></div>
+					        <div class="poster1 col-lg-12 col-md-12 col-sm-12 col-xs-12" id="d8" style="-webkit-transform: rotateX(210deg) translateZ(180px); "><p id="p8" class="balls"></p></div>
+					        <div class="poster1 col-lg-12 col-md-12 col-sm-12 col-xs-12" id="d9" style="-webkit-transform: rotateX(240deg) translateZ(180px); "><p id="p9" class="balls"></p></div>
+					        <div class="poster1 col-lg-12 col-md-12 col-sm-12 col-xs-12" id="d10" style="-webkit-transform: rotateX(270deg) translateZ(180px); "><p id="p10" class="balls"></p></div>
+					        <div class="poster1 col-lg-12 col-md-12 col-sm-12 col-xs-12" id="d11" style="-webkit-transform: rotateX(300deg) translateZ(180px); "><p id="p11" class="balls"></p></div>
+					        <div class="poster1 col-lg-12 col-md-12 col-sm-12 col-xs-12" id="d12" style="-webkit-transform: rotateX(330deg) translateZ(180px); "><p id="p12" class="balls"></p></div>
+			        	</div>
+		      		</div>
+				</div>
+				<div id="stage2" class="col-lg-4 col-md-5 col-sm-6 col-xs-6 col-lg-offset-1 col-md-offset-1  left">
+			      	<div id="rotate2" class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			        	<div id="ring-2" class=" stop col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					        <div class="poster2 col-lg-12 col-md-12 col-sm-12 col-xs-12" id="d13" style="-webkit-transform: rotateX(0deg) translateZ(180px); "><p id="p13" ></p></div>
+					        <div class="poster2 col-lg-12 col-md-12 col-sm-12 col-xs-12" id="d14" style="-webkit-transform: rotateX(30deg) translateZ(180px); "><p id="p14" ></p></div>
+					        <div class="poster2 col-lg-12 col-md-12 col-sm-12 col-xs-12" id="d15" style="-webkit-transform: rotateX(60deg) translateZ(180px); "><p id="p15" ></p></div>
+					        <div class="poster2 col-lg-12 col-md-12 col-sm-12 col-xs-12" id="d16" style="-webkit-transform: rotateX(90deg) translateZ(180px); "><p id="p16" ></p></div>
+					        <div class="poster2 col-lg-12 col-md-12 col-sm-12 col-xs-12" id="d17" style="-webkit-transform: rotateX(120deg) translateZ(180px); "><p id="p17" ></p></div>
+					        <div class="poster2 col-lg-12 col-md-12 col-sm-12 col-xs-12" id="d18" style="-webkit-transform: rotateX(150deg) translateZ(180px); "><p id="p18" ></p></div>
+					        <div class="poster2 col-lg-12 col-md-12 col-sm-12 col-xs-12" id="d19" style="-webkit-transform: rotateX(180deg) translateZ(180px); "><p id="p19" ></p></div>
+					        <div class="poster2 col-lg-12 col-md-12 col-sm-12 col-xs-12" id="d20" style="-webkit-transform: rotateX(210deg) translateZ(180px); "><p id="p20" ></p></div>
+					        <div class="poster2 col-lg-12 col-md-12 col-sm-12 col-xs-12" id="d21" style="-webkit-transform: rotateX(240deg) translateZ(180px); "><p id="p21"></p></div>
+					        <div class="poster2 col-lg-12 col-md-12 col-sm-12 col-xs-12" id="d22" style="-webkit-transform: rotateX(270deg) translateZ(180px); "><p id="p22" ></p></div>
+					        <div class="poster2 col-lg-12 col-md-12 col-sm-12 col-xs-12" id="d23" style="-webkit-transform: rotateX(300deg) translateZ(180px); "><p id="p23" ></p></div>
+					        <div class="poster2 col-lg-12 col-md-12 col-sm-12 col-xs-12" id="d24" style="-webkit-transform: rotateX(330deg) translateZ(180px); "><p id="p24" ></p></div>
+		        		</div>
+		      	</div>
+			</div>		
+		</div>
+		<div class="hideAndSeek col-lg-2 col-md-3 col-xs-3 col-sm-3">
+			<div id="optionDiv" class="col-lg-10 col-md-10 col-xs-10 col-sm-10 col-lg-offset-1 col-md-offset-1 col-xs-offset-1 col-sm-offset-1">
+	    		<div id="no1" class="col-lg-12 col-md-12 col-xs-12 col-sm-12" onclick="answerClicked(this.id);">
+	    		</div>
+	    		<div id="no2" class="col-lg-12 col-md-12 col-xs-12 col-sm-12" onclick="answerClicked(this.id);">
+	    		</div>
+	    		<div id="no3" class="col-lg-12 col-md-12 col-xs-12 col-sm-12" onclick="answerClicked(this.id);">
+	    		</div>
+	    		<div id="no4" class="col-lg-12 col-md-12 col-xs-12 col-sm-12" onclick="answerClicked(this.id);">
+	    		</div>
+	    	</div>
+		</div>
+    <div id="largediv"class="hideAndSeek col-lg-5 col-md-3 col-xs-3 col-sm-4">
+    </div>
+   </div>
+   	<div id="buttondiv"class="col-lg-12 col-md-12 col-xs-12 col-sm-12" style="height:90px">
+		<button id="StopTheWheel" class="col-lg-2 col-md-2 col-xs-2 col-sm-2 col-xs-offset-1 col-sm-offset-1" onclick="StopWheel();">Next Ball</button>
+		<audio id="startingSound"></audio>
+	</div>
+	<div id="divShowingTimerAndMessage" class="col-lg-12 col-md-12 col-xs-12 col-sm-12" style="text-align: center;">
+			<div id="divShowingTimer" class="hideAndSeek col-lg-1 col-md-1 col-xs-1 col-sm-1 col-lg-offset-1 col-md-offset-1 col-xs-offset-1 col-sm-offset-1">
+				<canvas id="myCanvas" width="100px" height="100px" style="border:2px solid white;border-radius:80px;">
+				</canvas>
+			</div>
+			<div id="divShowingDotBallMessage" class=" hideAndSeek col-lg-9 col-md-9 col-xs-9 col-sm-9" >
+   				<div class="col-lg-3 col-md-3 col-sm-5 col-xs-5 col-lg-offset-6 col-md-offset-6 col-xs-offset-6 col-sm-offset-6 left">
+   					<p id="showItsDotBallMessage"></p>
+   				</div>	
+   			</div>
+	</div>
+	<div id="answerDiv" class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+		<div class="col-lg-8 col-md-8 col-xs-8 col-sm-8 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-2" >
+			<p id="ansMessage"></p>
+		</div>
+	</div>
+	<audio id="playSound"></audio>
+	<audio id="playSound2"></audio>
+	<div id="showFieldChangedMessageDiv" class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+		<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 col-lg-offset-3 col-md-offset-3 col-xs-offset-3 col-sm-offset-3">
+			<p id="showFieldChangedMessage">Captain has changed the fielding positions.</p>
+		</div>
+	</div>
+	<div id="scoreBoard" class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+		<div id="part1" class="col-lg-4 col-md-4 col-xs-4 col-sm-4" >
+				<div id="part1-1" class="col-lg-3 col-md-3 col-xs-2 col-sm-2" >
+					<p id="nameOfCountry"></p>
+				</div>
+				<div id="part1-2" class="col-lg-4 col-md-4 col-xs-4 col-sm-4 " >
+					<p id="runs" ></p>
+				</div>
+			
+				<div id="part1-3" class="col-lg-2 col-md-2 col-xs-3 col-sm-3">
+					<p id="over" >Over</p>
+				</div>
+				<div id="part1-4" class="col-lg-3 col-md-3 col-xs-3 col-sm-3">
+					<p id="TotalOver"></p>
+				</div>
+		</div>
+		<div id="part2" class="col-lg-3 col-md-3 col-xs-3 col-sm-3">
+				<div id="part2-1" class="col-lg-5 col-md-5 col-xs-5 col-sm-5">
+					<p  id="strikeRate">StrRate</p>
+				</div>
+				<div id="part2-2" class="col-lg-7 col-md-7 col-xs-7 col-sm-7" >
+					<p id="showStrikeRate"></p>
+				</div>
+		</div>
+		<div id="part3" class="col-lg-5 col-md-5 col-xs-5 col-sm-5" >
+				<div id="part3-1" class="col-lg-3 col-md-3 col-xs-3 col-sm-3" >
+					<p id="nameOfPlayer"></p>
+				</div>
+				<div id="part3-2" class="col-lg-3 col-md-3 col-xs-3 col-sm-3 ">
+					<p id="playerScore"></p>
+				</div>
+				<div id="part3-3" class="col-lg-3 col-md-3 col-xs-3 col-sm-3" >
+					<p id="dummyPlayer" ></p>
+				</div>
+				<div id="part3-4" class="col-lg-3 col-md-3 col-xs-3 col-sm-3 ">
+					<p id="dummyPlayerScore" ></p>
+				</div>
+		</div>
+	</div>
+	<div id="showOnStrikePlayer" class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+	</div>
+	<div id="divShowingGameFinishedMessge">
+		<div class="col-lg-10 col-md-10 col-xs-10 col-sm-10 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1" style="background-color:rgba(15,158,114,0.5);">
+			<div  id="divShowingLastMessage" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align:center;background-color:white;">
+					<h1 id="Lastmessage" class="col-lg-10 col-md-10 col-xs-10 col-sm-10 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1" style="text-align:center;opacity:1.5"></h1>
+			</div>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+				<div id="divContainingInfoOfPlayer" class="col-lg-10 col-md-10 col-sm-10 col-xs-10 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1" >
+					<div  id="divContainingTextInfoOfPlayer" class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+							<p class="col-lg-6 col-md-6 col-sm-6 col-xs-6 infoOfPlayer" id="info0">Player</p>
+							<p class="col-lg-6 col-md-6 col-sm-6 col-xs-6 infoOfPlayer" id="info1"></p>
+							<p class="col-lg-6 col-md-6 col-sm-6 col-xs-6 infoOfPlayer" id="info2">Runs</p>						
+							<p class="col-lg-6 col-md-6 col-sm-6 col-xs-6 infoOfPlayer" id="info3"></p>						
+							<p class="col-lg-6 col-md-6 col-sm-6 col-xs-6 infoOfPlayer" id="info4">Balls</p>
+							<p class="col-lg-6 col-md-6 col-sm-6 col-xs-6 infoOfPlayer" id="info5"></p>
+							<p class="col-lg-6 col-md-6 col-sm-6 col-xs-6 infoOfPlayer" id="info6">StrRate</p>
+							<p class="col-lg-6 col-md-6 col-sm-6 col-xs-6 infoOfPlayer" id="info7"></p>
+							<p class="col-lg-6 col-md-6 col-sm-6 col-xs-6 infoOfPlayer" id="info8"></p>
+							<p class="col-lg-6 col-md-6 col-sm-6 col-xs-6 infoOfPlayer" id="info9"></p>
+					</div>	
+					<div id="divContainingImgInfoOfPlayer" class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="text-align:center;margin:0px;">
+						<!-- <div style="margin-top:30px;"> -->
+							<img id="lastpageImg" class="img-responsive">
+						<!-- </div> -->
+					</div>
+				</div>	
+			</div>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top:0px"> 
+				<!-- <button id="playAgain" class="col-lg-2 col-md-2 col-xs-2 col-sm-2 col-lg-offset-5 col-md-offset-5 col-xs-offset-5 col-sm-offset-5"  onclick="window.open('CricketGame.html','_self')">Play Again</button> -->
+
+				<div onclick="passResId('CricketGame.html');"  id="playAgain" class="col-lg-2 col-md-2 col-xs-2 col-sm-2 col-lg-offset-5 col-md-offset-5 col-xs-offset-5 col-sm-offset-5 btn-info " >
+	          			<span class="glyphicon glyphicon-repeat"></span>Play Again
+	        	</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

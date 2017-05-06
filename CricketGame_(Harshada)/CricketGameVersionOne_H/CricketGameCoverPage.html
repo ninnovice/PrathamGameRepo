@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Cricket Game</title>
+		<meta charset="utf-8"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" href="images/favi.ico">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/magic.css">
+		<link rel="stylesheet" type="text/css" href="css/magic.min.css">
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/CricketGameCSS.css">
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+		<script src="js/jquery.ui.touch-punch.min.js"></script>
+		<script src="code/utility.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="data/CricketDataDependingUponLanguage.js"></script>
+		<script type="text/javascript" src="code/tempJS.js"></script>
+		<script>
+			function buttonEffect()
+			{
+				$('#instructions').hide();
+					$("#play").hide();
+					$('#playCricketGame').hide();
+				setTimeout(function(){
+					$('#playCricketGame').show();
+					$('#playCricketGame').addClass('magictime twisterInUp');
+					$('#howToPlayGame').show();
+				},5000);
+				
+			}
+			function playSoundOnStart()
+			{
+				
+				document.getElementById("startingSound").src="sound/tenExtra.mp3";
+				document.getElementById("startingSound").play();
+				$('#howToPlayGame').hide();
+			}
+			function buttonClick()
+			{
+				window.location.href='CricketGame.html';
+			}
+		</script>
+	</head>
+	<body id="CoverPage"  onload="getInitialData();playSoundOnStart();buttonEffect();">
+		<div id="howToPlayGame" class="col-lg-2 col-md-2 col-xs-2 col-sm-2 col-lg-offset-9 col-md-offset-9 col-xs-offset-9 col-sm-offset-9 left"  onclick="showInstructions();">
+		</div>
+		<audio id="startingSound"></audio>
+		<div class="col-lg-10 col-md-10 col-xs-10 col-sm-10 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1">
+			<div  id="instructions" class="col-lg-8 col-md-8 col-xs-8 col-sm-8 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-2" style="margin-top:20px;background-color:rgba(1,129,192,0.8);">
+				<p id="pp1" style="color:#FF4500;"></p>
+				<p id="pp2"></p>
+				<p id="pp3"></p>
+				<p id="pp4"></p>
+				<p id="pp5"></p>
+			</div>
+		</div>
+		<div id="play" onclick=window.location.href='CricketGame.html' class=" btn btn-info col-lg-2 col-md-2 col-xs-2 col-sm-2 col-lg-offset-5 col-md-offset-5 col-xs-offset-5 col-sm-offset-5 " style="margin-top:20px;font-size:30px;">
+          <span class="glyphicon glyphicon-play" style="font-size:30px;"></span> Play
+        </div>
+		<button id="playCricketGame" class="btn-lg" onclick="buttonClick();">Play</button>
+	</body>
+</html>

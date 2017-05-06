@@ -1,0 +1,1229 @@
+body
+{
+    margin-top:5px;
+}
+.ring1 {
+        margin: 0 auto;
+        height: 150px;
+        /*width:150px;*/
+        -webkit-transform-style: preserve-3d;
+        -webkit-animation-iteration-count:1;
+        -webkit-animation-timing-function: linear;
+        -ms-transform-style: preserve-3d;
+        -ms-animation-iteration-count: 1;
+        -ms-animation-timing-function: linear;
+        -moz-transform-style: preserve-3d;
+        -moz-animation-iteration-count: 1;
+        -moz-animation-timing-function: linear;
+      }
+.ring2 {
+        margin: 0 auto;
+        height: 150px;
+        /*width:150px;*/
+        -webkit-transform-style: preserve-3d;
+        -webkit-animation-iteration-count:5;
+        -webkit-animation-timing-function: linear;
+        -ms-transform-style: preserve-3d;
+        -ms-animation-iteration-count:5;
+        -ms-animation-timing-function: linear;
+        -moz-transform-style: preserve-3d;
+        -moz-animation-iteration-count: 5;
+        -moz-animation-timing-function: linear;
+      }
+#rotate1, #rotate2
+{
+        margin:0 auto;
+        /*width:150px;*/
+        height:150px;
+        
+        -webkit-transform-style: preserve-3d; 
+        -ms-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+}
+
+#stage1,#stage2
+{
+      display:block;
+      /*width:150px;*/
+      margin-top:0px;
+      height:250px;
+      -webkit-perspective:1200;
+        -ms-perspective:1200;
+        -moz-perspective:1200;
+         -webkit-transform-style: preserve-3d; 
+        -ms-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+}
+
+.slowring
+      {
+        -webkit-animation-name: x-spin;
+        -webkit-animation-duration:3s;
+        -ms-animation-name: x-spin;
+        -ms-animation-duration:3s;
+        -moz-animation-name: x-spin;
+        -moz-animation-duration:3s;
+        animation-duration:3s;
+      }
+.fastring
+      {
+
+        -webkit-animation-name: x-spin;
+        -webkit-animation-duration:1s;
+        -ms-animation-name: x-spin;
+        -ms-animation-duration:1s;
+        -moz-animation-name: x-spin;
+        -moz-animation-duration:1s;
+        animation-duration:1s;
+        
+      }
+.extraSlow
+        {
+                -webkit-animation-name: x-spin;
+                -webkit-animation-duration:10s;
+                -ms-animation-name: x-spin;
+                -ms-animation-duration:10s;
+                -moz-animation-name: x-spin;
+                -moz-animation-duration:10s;
+                animation-duration:10s;
+        }
+@-webkit-keyframes x-spin {
+        0%    { -webkit-transform: rotateX(0deg); 
+                -ms-transform: rotateX(0deg);
+                -moz-transform: rotateX(0deg);}
+        50%   { -webkit-transform: rotateX(180deg); 
+                -ms-transform: rotateX(180deg);
+                -moz-transform: rotateX(180deg);}
+        100%  { -webkit-transform: rotateX(360deg); 
+                -ms-transform: rotateX(360deg);
+                -moz-transform: rotateX(360deg);}
+      }
+
+      @-webkit-keyframes y-spin {
+        0%    { -webkit-transform: rotateY(0deg);
+                  -ms-transform: rotateY(0deg);
+                -moz-transform: rotateY(0deg); }
+        50%   { -webkit-transform: rotateY(180deg);
+                -ms-transform: rotateY(180deg);
+                -moz-transform: rotateY(180deg); }
+        100%  { -webkit-transform: rotateY(360deg);
+                -ms-transform: rotateY(360deg);
+                -moz-transform: rotateY(360deg);}
+      }
+
+@-webkit-keyframes back-y-spin
+ {
+        0%    { -webkit-transform: rotateY(360deg); 
+                -ms-transform: rotateY(360deg);
+                -moz-transform: rotateY(360deg);}
+        50%   { -webkit-transform: rotateY(180deg);
+                -ms-transform: rotateY(180deg);
+                -moz-transform: rotateY(180deg); }
+        100%  { -webkit-transform: rotateY(0deg); 
+                -ms-transform: rotateY(0deg); 
+                -moz-transform: rotateY(0deg); }
+}
+      
+
+/* 3D Bouncing ball */
+
+#ballWrapper {
+    width: 140px;
+    height: 300px;
+    position: fixed;
+    left: 50%;
+    top: 35%;
+    margin-left: -70px;
+    z-index: 100;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: all 5s linear 0s;
+    -moz-transition: all 5s linear 0s;
+    transition: all 5s linear 0s;
+    cursor: pointer;
+}
+
+#ballWrapper:active {
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+    cursor: pointer;
+}
+
+#ball {
+    width: 140px;
+    height: 140px;
+    border-radius: 70px;
+    background:#9C2626;
+    background: url("ball2.png");
+    box-shadow: inset 0 -5px 15px rgba(255,255,255,0.4), 
+                inset -2px -1px 40px rgba(0,0,0,0.4), 
+                0 0 1px #000;   
+    position: absolute;
+    top: 0; 
+    z-index: 11;
+    -webkit-animation: jump 1s infinite;
+    -moz-animation: jump 1s infinite;
+    -o-animation: jump 1s infinite;
+    -ms-animation: jump 1s infinite;
+    animation: jump 1s infinite;
+    cursor: pointer;
+}
+
+#ball::after {
+    width: 80px; 
+    height: 40px; 
+    position: absolute;
+    left: 30px;
+    top: 10px;
+    z-index: 10;
+    background: url("ball2.jpg");
+    border-radius: 40px / 20px; 
+}
+
+#ballShadow {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    z-index: 10;
+    margin-left: -30px;
+    width: 60px;
+    height: 75px;
+    background: rgba(20, 20, 20, .1);
+    box-shadow: 0px 0 20px 35px rgba(20,20,20,.1);
+    border-radius: 30px / 40px; 
+    -webkit-transform: scaleY(.3);
+    -moz-transform: scaleY(.3);
+    -ms-transform: scaleY(.3);
+    -o-transform: scaleY(.3);
+    transform: scaleY(.3);
+    -webkit-animation: shrink 1s infinite;
+    -moz-animation: shrink 1s infinite;
+    -o-animation: shrink 1s infinite;
+    -ms-animation: shrink 1s infinite;
+    animation: shrink 1s infinite;
+}
+
+/* Animations */
+
+@-webkit-keyframes jump {
+    0% {top: 0;
+        -webkit-animation-timing-function: ease-in;
+    }
+    40% {}
+    50% {top: 140px;
+        height: 140px;
+        -webkit-animation-timing-function: ease-out;
+    }
+    55% {top: 160px; height: 120px; border-radius: 70px / 60px;
+        -webkit-animation-timing-function: ease-in;}
+    65% {top: 120px; height: 140px; border-radius: 70px;
+        -webkit-animation-timing-function: ease-out;}
+    95% {
+        top: 0;     
+        -webkit-animation-timing-function: ease-in;
+    }
+    100% {top: 0;
+        -webkit-animation-timing-function: ease-in;
+    }
+}
+
+@-moz-keyframes jump {
+    0% {top: 0;
+        -moz-animation-timing-function: ease-in;
+    }
+    40% {}
+    50% {top: 140px;
+        height: 140px;
+        -moz-animation-timing-function: ease-out;
+    }
+    55% {top: 160px; height: 120px; border-radius: 70px / 60px;
+        -moz-animation-timing-function: ease-in;}
+    65% {top: 120px; height: 140px; border-radius: 70px;
+        -moz-animation-timing-function: ease-out;}
+    95% {
+        top: 0;     
+        -moz-animation-timing-function: ease-in;
+    }
+    100% {top: 0;
+        -moz-animation-timing-function: ease-in;
+    }
+}
+
+@-o-keyframes jump {
+    0% {top: 0;
+        -o-animation-timing-function: ease-in;
+    }
+    40% {}
+    50% {top: 140px;
+        height: 140px;
+        -o-animation-timing-function: ease-out;
+    }
+    55% {top: 160px; height: 120px; border-radius: 70px / 60px;
+        -o-animation-timing-function: ease-in;}
+    65% {top: 120px; height: 140px; border-radius: 70px;
+        -o-animation-timing-function: ease-out;}
+    95% {
+        top: 0;     
+        -o-animation-timing-function: ease-in;
+    }
+    100% {top: 0;
+        -o-animation-timing-function: ease-in;
+    }
+}
+
+@-ms-keyframes jump {
+    0% {top: 0;
+        -ms-animation-timing-function: ease-in;
+    }
+    40% {}
+    50% {top: 140px;
+        height: 140px;
+        -ms-animation-timing-function: ease-out;
+    }
+    55% {top: 160px; height: 120px; border-radius: 70px / 60px;
+        -ms-animation-timing-function: ease-in;}
+    65% {top: 120px; height: 140px; border-radius: 70px;
+        -ms-animation-timing-function: ease-out;}
+    95% {
+        top: 0;     
+        -ms-animation-timing-function: ease-in;
+    }
+    100% {top: 0;
+        -ms-animation-timing-function: ease-in;
+    }
+}
+
+@keyframes jump {
+    0% {
+        top: 0;
+        animation-timing-function: ease-in;
+    }
+    50% {
+        top: 140px;
+        height: 140px;
+        animation-timing-function: ease-out;
+    }
+    55% {
+        top: 160px; 
+        height: 120px; 
+        border-radius: 70px / 60px;
+        animation-timing-function: ease-in;
+    }
+    65% {
+        top: 120px; 
+        height: 140px; 
+        border-radius: 70px;
+        animation-timing-function: ease-out;
+    }
+    95% {
+        top: 0;     
+        animation-timing-function: ease-in;
+    }
+    100% {
+        top: 0;
+        animation-timing-function: ease-in;
+    }
+}
+
+
+
+@-webkit-keyframes shrink {
+    0% {
+        bottom: 0;
+        margin-left: -30px;
+        width: 60px;
+        height: 75px;
+        background: rgba(20, 20, 20, .1);
+        box-shadow: 0px 0 20px 35px rgba(20,20,20,.1);
+        border-radius: 30px / 40px;
+        -webkit-animation-timing-function: ease-in;
+    }
+    50% {
+        bottom: 30px;
+        margin-left: -10px;
+        width: 20px;
+        height: 5px;
+        background: rgba(20, 20, 20, .3);
+        box-shadow: 0px 0 20px 35px rgba(20,20,20,.3);
+        border-radius: 20px / 20px;
+        -webkit-animation-timing-function: ease-out;
+    }
+    100% {
+        bottom: 0;
+        margin-left: -30px;
+        width: 60px;
+        height: 75px;
+        background: rgba(20, 20, 20, .1);
+        box-shadow: 0px 0 20px 35px rgba(20,20,20,.1);
+        border-radius: 30px / 40px;
+        -webkit-animation-timing-function: ease-in;
+    }
+}
+
+@-moz-keyframes shrink {
+    0% {
+        bottom: 0;
+        margin-left: -30px;
+        width: 60px;
+        height: 75px;
+        background: rgba(20, 20, 20, .1);
+        box-shadow: 0px 0 20px 35px rgba(20,20,20,.1);
+        border-radius: 30px / 40px;
+        -moz-animation-timing-function: ease-in;
+    }
+    50% {
+        bottom: 30px;
+        margin-left: -10px;
+        width: 20px;
+        height: 5px;
+        background: rgba(20, 20, 20, .3);
+        box-shadow: 0px 0 20px 35px rgba(20,20,20,.3);
+        border-radius: 20px / 20px;
+        -moz-animation-timing-function: ease-out;
+    }
+    100% {
+        bottom: 0;
+        margin-left: -30px;
+        width: 60px;
+        height: 75px;
+        background: rgba(20, 20, 20, .1);
+        box-shadow: 0px 0 20px 35px rgba(20,20,20,.1);
+        border-radius: 30px / 40px;
+        -moz-animation-timing-function: ease-in;
+    }
+}
+
+@-o-keyframes shrink {
+    0% {
+        bottom: 0;
+        margin-left: -30px;
+        width: 60px;
+        height: 75px;
+        background: rgba(20, 20, 20, .1);
+        box-shadow: 0px 0 20px 35px rgba(20,20,20,.1);
+        border-radius: 30px / 40px;
+        -o-animation-timing-function: ease-in;
+    }
+    50% {
+        bottom: 30px;
+        margin-left: -10px;
+        width: 20px;
+        height: 5px;
+        background: rgba(20, 20, 20, .3);
+        box-shadow: 0px 0 20px 35px rgba(20,20,20,.3);
+        border-radius: 20px / 20px;
+        -o-animation-timing-function: ease-out;
+    }
+    100% {
+        bottom: 0;
+        margin-left: -30px;
+        width: 60px;
+        height: 75px;
+        background: rgba(20, 20, 20, .1);
+        box-shadow: 0px 0 20px 35px rgba(20,20,20,.1);
+        border-radius: 30px / 40px;
+        -o-animation-timing-function: ease-in;
+    }
+}
+
+@-ms-keyframes shrink {
+    0% {
+        bottom: 0;
+        margin-left: -30px;
+        width: 60px;
+        height: 75px;
+        background: rgba(20, 20, 20, .1);
+        box-shadow: 0px 0 20px 35px rgba(20,20,20,.1);
+        border-radius: 30px / 40px;
+        -ms-animation-timing-function: ease-in;
+    }
+    50% {
+        bottom: 30px;
+        margin-left: -10px;
+        width: 20px;
+        height: 5px;
+        background: rgba(20, 20, 20, .3);
+        box-shadow: 0px 0 20px 35px rgba(20,20,20,.3);
+        border-radius: 20px / 20px;
+        -ms-animation-timing-function: ease-out;
+    }
+    100% {
+        bottom: 0;
+        margin-left: -30px;
+        width: 60px;
+        height: 75px;
+        background: rgba(20, 20, 20, .1);
+        box-shadow: 0px 0 20px 35px rgba(20,20,20,.1);
+        border-radius: 30px / 40px;
+        -ms-animation-timing-function: ease-in;
+    }
+}
+
+@keyframes shrink {
+    0% {
+        bottom: 0;
+        margin-left: -30px;
+        width: 60px;
+        height: 75px;
+        background: rgba(20, 20, 20, .1);
+        box-shadow: 0px 0 20px 35px rgba(20,20,20,.1);
+        border-radius: 30px / 40px;
+        animation-timing-function: ease-in;
+    }
+    50% {
+        bottom: 30px;
+        margin-left: -10px;
+        width: 20px;
+        height: 5px;
+        background: rgba(20, 20, 20, .3);
+        box-shadow: 0px 0 20px 35px rgba(20,20,20,.3);
+        border-radius: 20px / 20px;
+        animation-timing-function: ease-out;
+    }
+    100% {
+        bottom: 0;
+        margin-left: -30px;
+        width: 60px;
+        height: 75px;
+        background: rgba(20, 20, 20, .1);
+        box-shadow: 0px 0 20px 35px rgba(20,20,20,.1);
+        border-radius: 30px / 40px;
+        animation-timing-function: ease-in;
+    }
+}
+.optionsAtRightSide
+            {
+                color:black;
+                font-family: cursive;
+                margin: -25px;!important
+            }
+#background
+         {
+            /*background-image: url('back.png');*/
+            background-position:fixed;
+            background-size:cover;
+            background-repeat:no-repeat;
+         } 
+#CoverPage
+{
+           /* background-image: url('BackgroundImage.gif');*/
+            background-position:fixed;
+            background-size:cover;
+            background-repeat:no-repeat;
+}
+#playCricketGame {
+    border: 3px solid white;
+    border-radius: 50px;
+    width: 90px;
+    height: 90px;
+    margin: 14% 0% 0% 46%;
+    background-color: rgb(116,22,14);
+    text-align: center;
+    font-size: 25px;
+    color: white;
+}
+.shake {
+            animation: buttonShake 0.8s ease;
+            -webkit-animation: buttonShake 0.8s ease;
+            -moz-animation: buttonShake 0.7s ease;
+            -ms-animation: buttonShake 0.7s ease;
+            -o-animation: buttonShake 0.7s ease;
+        }
+
+@keyframes buttonShake 
+{
+    0%, 100% {
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-10px);
+        -webkit-transform: translateX(-10px);
+        -moz-transform: translateX(-10px);
+        -ms-transform: translateX(-10px);
+        -o-transform: translateX(-10px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(10px);
+        -webkit-transform: translateX(10px);
+        -moz-transform: translateX(10px);
+        -ms-transform: translateX(10px);
+        -o-transform: translateX(10px);
+    }
+}
+
+@-webkit-keyframes buttonShake {
+    0%, 100% {
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-10px);
+        -webkit-transform: translateX(-10px);
+        -moz-transform: translateX(-10px);
+        -ms-transform: translateX(-10px);
+        -o-transform: translateX(-10px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(10px);
+        -webkit-transform: translateX(10px);
+        -moz-transform: translateX(10px);
+        -ms-transform: translateX(10px);
+        -o-transform: translateX(10px);
+    }
+}
+
+@-moz-keyframes buttonShake {
+    0%, 100% {
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-10px);
+        -webkit-transform: translateX(-10px);
+        -moz-transform: translateX(-10px);
+        -ms-transform: translateX(-10px);
+        -o-transform: translateX(-10px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(10px);
+        -webkit-transform: translateX(10px);
+        -moz-transform: translateX(10px);
+        -ms-transform: translateX(10px);
+        -o-transform: translateX(10px);
+    }
+}
+
+@-ms-keyframes buttonShake {
+    0%, 100% {
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-10px);
+        -webkit-transform: translateX(-10px);
+        -moz-transform: translateX(-10px);
+        -ms-transform: translateX(-10px);
+        -o-transform: translateX(-10px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(10px);
+        -webkit-transform: translateX(10px);
+        -moz-transform: translateX(10px);
+        -ms-transform: translateX(10px);
+        -o-transform: translateX(10px);
+    }
+}
+
+@-o-keyframes buttonShake {
+    0%, 100% {
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-10px);
+        -webkit-transform: translateX(-10px);
+        -moz-transform: translateX(-10px);
+        -ms-transform: translateX(-10px);
+        -o-transform: translateX(-10px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(10px);
+        -webkit-transform: translateX(10px);
+        -moz-transform: translateX(10px);
+        -ms-transform: translateX(10px);
+        -o-transform: translateX(10px);
+    }
+} 
+.poster1,.poster2 
+      {
+        background-image: url('ball2.jpg');
+        position:absolute;
+        left:0px;
+        width:85px;
+        height:80px;
+        opacity: 1.7;
+        -webkit-border-radius: 50%;
+        -ms-border-radius:50%;
+        -moz-border-radius:50%;
+        animation-name: rotate;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+}
+
+@keyframes rotate {
+  from { background-position-y: 0px; }
+  to { background-position-y: 210px; }
+}
+#info0,#info2,#info4,#info6,#info1,#info3,#info5,#info7{
+    background-color: white;
+}
+#info8,#info9{
+    background-color: rgb(1,160,226);
+}
+#howToPlayGame{
+    background-color: #ff6933;
+    height:30px;
+    font-size:19px;
+    text-align: center;
+    color: white;
+}
+#instructions
+{
+    font-size:30px;color:black;font-family: cursive;text-align: center;
+}
+#nameOfPlayer, #dummyPlayer {
+    color: black;
+    font-size:21px;
+    margin-top: 4px;
+    font-family: Georgia;
+    text-align: center;
+}
+#TotalOver {
+    margin-top: 0px;
+    font-size: 26px;
+    font-family: Georgia;
+    text-align: center;
+    color: white;
+}
+#over, #strikeRate {
+    font-size: 23px;
+    color: black;
+    margin-top: 4px;
+    font-family: Georgia;
+    text-align: center;
+}
+#showStrikeRate {
+    margin-top: 3px;
+    font-size: 25px;
+    font-family: Georgia;
+    text-align: center;
+    color: white;
+}
+#playerScore {
+    margin-top: 3px;
+    font-size:22px;
+    font-family: Georgia;
+    text-align: center;
+    color: white;
+}
+#dummyPlayerScore {
+    margin-top: 3px;
+    font-size: 22px;
+    font-family: Georgia;
+    color: white;
+    text-align:center;
+}
+#nameOfCountry {
+    font-size: 24px;
+    color: black;
+    margin-top: 2px;
+    text-align: center;
+    font-family: Georgia;
+}
+  #runs {
+    font-size: 26px;
+    font-family: Georgia;
+    margin-top: -1px;
+    margin-bottom: 5px;
+     /*border-color: black; 
+     border-radius: 21px; 
+     border-style: solid; */
+    /* width: 130px; */
+    text-align:center;
+    color: white;
+}
+  #showItsDotBallMessage {
+    font-size: 50px;
+    color:#FF4500;
+    margin-top: -12%;
+}
+#playAgain {
+    font-size: 21px;
+    font-family: Georgia;
+    height: 36px;
+    background-color: #ff6933;
+    color: black;
+    margin-top: 2%;
+    min-width: 21%;
+    padding-left: 0px;
+    padding-right: 0px;
+        text-align: center;
+}
+#p1,#p2,#p3,#p4,#p5,#p6,#p7,#p8,#p9,#p10,#p11,#p12,#p13,#p14,#p15,#p16,#p17,#p18,#p19,#p20,#p21,#p22,#p23,#p24
+{
+        font-family: 'Georgia', serif;
+        font-size:30px;
+        font-weight: bolder;
+        text-align: center;
+        margin-top:15px;
+        color:rgb(145,195,0);
+}
+#Lastmessage
+{
+    margin: 0px 0px 0px 85px;
+    font-family: Georgia;
+}
+#showFieldChangedMessage
+{
+    font-size: 30px;
+    color: red;
+    text-align: center;
+}
+#buttondiv
+{
+    margin-top:-110px;
+} 
+#btnno1{
+    height:55px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.glyphicon 
+{
+    position: relative;
+    top:6px;
+}
+.infoOfPlayer
+{   font-family: Georgia;
+    font-size:20px; 
+    text-align:center;
+    font-color:white;
+    margin-top: 5px;
+    font-weight: bold;
+}
+#scoreBoard {
+    background-color: #1e90ff;
+    margin-bottom: -20px;
+    height:55px;
+    position: fixed;
+    bottom: 20px;
+    padding: 5px;
+}
+#showOnStrikePlayer {
+    font-size: 50px;
+    text-align: center;
+    color:#FF4500;
+    margin-top: -60px;
+}
+
+#part1,#part2,#part3{
+    padding:0px;
+}
+#part1-1,#part1-2,#part1-3,#part1-4,#part2-1,#part2-2,#part3-1,#part3-2,#part3-3,#part3-4{
+    padding:0px;
+}
+#divShowingTimer{
+    margin-top:-120px;
+}
+#StopTheWheel {
+    position: absolute;
+    height:80px;
+    font-size: 25px;
+    font-family: Georgia;
+   /* width: 144px;*/
+    text-align: center;
+    margin-top: -15px;
+    border-radius: 50px;
+    background-color: rgb(116,22,14);
+    color: white;
+}
+#smalldiv
+{
+    margin-top:80px;
+    justify-content: center;
+    align-items: center; 
+}
+#no1,#no2,#no3,#no4
+{
+    font-family: 'Georgia', serif;font-size:26px;font-weight: bold;text-align: center;
+    color:white;
+    height:60px;
+    margin-top:10px;
+    margin-bottom:10px;
+    background-color:rgb(35,31,101);
+}
+#ansMessage {
+    font-size: 48px;
+    color: #FF4500;
+    font-family: Georgia;
+    text-align: center;
+    margin-top:-9%;
+}
+/*@media only screen  and (min-device-width :775px) and (max-device-width:1025px) {
+    #instructions
+{
+    font-size:23px;color:black;font-family: cursive;
+}
+#ballWrapper {
+    width: 140px;
+    height: 300px;
+    position: fixed;
+    left: 50%;
+    top: 35%;
+    margin-left: -70px;
+    z-index: 100;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: all 5s linear 0s;
+    -moz-transition: all 5s linear 0s;
+    transition: all 5s linear 0s;
+    cursor: pointer;
+}
+#howToPlayGame{
+    background-color: #ff6933;
+    height:30px;
+    font-size:19px;
+    text-align: center;
+    color: white;
+}
+#ball {
+    width: 140px;
+    height: 140px;
+    border-radius: 70px;
+    background:#9C2626;
+    background: url("ball2.png");
+    box-shadow: inset 0 -5px 15px rgba(255,255,255,0.4), 
+                inset -2px -1px 40px rgba(0,0,0,0.4), 
+                0 0 1px #000;   
+    position: absolute;
+    top: 0; 
+    z-index: 11;
+    -webkit-animation: jump 1s infinite;
+    -moz-animation: jump 1s infinite;
+    -o-animation: jump 1s infinite;
+    -ms-animation: jump 1s infinite;
+    animation: jump 1s infinite;
+    cursor: pointer;
+}
+
+#ball::after {
+    width: 80px; 
+    height: 40px; 
+    position: absolute;
+    left: 30px;
+    top: 10px;
+    z-index: 10;
+    background: url("ball2.jpg");
+    border-radius: 40px / 20px; 
+}
+
+#ballShadow {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    z-index: 10;
+    margin-left: -30px;
+    width: 60px;
+    height: 75px;
+    background: rgba(20, 20, 20, .1);
+    box-shadow: 0px 0 20px 35px rgba(20,20,20,.1);
+    border-radius: 30px / 40px; 
+    -webkit-transform: scaleY(.3);
+    -moz-transform: scaleY(.3);
+    -ms-transform: scaleY(.3);
+    -o-transform: scaleY(.3);
+    transform: scaleY(.3);
+    -webkit-animation: shrink 1s infinite;
+    -moz-animation: shrink 1s infinite;
+    -o-animation: shrink 1s infinite;
+    -ms-animation: shrink 1s infinite;
+    animation: shrink 1s infinite;
+}
+
+body
+{
+    margin-top:20px;
+}
+#divshowingCricketBall
+{
+    height:305px;
+}
+#myCanvas{
+    width:80px; 
+    height:80px;
+}
+#divShowingTimer{
+    margin-left: 10%;
+}
+.poster1, .poster2 {
+    background-image: url('ball2.jpg');
+    position: absolute;
+    left: 0px;
+    width: 75px;
+    height: 75px;
+    opacity: 1.7;
+    -webkit-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -moz-border-radius: 50%;
+    animation-name: rotate;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rotate {
+  from { background-position-y: 0px; }
+  to { background-position-y: 210px; }
+}
+
+#stage1,#stage2
+{
+    display:block;
+    width:95px;
+    margin-top:0px;
+    height:95px;
+    -webkit-perspective:1200;
+    -ms-perspective:1200;
+    -moz-perspective:1200;
+    -webkit-transform-style: preserve-3d; 
+    -ms-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+}
+#rotate1, #rotate2
+{
+        margin:0 auto;
+        width:50px;
+        height:50px; 
+        -webkit-transform-style: preserve-3d; 
+        -ms-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+}
+#StopTheWheel {
+    position: absolute;
+    height: 55px;
+    font-size: 25px;
+    font-family: Georgia;
+    width: 144px;
+    text-align: center;
+    margin-top: -15px;
+    border-radius: 50px;
+    background-color: rgb(116,22,14);
+    color: white;
+}
+#smalldiv
+{
+    margin-top:80px;
+    justify-content: center;
+    align-items: center; 
+}
+#no1,#no2,#no3,#no4
+{
+    font-family: 'Georgia', serif;font-size:26px;font-weight: bold;text-align: center;
+    color:white;
+    height:60px;
+    margin-top:10px;
+    margin-bottom:10px;
+    background-color:rgb(35,31,101);
+}
+#ansMessage {
+    font-size: 48px;
+    color: black;
+    font-family: Georgia;
+    text-align: center;
+    margin-top: 20%;
+}
+#nameOfPlayer, #dummyPlayer {
+    color: black;
+    font-size: 23px;
+    margin-top: 4px;
+    font-family: Georgia;
+    text-align: center;
+}
+#TotalOver {
+    margin-top: 0px;
+    font-size: 26px;
+    font-family: Georgia;
+    text-align: center;
+    color: white;
+}
+#over, #strikeRate {
+    font-size: 23px;
+    color: black;
+    margin-top: 4px;
+    font-family: Georgia;
+    text-align: center;
+}
+#showStrikeRate {
+    margin-top: 3px;
+    font-size: 25px;
+    font-family: Georgia;
+    text-align: center;
+    color: white;
+}
+#playerScore {
+    margin-top: 3px;
+    font-size: 23px;
+    font-family: Georgia;
+    text-align: center;
+    color: white;
+}
+#dummyPlayerScore {
+    margin-top: 3px;
+    font-size: 23px;
+    font-family: Georgia;
+    color: white;
+    text-align: right;
+}
+#nameOfCountry {
+    font-size: 24px;
+    color: black;
+    margin-top: 2px;
+    text-align: center;
+    font-family: Georgia;
+}
+  #runs {
+    font-size: 27px;
+    font-family: Georgia;
+    margin-top: -1px;
+    margin-bottom: 5px;
+    /* border-color: black; 
+    /* border-radius: 21px; */
+    /* border-style: solid; */
+    /* width: 130px; */
+    /*text-align: right;
+    color: white;
+}
+  #showItsDotBallMessage {
+    font-size: 50px;
+    color: black;
+}
+#playAgain {
+    font-size: 21px;
+    font-family: Georgia;
+    height: 36px;
+    background-color: #ff6933;
+    color: black;
+    margin-top: 2%;
+    min-width: 21%;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+#p1,#p2,#p3,#p4,#p5,#p6,#p7,#p8,#p9,#p10,#p11,#p12,#p13,#p14,#p15,#p16,#p17,#p18,#p19,#p20,#p21,#p22,#p23,#p24
+{
+        font-family: 'Georgia', serif;
+        font-size:30px;
+        font-weight: bolder;
+        text-align: center;
+        margin-top:15px;
+        color:rgb(145,195,0);
+}
+#Lastmessage
+{
+    margin: 0px 0px 0px 85px;
+    font-family: Georgia;
+}
+#showFieldChangedMessage
+{
+    font-size: 30px;
+    color: red;
+    text-align: center;
+}
+#buttondiv
+{
+    margin-top:-110px;
+} 
+#btnno1{
+    height:55px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.glyphicon 
+{
+    position: relative;
+    top:6px;
+}
+.infoOfPlayer
+{   font-family: Georgia;
+    font-size:20px; 
+    text-align:center;
+    font-color:white;
+    margin-top: 5px;
+    font-weight: bold;
+}
+#scoreBoard {
+    background-color: #1e90ff;
+    margin-bottom: -20px;
+    height: 50px;
+    position: fixed;
+    bottom: 20px;
+    padding: 5px;
+}
+#showOnStrikePlayer {
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    margin-top: -60px;
+}
+
+#part1,#part2,#part3{
+    padding:0px;
+}
+#part1-1,#part1-2,#part1-3,#part1-4,#part2-1,#part2-2,#part3-1,#part3-2,#part3-3,#part3-4{
+    padding:0px;
+}
+#divShowingTimer{
+    margin-top:-120px;
+}
+#playCricketGame{
+  border: 3px solid white;
+    border-radius: 50px;
+    width: 90px;
+    height: 90px;
+    margin:90px 0px 0px 365px;
+    background-color: rgb(116,22,14);
+    text-align: center;
+    font-size: 25px;
+    color: white;
+}
+#divShowingLastMessage
+{
+    height:65px;
+}
+#info0,#info2,#info4,#info6,#info1,#info3,#info5,#info7{
+    background-color: white;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+#info8,#info9{
+    background-color: rgb(1,160,226);
+}
+#divContainingTextInfoOfPlayer
+{
+    margin-top:2%;
+}
+#pp3,#pp2,#pp4,#pp5{
+    color:white;
+    text-align: center;
+}
+#pp1{
+    text-align: center;
+}
+}*/
+
+
