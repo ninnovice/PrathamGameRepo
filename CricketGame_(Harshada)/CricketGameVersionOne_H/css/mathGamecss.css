@@ -1,0 +1,302 @@
+
+
+ #showItsDotBallMessage
+ {
+  text-align:center;
+
+ }
+ 
+ 
+#clockDiv
+{
+  border-radius:50px;
+  border-color: black;
+  border-width: 2px;
+  background-color: red;
+  color:black;
+  font-size: 30px;
+  height:80px;
+  width:80px;
+  text-align: center;
+
+
+}
+#message
+{
+  color:black;
+  font-size: 28px;
+}
+#Lastmessage
+{
+  margin: -390px 0px 0px 0px;
+}
+#playAgain
+{
+  font-size: 32px;
+  font-family: cursive;
+}
+#nameOfPlayer,#dummyPlayer,#over,#strikeRate
+{
+  font-size:20px;
+  color:black;
+}
+#nameOfCountry
+{
+  font-size: 25px;
+  color:black;
+}
+#playerScore,#dummyPlayerScore,#TotalOver,#showStrikeRate
+{
+  font-size: 28px;
+  font-family: cursive;
+  margin-top:5px;
+  margin-bottom: 5px;
+}
+#runs
+{
+  border-color: black;
+  border-radius: 20px;
+  border-style: solid;
+  margin-top:5px;
+  margin-bottom: 5px;
+}
+#instructions,#pp1,#pp2,#pp3,#pp4,#pp5
+{
+  font-size: 22px;
+}
+.stop
+{
+        margin: 0 auto;
+        height: 150px;
+        width:150px;
+        -webkit-transform-style: preserve-3d;
+        -webkit-animation-iteration-count:0;
+        -webkit-animation-timing-function: linear;
+        -ms-transform-style: preserve-3d;
+        -ms-animation-iteration-count: 0;
+        -ms-animation-timing-function: linear;
+        -moz-transform-style: preserve-3d;
+        -moz-animation-iteration-count: 0;
+        -moz-animation-timing-function: linear;
+
+        /*-webkit-animation-name: x-spin;
+        -webkit-animation-duration:5s;
+        -ms-animation-name: x-spin;
+        -ms-animation-duration:5s;
+        -moz-animation-name: x-spin;
+        -moz-animation-duration:5s;
+        animation-duration:5s;*/
+      
+}
+
+
+  
+      
+
+    
+
+
+
+
+
+
+
+
+#smalldiv{
+		
+      border-radius:70px;
+			min-height:406px;
+			display:flex;
+			justify-content: center;
+			align-items: center; 
+      
+		}
+
+
+#number
+{
+	font-size:60px
+}
+
+    #numberSelected
+    {
+      display:block;
+      text-align:center;
+      font-size:70px;
+      margin-top:35px;
+    }
+		
+.selection
+{
+	font-size:50px;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	min-width:60px;	
+	min-height:110px;
+	background-color:pink;
+}
+
+#showMessage
+{	display:flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+
+
+       
+      
+
+      
+
+      
+      
+      
+@keyframes scale {
+  0%  { transform: scale(1);   }
+  32% { transform: scale(0.4); animation-timing-function:  ease-in; }
+  70% { transform: scale(1); animation-timing-function:  ease-in;  }
+  75% { transform: scale(1.2);  animation-timing-function:  ease-in-out; }
+  86% { transform: scale(2);  }  
+  98% { transform: scale(1.2); }
+  100%{ transform: scale(1); }
+}
+@keyframes move {
+  0%   { left: 200px;  }  
+  70%  { left: -200px; }
+  100% { left: 200px;  }
+}
+      
+      
+	p{
+		font-family: 'Georgia', serif;
+		/*font-size: 36px;*/
+		font-weight: bold;
+		text-align: center;
+		margin-top:15px;
+		
+	}
+	.showScore
+	{
+		font-family: 'Georgia', serif;
+		font-size: 36px;
+		font-weight: bold;
+		text-align: center;
+		margin-top:0px;
+		color: white;
+	}
+	      
+      
+      
+      
+      
+ 
+ 
+	
+
+
+@media only screen and (max-width:1000px)and(min-width:600px){
+  #StopTheWheel
+  {
+    position:absolute;
+    height:50px;
+    font-size: 20px;
+    font-family: cursive;
+    width:120px;
+  }
+  .poster1,.poster2 
+    {
+        background-image: url('ball2.jpg');
+        position:fixed;
+        /*left:0px;*/
+        width:30px;
+        height:30px;
+        opacity: 1.7;
+        -webkit-border-radius:50%;
+        -ms-border-radius:50%;
+        -moz-border-radius:50%;
+        animation-name:rotate;
+        animation-duration:5s;
+        animation-iteration-count: infinite;
+        animation-timing-function:ease-in-out,linear;
+    }
+    #rotate1, #rotate2
+    {
+        margin:0 auto;
+        width:70px;
+        height:70px;
+        
+        -webkit-transform-style: preserve-3d; 
+        -ms-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+    }
+
+    #ansMessage
+    {
+      text-align: center;
+      color:Red;
+      font-family: cursive;
+      font-size:35px;
+    }
+    #buttondiv
+    {
+      margin-top:-110px;
+    } 
+  #Lastmessage
+  {
+    margin: 0px 0px 0px 80px;
+  }
+  #LastPage
+  {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+  }
+  #StopTheWheel
+  {
+    position:absolute;
+    height:80px;
+    font-size:25px;
+    font-family: cursive;
+    width:120px;
+    text-align: center;
+  }
+  
+  #nameOfCountry
+  {
+    font-size:18px;
+    color:black;
+  }
+  #runs{
+    margin-top:7px;
+    width:130px;
+    font-size:18px;!important
+  }
+  #over,#strikeRate{
+    font-size:18px;
+    color:black;
+    margin-top: 10px;
+    
+  }
+  #TotalOver,#showStrikeRate,#nameOfPlayer,#dummyPlayer,#dummyPlayerScore
+  {
+    margin-top:8px;
+    font-size:18px;
+  }
+  #showItsDotBallMessage{
+    font-size:30px;
+    color:white;
+  }
+  #ansMessage{
+    font-size:30px;
+    color: white;
+  }
+  #playAgain
+  {
+    font-size:25px;
+    font-family: cursive;
+  }
+}
