@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Abacus Addition
+   </title>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+   <script type="text/javascript" src="js/jquery.min.js"></script>
+   <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+   <link rel="stylesheet" type="text/css" href="css/jquery-ui.css"/>
+   <script type="text/javascript" src="js/bootstrap.min.js"></script>
+   <script src="js/jquery.ui.touch-punch.min.js"></script>
+   <link rel="stylesheet" type="text/css" href="css/stylesheet.css"/>
+   <link rel="stylesheet" type="text/css" href="css/animate.css"/>
+   <script type="text/javascript" src="../js/Utils.js"></script>
+   <script type="text/javascript" src="code/main.js"></script>
+   <script type="text/javascript" src="js/data.js"></script>
+
+</head>
+<body>
+<div id="AbacusGameMainDiv">
+	<div id="gamePage" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+		
+   		<div class="row AbacusPad">
+    		<div id="firstNumber" class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+	    		<div class="column1 col-lg-3 col-md-3 col-sm-3 col-xs-3" >
+					<div class="placeName row" >
+						हज़ार
+			  	    </div>
+					<div class="ThousandsPlace NoOfBallsInColumn">0
+					</div>
+					<div id="firstNumberballFor1000InAbacusPad" class="columnBallsDiv firstNumberBalls">
+					</div>
+				</div>
+	    		<div class="column2 col-lg-3 col-md-3 col-sm-3 col-xs-3" >
+					<div class="placeName row" >
+						सैंकड़ा 
+			  	    </div>
+					<div class="HundredPlace NoOfBallsInColumn">0
+					</div>
+					<div id="firstNumberballFor100InAbacusPad" class="columnBallsDiv firstNumberBalls">
+					</div>
+				</div>
+				<div class="column3 col-lg-3 col-md-3 col-sm-3 col-xs-3" >
+					<div class="placeName row" >
+						दहाई
+		  		    </div>
+					<div class="TensPlace NoOfBallsInColumn">0
+					</div>
+					<div id="firstNumberballFor10InAbacusPad" class="columnBallsDiv firstNumberBalls">
+					</div>
+			    </div>
+				<div class="column4 col-lg-3 col-md-3 col-sm-3 col-xs-3" >
+					<div class="placeName row" >
+						इकाई 
+		  		    </div>
+					<div class="OnesPlace NoOfBallsInColumn">0
+					</div>
+					<div id="firstNumberballFor1InAbacusPad" class=" columnBallsDiv firstNumberBalls">
+					</div>
+				</div>
+    		</div>
+	   		<div id="operation" class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+				<img  class="operation" src="img/plus.png" style="width:100%;     margin-top: 242%;">
+    		</div>
+    		<div id="secondNumber" class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+    			<div class="column1 col-lg-3 col-md-3 col-sm-3 col-xs-3" >
+					<div class="placeName row" >
+						हज़ार
+			  	    </div>
+					<div class="ThousandsPlace NoOfBallsInColumn">0
+					</div>
+					<div id="secondNumberballFor1000InAbacusPad" class="columnBallsDiv secondNumberBalls">
+					</div>
+				</div>
+				<div class="column2 col-lg-3 col-md-3 col-sm-3 col-xs-3" >
+					<div class="placeName row" >
+						सैंकड़ा 
+		  		    </div>
+					<div class="HundredPlace NoOfBallsInColumn">0
+					</div>
+					<div id="secondNumberballFor100InAbacusPad" class="columnBallsDiv secondNumberBalls">
+					</div>
+				</div>
+				<div class="column3 col-lg-3 col-md-3 col-sm-3 col-xs-3" >
+					<div class="placeName row" >
+						दहाई
+		  		    </div>
+					<div class="TensPlace NoOfBallsInColumn">0
+					</div>
+					<div id="secondNumberballFor10InAbacusPad" class="columnBallsDiv secondNumberBalls">
+					</div>
+			    </div>
+				<div class="column4 col-lg-3 col-md-3 col-sm-3 col-xs-3" >
+					<div class="placeName row" >
+						इकाई 
+		  		    </div>
+					<div class="OnesPlace NoOfBallsInColumn">0
+					</div>
+					<div id="secondNumberballFor1InAbacusPad" class="columnBallsDiv secondNumberBalls">
+					</div>
+				</div>
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top: 10%;">
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="padding:0px;">
+						<img  class="submitIcon" src="img/submit.png">
+    				</div>
+    				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"  style="padding:0px;">
+						<img  class="nextIcon" src="img/next.png">
+    				</div>
+				</div>
+			</div>
+			<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+				<img  class="equalto" src="img/equal.png" style="width:100%;    margin-top: 242%;">
+    		</div>
+			<div id="AnsNumber" class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+				<div class="column1 col-lg-3 col-md-3 col-sm-3 col-xs-3" >
+					<div class="placeName row" >
+						हज़ार
+		  		    </div>
+		  		    <div class="digitsAndAddition row" >0
+		  		    </div>
+					<div class="HatchyaDiv" style="margin-top:2px;    border-bottom: 1px solid;">
+                    	<img  class="Hatchya2 " src="img/ballFor1000.png">
+                    	<img  class="Hatchya1" src="img/ballFor1000.png">
+                	</div>
+					<div id="column1firstBox" class="columnBallsDiv firstBox">
+					</div>
+					<div class="plusSignDiv">
+                    	<img  class="plusSign blink_me"  onclick="Abacus.doAdditionForColumn(1);" src="img/plus.png">
+                   	</div>
+					<div id="column1secondBox"  class="columnBallsDiv secondBox">
+					</div>
+				</div>
+				<div class="column2 col-lg-3 col-md-3 col-sm-3 col-xs-3" >
+					<div class="placeName row" >
+						सैंकड़ा 
+		  		    </div>
+		  		     <div class="digitsAndAddition row" >0
+		  		    </div>
+					<div class="HatchyaDiv" style="margin-top:2px;    border-bottom: 1px solid;">
+                    	<img  class="Hatchya2 " src="img/ballFor100.png">
+                    	<img  class="Hatchya1" src="img/ballFor100.png">
+                	</div>
+					<div id="column2firstBox" class="columnBallsDiv firstBox">
+					</div>
+					<div class="plusSignDiv">
+                    	<img  class="plusSign blink_me"  onclick="Abacus.doAdditionForColumn(2);" src="img/plus.png">
+                   	</div>
+					<div id="column2secondBox"  class="columnBallsDiv secondBox">
+					</div>
+				</div>
+				<div class="column3 col-lg-3 col-md-3 col-sm-3 col-xs-3" >
+					<div class="placeName row" >
+						दहाई
+		  		    </div>
+		  		     <div class="digitsAndAddition row" >0
+		  		    </div>
+					<div class="HatchyaDiv" style="margin-top:2px;    border-bottom: 1px solid;">
+                    	<img  class="Hatchya2 " src="img/ballFor10.png">
+                    	<img  class="Hatchya1 " src="img/ballFor10.png">
+                	</div>
+					<div id="column3firstBox"  class="columnBallsDiv firstBox">
+					</div>
+					<div class="plusSignDiv">
+                    	<img  class="plusSign blink_me" onclick="Abacus.doAdditionForColumn(3);" src="img/plus.png">
+                   	</div>
+					<div id="column3secondBox"  class="columnBallsDiv secondBox">
+					</div>
+				 </div>
+				<div class="column4 col-lg-3 col-md-3 col-sm-3 col-xs-3" >
+					<div class="placeName row" >
+						इकाई 
+		  		    </div>
+		  		     <div class="digitsAndAddition row" >0
+		  		    </div>
+					<div class="HatchyaDiv" style="margin-top:2px;    border-bottom: 1px solid;">
+                    	<img  class="Hatchya2 " src="img/ballFor1.png">
+                    	<img  class="Hatchya1 " src="img/ballFor1.png">
+                	</div>
+					<div id="column4firstBox" class="columnBallsDiv firstBox">
+					</div>
+					<div class="plusSignDiv">
+                    	<img  class="plusSign blink_me" onclick="Abacus.doAdditionForColumn(4);" src="img/plus.png">
+                   	</div>
+					<div id="column4secondBox" class="columnBallsDiv secondBox">
+					</div>
+				</div>
+				
+			</div>
+	   	</div>	    	
+	</div>
+</div>
+</body>
+</html>
