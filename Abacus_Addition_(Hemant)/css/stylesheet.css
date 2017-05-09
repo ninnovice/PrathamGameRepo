@@ -1,0 +1,155 @@
+@media screen and (min-width: 400px) {
+    body{font-size: 13px;}
+   
+}
+
+@media screen and (min-width: 900px) {
+    body{font-size: 15px;}
+}
+@media screen and (min-width: 1100px) {
+    body{font-size: 18px;}
+}
+
+#AbacusGameMainDiv {
+    background-position: center;
+    background-size: cover;
+    background-repeat:no-repeat;
+    position: fixed;
+    margin-left: 0%;
+    margin-right:0%;
+    margin-top:  0%;
+    width:100%;
+    height:100%;
+    background-color: gray;
+}
+
+
+
+#gamePage{
+
+    width:100%;
+    height:100%;
+    background-color: lavender;
+}
+#ballsWithValue{
+    font-size: 32px;
+    font-weight: bold;
+}
+#ballsWithValue > .ballFor1{
+    width: 3%;
+}
+
+#ballsWithValue > .ballFor10{
+    width: 4%;
+}
+
+#ballsWithValue > .ballFor100{
+    width: 5%;
+}
+
+#ballsWithValue > .ballFor1000{
+    width: 6%;
+}
+
+.AbacusPad{
+   height:88%;
+   margin-top: 3%;
+}
+
+#firstNumber,#secondNumber{
+   background-color: wheat;
+   height: 55%;    padding: 0px;
+   text-align:center;
+}
+
+#AnsNumber{
+   background-color: wheat;
+   height: 100%;    padding: 0px;
+   text-align:center;
+}
+
+#firstNumber > .column1 >  .columnBallsDiv > div >img,#secondNumber > .column1 >  .columnBallsDiv >div >img,#AnsNumber > .column1 >  .columnBallsDiv >div >img{
+    width: 50%;
+}
+#firstNumber > .column2 >  .columnBallsDiv > div >img,#secondNumber > .column2 >  .columnBallsDiv >div >img,#AnsNumber > .column2 >  .columnBallsDiv >div >img{
+    width: 48%;
+}
+#firstNumber > .column3 >  .columnBallsDiv > div >img,#secondNumber > .column3 >  .columnBallsDiv >div >img,#AnsNumber > .column3 > .columnBallsDiv > div >img{
+    width:42%;
+}
+#firstNumber > .column4 >  .columnBallsDiv > div >img,#secondNumber > .column4 > .columnBallsDiv > div >img,#AnsNumber > .column4 > .columnBallsDiv > div >img{
+    width: 38%;
+}
+
+.columnBallsDiv{
+       text-align:right;
+       height: 38%;
+  }
+.column1,.column2,.column3,.column4
+{
+    padding: 0px;
+    height: 100%;
+    border: 1px solid;
+ }
+.ThousandsPlace, .HundredPlace,.TensPlace,.OnesPlace{
+        border-bottom: 1px solid;
+}
+
+.ButtonsIcon{
+    width: 27%;
+    margin-left: 9%;
+    margin-top: 8px;
+}
+
+.plusSign{
+    width: 50%;
+    visibility: hidden;
+}
+
+#AnsBlock{
+   height:85%;
+   width:49%;   
+    margin-left: 2%;
+}
+
+.submitIcon,.nextIcon{
+    width: 81%;
+}
+
+
+.Hatchya2 {
+    width: 42%;
+    visibility: hidden;
+}
+.Hatchya1 {
+    width: 42%;
+    display: none;
+
+}
+.HatchyaDiv{
+      display: inline-table;
+      text-align: right;
+   
+}
+
+
+.optionButtons{
+  height: 95%;
+  text-align: center;
+  border-radius: 10px;
+  font-weight: bold;
+  padding: 0px;
+  font-size: 30px;
+  margin-left: 2%;
+}
+
+.optionButtons > div {
+    background-color: orange;
+}
+.blink_me {
+ animation: blinker 0.6s linear infinite;
+}
+
+@keyframes blinker {  
+ 50% { opacity: 0.5; }
+}
