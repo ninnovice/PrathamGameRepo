@@ -1,0 +1,223 @@
+@media screen and (min-width: 350px) {
+    .ballsWithTheirValueDiv{
+        font-size: 19px;
+    }
+    .abacusNumber {
+        font-size: 12px;
+        padding-top: 42%;
+    }
+    .circleNumber{
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 600px) {
+   .ballsWithTheirValueDiv > div > .ballImageDiv{
+        padding: 0px;
+    }
+   
+}
+@media screen and (min-width: 700px) {
+    .ballsWithTheirValueDiv{
+        font-size: 23px;
+    }
+    .abacusNumber {
+        padding-top: 39%;
+        font-size: 19px;
+    }
+    .circleNumber{
+        font-size: 20px;
+    }
+}
+@media screen and (min-width: 800px) {
+    .ballsWithTheirValueDiv{
+        font-size: 25px;
+    }
+    .abacusNumber {
+        padding-top: 24%;
+        font-size: 21px;
+    }
+     .circleNumber{
+        font-size: 21px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .ballsWithTheirValueDiv{
+        font-size: 26px;
+    }
+    .abacusNumber {
+        padding-top: 24%;
+        font-size: 28px;
+    }
+     .circleNumber{
+        font-size: 22px;
+    }
+}
+@media screen and (min-width: 1100px) {
+    .ballsWithTheirValueDiv{
+        font-size: 33px;
+    }
+    .abacusNumber {
+        padding-top: 25%;
+        font-size: 34px;
+    }
+     .circleNumber{
+        font-size: 26px;
+    }
+}
+
+#AbacusGameMainDiv {
+    background-position: center;
+    background-size: cover;
+    background-repeat:no-repeat;
+    position: fixed;
+    margin-left: 0%;
+    margin-right:0%;
+    margin-top:  0%;
+    width:100%;
+    height:100%;
+}
+
+#levelPage{
+    text-align: center;
+}
+
+.levelImages{
+    width: 80%;
+    margin-top: 130%;
+}
+
+.homeIcon{
+    width: 115%;
+}
+
+#coverPage{
+    width:100%;
+    height:100%;
+    display: none;
+    background-size: cover;
+}
+ 
+#gamePage{
+    width:100%;
+    height:100%;
+    display: none;
+}
+ 
+.abacusNumber {
+    position: relative;
+    width: 94%;
+    font-weight: bold;
+    color: black;
+    display: block;
+    background-size: cover;
+    border-radius: 8px;
+    margin: -5px auto;
+    text-align: center;
+    margin-bottom: 14%;
+        height: 20%;
+}
+
+.ballsWithTheirValueDiv{
+    font-weight: bold;
+    color: aliceblue
+}
+
+.ballsWithTheirValueDiv > div > .ballValueText{
+    text-align: right;
+    margin-top: 0%;
+    padding: 0px;
+}
+
+.ballsWithTheirValueDiv > div > .ballImageDiv{
+    text-align: center;
+    margin-left: -8%;
+}
+
+.ballsWithTheirValueDiv > div > .ballImageDiv > .ballFor1{
+    width: 25%;
+ }
+
+.ballsWithTheirValueDiv > div > .ballImageDiv > .ballFor10{
+    width: 31%;
+ }
+
+.ballsWithTheirValueDiv > div > .ballImageDiv > .ballFor100{
+    width: 40%;
+ }
+
+.ballsWithTheirValueDiv > div > .ballImageDiv > .ballFor1000{
+    width: 44%;
+ }
+
+#abacusPad{
+    height: 100%;
+    padding: 0px;
+}
+
+.column{
+    height:100%;
+    margin-left: 0.3%;
+    width: 9.6%;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.BallForRoundup > div > img{
+    margin-left: 52%;
+}
+
+#column1 > .ballsInColumn_Div > div,#column2 > .ballsInColumn_Div > div,#column3 > .ballsInColumn_Div > div,#column4 > .ballsInColumn_Div > div, #column5 > .ballsInColumn_Div > div {
+    margin-left: 23%;
+    text-align: center;
+}
+
+#column6 > .ballsInColumn_Div >.Col1BallsDiv,#column7 > .ballsInColumn_Div >.Col1BallsDiv,#column8 > .ballsInColumn_Div >.Col1BallsDiv,#column9 > .ballsInColumn_Div >.Col1BallsDiv, #column10 > .ballsInColumn_Div >.Col1BallsDiv {
+   text-align: right;
+}
+
+.BallFor1WidthInAbacusPad{
+        margin-bottom: 1px;
+    width: 45%;
+    margin-right: 2px;
+}
+
+.BallFor10WidthInAbacusPad{
+    margin-bottom: 1px;
+    width: 60%;
+}
+
+.BallFor100WidthInAbacusPad{
+    margin-bottom: 1px;
+    width: 75%;
+}
+
+.homeIcon,.nextIcon{
+    width: 34%;
+    margin-top: 40%;
+}
+
+.prathamlogo{
+    width: 67%;
+}
+
+.kakaji{
+   padding-top: 6%;
+   width: 100%;
+}
+.circleNumber{
+    background-color: cornsilk;
+    border-radius: 36px;
+    text-align: center;
+    padding: 0px;
+    font-weight: bold;
+}
+
+
+.blink_me {
+ animation: blinker 0.6s linear infinite;
+}
+
+@keyframes blinker {  
+ 50% { opacity: 0.5; }
+}
