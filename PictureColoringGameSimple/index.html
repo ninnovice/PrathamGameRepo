@@ -1,0 +1,108 @@
+<html>
+  <head>
+      <title>Picture Colouring Game</title>
+	  <meta charset="utf-8">
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+      <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
+      <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+      <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+      <link rel="stylesheet" type="text/css" href="css/animate.css">
+      <script type="text/javascript" src="js/jquery.min.js"></script>
+      <script type="text/javascript" src="js/jquery-ui.js"></script>
+	  <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	  <script type="text/javascript" src="js/bootstrap.js"></script>
+	  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+	  <script src="scripts/main.js"></script>
+ 	  <script src="scripts/sketch.js"></script>
+ 	  <script src="data/dataAsset.js"></script>
+  </head>
+  <body>
+ 		<div id="header" class="col-sm-12 col-xs-12 col-md-12 col-lg-12">
+			<div id="logo" class="fullHeight col-sm-1 col-xs-1 col-md-1 col-lg-1"></div>
+			<div id="scroll" class="col-sm-10 col-xs-10 col-md-10 col-lg-10"></div>
+			<div id="home" class="fullHeight col-sm-1 col-xs-1 col-md-1 col-lg-1"></div>
+		</div>
+  		<div id="container" class="col-sm-12 col-xs-12 col-md-12 col-lg-12">
+	    	 <div id="toolSection" class="fullHeight col-sm-1 col-xs-1 col-md-1 col-lg-1">   	 	
+				<div id="brush" class='operationHeight'> 
+					<div id="brushSize">
+								<div id="small" class="sizeDivs" value="5">
+								</div>
+								<div id="medium" class="sizeDivs" value="20">
+								</div>
+								<div id="big" class="sizeDivs" value="40">
+								</div>
+					</div>
+				</div>
+	    	 	<div id="dropper" class="operationHeight">
+	    	 		
+	    	 	</div>
+	    	 	<div id="eraser" class="operationHeight">
+	    	 		
+	    	 	</div>
+	    	 	<!--<div id="home" class="operationHeight">
+	    	 		
+	    	 	</div>-->
+	    	 </div>
+	    	 <div id="imageSection" class="fullHeight col-sm-8 col-xs-8 col-md-8 col-lg-8">
+	    	 		<div id="pictureCanvas" class="fullHeight col-sm-12 col-xs-12 col-md-12 col-lg-12">
+						<div class="fullHeight col-sm-12 col-xs-12 col-md-12 col-lg-12">
+							<center id="forSVG" >
+							</center>
+						</div>
+	    	 			<canvas id="myCanvas"></canvas>
+	    	 		</div>
+	    	 </div>
+	    	 <div id="operationSection" class="fullHeight col-sm-1 col-xs-1 col-md-1 col-lg-1">
+	    	 	<div id="redo" class="operationHeight">
+	    	 		
+	    	 	</div>
+	    	 	<div id="undo" class="operationHeight">
+	    	 		
+	    	 	</div>
+	    	 	<div id="clear" class="operationHeight">
+	    	 		
+	    	 	</div>
+	    	 	<div id="next" class="operationHeight">
+	    	 		
+	    	 	</div>
+	    	 </div> 
+	    	 <div id="paletteSection" class="col-sm-2 col-xs-2 col-md-2 col-lg-2">
+	    	 	<div id="colorPalette" class="col-sm-12 col-xs-12 col-md-12 col-lg-12">
+	    	 	<div class="col-sm-12 col-xs-12 col-md-12 col-lg-12">
+	    	 		<div id="selectedColor" class="selectedColorHeight col-sm-6 col-xs-6 col-md-6 col-lg-6 col-sm-offset-3 col-xs-offset-3 col-lg-offset-3 col-md-offset-3" style="background-color:#000000"></div>
+				</div>
+	    	 		<div class="col-sm-12 col-xs-12 col-md-12 col-lg-12 ">
+	    	 		<div class="colorHeight col-md-4 col-md-offset-1" style="background-color:#848583;"></div>
+	    	 		<div class="colorHeight col-md-4 col-md-offset-1" style="background-color:#C7C5C6;"></div>
+	    	 		<div class="colorHeight col-md-4 col-md-offset-1" style="background-color:#92272F;"></div>
+	    	 		<div class="colorHeight col-md-4 col-md-offset-1" style="background-color:#E87320;"></div>
+	    	 		<div class="colorHeight col-md-4 col-md-offset-1" style="background-color:#180E0F;"></div>
+	    	 		<div class="colorHeight col-md-4 col-md-offset-1" style="background-color:#FDFBFC;"></div>
+	    	 		<div class="colorHeight col-md-4 col-md-offset-1" style="background-color:#BF2038;"></div>
+	    	 		<div class="colorHeight col-md-4 col-md-offset-1" style="background-color:#F8CA14;"></div>
+	    	 		<div class="colorHeight col-md-4 col-md-offset-1" style="background-color:#118F3F;"></div>
+	    	 		<div class="colorHeight col-md-4 col-md-offset-1" style="background-color:#89C527;"></div>
+	    	 		<div class="colorHeight col-md-4 col-md-offset-1" style="background-color:#317C7C;"></div>
+	    	 		<div class="colorHeight col-md-4 col-md-offset-1" style="background-color:#2BB8D2;"></div>
+	    	 		<div class="colorHeight col-md-4 col-md-offset-1" style="background-color:#311B65;"></div>
+	    	 		<div class="colorHeight col-md-4 col-md-offset-1" style="background-color:#BF8EB4;"></div>
+	    	 		<div class="colorHeight col-md-4 col-md-offset-1" style="background-color:#355743;"></div>
+	    	 		<div class="colorHeight col-md-4 col-md-offset-1" style="background-color:#FFFE76;"></div>
+	    	 		<div class="colorHeight col-md-4 col-md-offset-1" style="background-color:#177AB5;"></div>
+	    	 		<div class="colorHeight col-md-4 col-md-offset-1" style="background-color:#62C4F2;"></div>
+	    	 		<div class="colorHeight col-md-4 col-md-offset-1" style="background-color:#004893;"></div>
+	    	 		<div class="colorHeight col-md-4 col-md-offset-1" style="background-color:#8E85C8;"></div>
+	    	 		<div class="colorHeight col-md-4 col-md-offset-1" style="background-color:#E79EB2;"></div>
+	    	 		<div class="colorHeight col-md-4 col-md-offset-1" style="background-color:#DF1D47;"></div>
+	    	 		<div class="colorHeight col-md-4 col-md-offset-1" style="background-color:#B1E06B;"></div>
+	    	 		<div class="colorHeight col-md-4 col-md-offset-1" style="background-color:#DA1977;"></div>
+	    	 		<div class="colorHeight col-md-4 col-md-offset-1" style="background-color:#935847;"></div>
+	    	 		<div class="colorHeight col-md-4 col-md-offset-1" style="background-color:#F7C389;"></div>
+	    	 		</div>
+	    	 	</div>
+	    	 </div>
+	    </div>
+  </body>
