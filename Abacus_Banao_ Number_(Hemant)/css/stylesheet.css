@@ -1,0 +1,316 @@
+
+#AbacusGameMainDiv {
+    background-position: center;
+    background-size: cover;
+    background-repeat:no-repeat;
+    position: fixed;
+    margin-left: 0%;
+    margin-right:0%;
+    margin-top:  0%;
+    width:100%;
+    height:100%;
+    color: rgb(0,124,194);;
+}
+
+.levelImages{
+    width: 90%;
+    margin-top: 130%;
+}
+
+
+#coverPage{
+    width:100%;
+    height:100%;
+    display: none;
+    background-size: cover;
+}
+
+#gamePage{
+    width:100%;
+    height:100%;
+    display: none;
+}
+
+.numberBanaoWhiteDiv{
+  background-color:rgba(248, 248, 255,0.7); 
+  border-radius: 20px;
+  padding:0px;
+  margin-left: 0%;
+}
+#AskedNumberInText{
+    font-weight: bold;
+    color: darkblue;
+    text-align: center;
+    padding:0px;
+}
+
+#AskedQues{
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 1px solid black;
+    padding: 0px;
+}
+
+#ballPickerBox{
+    height: 100%;
+    font-weight: bold;
+    margin-top:6%;
+    background-color:rgba(248, 248, 255,0.7);
+    border-radius: 20px;
+    padding: 0px;
+    display: none;
+}
+
+#abacusPadOuterDiv{
+    height: 100%;
+    padding-left: 21px;
+}
+
+#abacusPad{
+    background-color: rgba(248, 248, 255,0.7);
+    border-radius: 60px;
+    text-align: -webkit-center;
+    border: 1px solid;
+    height: 81%;
+}
+
+#column1,#column2,#column3,#column4{
+    padding: 0px;
+    height: 100%;
+}
+.NoOfBallsInColumn {
+    text-align:center;
+    font-weight: bold;
+    margin-bottom: 1%;
+    border-bottom: 1px solid;
+}
+
+.ballInBallsBox {
+    position:absolute;
+}
+/* width of balls in Balls Box */
+#abacusPad > .ballFor1{
+    width: 5%;
+}
+#abacusPad > .ballFor10{
+    width: 7%;
+}
+#abacusPad > .ballFor100{
+    width: 9%;
+}
+#abacusPad > .ballFor1000{
+    width: 11%;
+}
+#column1 >.BeadsImages >.ballInAbacusPad{ width: 38%; }
+#column2 >.BeadsImages >.ballInAbacusPad{ width: 32%; }
+#column3 >.BeadsImages >.ballInAbacusPad{ width: 26%; }
+#column4 >.BeadsImages >.ballInAbacusPad{ width: 20%; }
+.WidthOfBallOf1InPickerBox{   width: 40%;  }
+.WidthOfBallOf10InPickerBox{  width: 50%;  }
+.WidthOfBallOf100InPickerBox{ width: 60%;  }
+.WidthOfBallOf1000InPickerBox{width: 70%;  }
+
+
+.placeName{
+    border-bottom: 1px solid;  
+}
+
+#TextOfThousandsPlace,#TextOfHundredsPlace {
+    width: 15%;
+    color: orange;
+    text-decoration: underline;
+    padding: 0px;
+    text-align: -webkit-right;
+    display: none;
+}
+
+#TextOfSou{
+    padding: 0px;width: 11%;
+    display: none;
+}
+#TextOfhazar{
+    display: none;
+        padding: 0px;
+}
+#TextOfTensAndOnesPlace{
+    padding: 0px;
+    width: 32%;
+    color: blueviolet;
+    text-decoration: underline;
+    margin-left: 2%;     
+    text-align: left;
+    display: none;
+}
+
+#AnsOption{
+  display: none;
+}
+
+#paryay{
+   margin-top:4%;
+   background-color:rgba(248, 248, 255,0.7);
+   border-radius: 20px;
+   text-align: center; 
+}
+
+#AnsOptionList{
+    text-align: center;
+    width: 30%;
+    margin-top: 1%;
+    background-color: rgba(248, 248, 255,0.7);
+    border-radius: 20px;
+    color:orange; 
+}
+
+
+.ButtonsIcon{
+    margin-left: 4%;
+    width: 8%;
+}
+
+.prathamlogo{
+    width: 56%;
+}
+
+@media screen and (min-width: 400px) {
+   #AskedNumberInText{
+    font-size: 13px;
+        margin-left: -4%;
+   }
+   #AskedQues,.NoOfBallsInColumn,.placeName,#AnsOption{
+    font-size: 13px; 
+    line-height: 1.31;
+   }
+   #ballPickerBox{  font-size: 21px;  }
+   #abacusPad{      border-radius: 22px;   }
+   .ButtonsIcon{    width: 12%;     }
+   .numberBanaoWhiteDiv,#ballPickerBox,#AnsOptionList {
+    border-radius: 7px;
+   }
+   #column1 >.BeadsImages >.ballInAbacusPad{ width: 43%; }
+  #column2 >.BeadsImages >.ballInAbacusPad{ width: 38%; }
+  #column3 >.BeadsImages >.ballInAbacusPad{ width: 33%; }
+  #column4 >.BeadsImages >.ballInAbacusPad{ width: 28%; }
+  .WidthOfBallOf1InPickerBox{   width: 60%;  }
+  .WidthOfBallOf10InPickerBox{  width: 70%;  }
+  .WidthOfBallOf100InPickerBox{ width: 80%;  }
+  .WidthOfBallOf1000InPickerBox{width: 90%;  }
+
+
+}
+
+
+@media screen and (min-width: 500px) {
+   #AskedNumberInText{
+    font-size: 14px;
+      margin-left: -4%;
+   }
+   #AskedQues,.NoOfBallsInColumn,.placeName,#AnsOption{
+    font-size: 16px;  line-height: 1.36;
+   }
+   #ballPickerBox{  font-size: 24px;  }
+   #abacusPad{    border-radius: 36px;   }
+}
+
+
+
+
+
+@media screen and (min-width: 600px) {
+   #AskedNumberInText{
+    font-size: 19px;  margin-left: -4%;
+   }
+   #AskedQues,.NoOfBallsInColumn,.placeName,#AnsOption{
+    font-size: 17px;
+   }
+   #ballPickerBox{
+    font-size: 24px;
+   }
+   #abacusPad{
+    border-radius: 40px;
+   }
+}
+@media screen and (min-width: 700px) {
+   #AskedNumberInText{
+    font-size: 18px;
+   }
+   #AskedQues,.NoOfBallsInColumn,.placeName,#AnsOption{
+    font-size: 17px;
+   }
+   #ballPickerBox{
+    font-size: 24px;
+   }
+    #abacusPad{
+    border-radius: 40px;
+   }
+    .numberBanaoWhiteDiv,#ballPickerBox,#AnsOptionList {
+    border-radius: 15px;
+   }
+   #column1 >.BeadsImages >.ballInAbacusPad{ width: 38%; }
+#column2 >.BeadsImages >.ballInAbacusPad{ width: 32%; }
+#column3 >.BeadsImages >.ballInAbacusPad{ width: 26%; }
+#column4 >.BeadsImages >.ballInAbacusPad{ width: 20%; }
+.WidthOfBallOf1InPickerBox{   width: 40%;  }
+.WidthOfBallOf10InPickerBox{  width: 50%;  }
+.WidthOfBallOf100InPickerBox{ width: 60%;  }
+.WidthOfBallOf1000InPickerBox{width: 70%;  }
+}
+@media screen and (min-width: 800px) {
+   #AskedNumberInText{
+    font-size: 22px;  margin-left: -3%;
+   }
+   #AskedQues,.NoOfBallsInColumn,.placeName,#AnsOption{
+    font-size: 21px;
+   }
+   #ballPickerBox{
+    font-size: 33px;
+   }
+}
+@media screen and (min-width: 900px) {
+   #AskedNumberInText{
+    font-size: 25px;
+   }
+   #AskedQues,.NoOfBallsInColumn,.placeName,#AnsOption{
+    font-size: 22px;
+   }
+   #ballPickerBox{
+    font-size: 30px;
+   }
+   .ButtonsIcon{    width: 9%;     }
+}
+@media screen and (min-width: 1000px) {
+   #AskedNumberInText{
+    font-size: 32px;  margin-left: 0%;
+   }
+   #AskedQues,.NoOfBallsInColumn,.placeName,#AnsOption{
+    font-size: 31px;     line-height: 1.3;
+   }
+   #ballPickerBox{
+    font-size: 43px;
+   }
+    .numberBanaoWhiteDiv,#ballPickerBox,#AnsOptionList {
+    border-radius: 19px;
+   }
+}
+@media screen and (min-width: 1100px) {
+   #AskedNumberInText{
+    font-size: 36px;
+   }
+   #AskedQues,.NoOfBallsInColumn,.placeName,#AnsOption{
+    font-size: 31px;
+   }
+   #ballPickerBox{
+    font-size: 43px;
+   }
+}
+@media screen and (min-width: 1200px) {
+   #AskedNumberInText{
+    font-size: 36px;
+   }
+   #AskedQues,.NoOfBallsInColumn,.placeName,#AnsOption{
+    font-size: 31px;
+   }
+   #ballPickerBox{
+    font-size: 43px;
+   }
+}
